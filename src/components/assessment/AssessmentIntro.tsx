@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle2, Clock } from 'lucide-react';
 import assessmentData from '@/data/assessment.json';
+import VendorIntro from '@/components/vendor/VendorIntro';
 
 const AssessmentIntro = () => {
   const navigate = useNavigate();
@@ -39,6 +40,11 @@ const AssessmentIntro = () => {
               <span className="text-sm">Downloadable PDF report</span>
             </div>
           </div>
+        </div>
+
+        {/* Vendor Introduction */}
+        <div className="mb-8 max-w-2xl mx-auto">
+          <VendorIntro />
         </div>
 
         {/* Progress Indicator */}

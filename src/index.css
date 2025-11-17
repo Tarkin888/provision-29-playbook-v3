@@ -55,6 +55,10 @@ All colors MUST be HSL.
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Vendor branding colors - dynamically injected */
+    --vendor-primary: 221 83% 53%;
+    --vendor-secondary: 168 76% 42%;
   }
 
   .dark {

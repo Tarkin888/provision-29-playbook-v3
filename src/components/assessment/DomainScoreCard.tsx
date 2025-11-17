@@ -20,9 +20,10 @@ interface DomainScoreCardProps {
   color: string;
   questions: Question[];
   recommendations: string[];
+  children?: React.ReactNode;
 }
 
-const DomainScoreCard = ({ icon, name, score, maxScore, color, questions, recommendations }: DomainScoreCardProps) => {
+const DomainScoreCard = ({ icon, name, score, maxScore, color, questions, recommendations, children }: DomainScoreCardProps) => {
   const [expanded, setExpanded] = useState(false);
   const percentage = (score / maxScore) * 100;
 
@@ -106,6 +107,9 @@ const DomainScoreCard = ({ icon, name, score, maxScore, color, questions, recomm
                 ))}
               </ul>
             </div>
+
+            {/* Vendor-specific content */}
+            {children}
           </div>
         )}
       </div>

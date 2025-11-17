@@ -3,6 +3,8 @@ import { NavLink } from '@/components/NavLink';
 import { Button } from '@/components/ui/button';
 import { Menu, X, FileCheck } from 'lucide-react';
 import { MobileMenu } from './MobileMenu';
+import VendorLogo from './vendor/VendorLogo';
+import VendorTagline from './vendor/VendorTagline';
 
 export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,10 +20,12 @@ export const Header = () => {
 
   return (
     <>
+      <VendorTagline />
       <header className="fixed top-0 left-0 right-0 z-50 h-[var(--nav-height)] bg-background border-b shadow-sm">
         <div className="container mx-auto h-full px-4 flex items-center justify-between">
           {/* Logo */}
           <NavLink to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <VendorLogo />
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-lg">P29</span>
             </div>

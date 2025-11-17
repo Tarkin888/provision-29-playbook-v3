@@ -7,8 +7,12 @@ import RadarChart from '@/components/assessment/RadarChart';
 import DomainScoreCard from '@/components/assessment/DomainScoreCard';
 import ActionCard from '@/components/assessment/ActionCard';
 import assessmentData from '@/data/assessment.json';
-import { Download, RefreshCw, ArrowRight, Share2, BookOpen, Map } from 'lucide-react';
+import { Download, RefreshCw, Share2, BookOpen, Map } from 'lucide-react';
 import jsPDF from 'jspdf';
+import VendorRecommendation from '@/components/vendor/VendorRecommendation';
+import VendorContact from '@/components/vendor/VendorContact';
+import VendorCTA from '@/components/vendor/VendorCTA';
+import VendorFooter from '@/components/vendor/VendorFooter';
 
 const AssessmentResults = () => {
   const navigate = useNavigate();
@@ -309,7 +313,9 @@ const AssessmentResults = () => {
                 color={domain.color}
                 questions={domain.questionDetails}
                 recommendations={getDomainRecommendations(domain.id)}
-              />
+              >
+                <VendorRecommendation domainId={domain.id} />
+              </DomainScoreCard>
             ))}
           </div>
         </div>
@@ -325,6 +331,11 @@ const AssessmentResults = () => {
               <ActionCard key={index} {...action} />
             ))}
           </div>
+        </div>
+
+        {/* Vendor Contact */}
+        <div className="mb-16">
+          <VendorContact />
         </div>
 
         {/* Next Steps */}
@@ -360,16 +371,22 @@ const AssessmentResults = () => {
               <span>Retake Assessment</span>
             </Button>
           </div>
+          <div className="mt-6 flex justify-center">
+            <VendorCTA size="lg" />
+          </div>
         </div>
 
         {/* Share Results */}
-        <div className="text-center">
+        <div className="text-center mb-8">
           <p className="text-muted-foreground mb-4">Share your results with your team</p>
           <Button variant="outline">
             <Share2 className="mr-2 h-4 w-4" />
             Share Results
           </Button>
         </div>
+
+        {/* Footer Attribution */}
+        <VendorFooter />
       </div>
     </div>
   );

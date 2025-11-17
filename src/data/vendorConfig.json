@@ -1,0 +1,108 @@
+{
+  "vendors": {
+    "readinow": {
+      "id": "readinow",
+      "name": "ReadiNow",
+      "logo": "/vendors/readinow-logo.svg",
+      "primaryColor": "213 94% 40%",
+      "secondaryColor": "197 100% 44%",
+      "tagline": "Powered by ReadiNow GRC Platform",
+      "intro": "This Provision 29 Readiness Assessment is provided in partnership with ReadiNow, the leading GRC platform for FTSE organisations.",
+      "recommendations": {
+        "governance": "ReadiNow's Board Portal provides real-time material controls dashboards for directors.",
+        "risk": "ReadiNow's Risk Module seamlessly links principal risks to material controls.",
+        "control": "ReadiNow's Control Library includes 500+ pre-configured material controls mapped to principal risks.",
+        "assurance": "ReadiNow's Testing Workflow automates control effectiveness testing across three lines of defence.",
+        "technology": "ReadiNow's AI-powered Dashboard Builder creates board-ready P29 reports in minutes."
+      },
+      "ctaButton": {
+        "text": "Request ReadiNow Demo",
+        "url": "https://readinow.com/demo"
+      },
+      "contactPerson": {
+        "name": "Dan Oak",
+        "title": "Partnerships Director",
+        "email": "dan.oak@readinow.com",
+        "photo": "/vendors/dan-oak.jpg"
+      }
+    },
+    "protecht": {
+      "id": "protecht",
+      "name": "Protecht",
+      "logo": "/vendors/protecht-logo.svg",
+      "primaryColor": "147 100% 33%",
+      "secondaryColor": "152 100% 26%",
+      "tagline": "Powered by Protecht.ERM",
+      "intro": "This P29 assessment is delivered in partnership with Protecht, trusted by ASX and FTSE organisations worldwide.",
+      "recommendations": {
+        "governance": "Protecht's Board Module delivers exec-ready material controls oversight.",
+        "risk": "Protecht.ERM's Risk Framework aligns principal risks to material controls automatically.",
+        "control": "Protecht's Controls Library is pre-mapped to COSO, ISO 31000, and P29 requirements.",
+        "assurance": "Protecht's Assurance Hub coordinates testing across 1st, 2nd, and 3rd lines.",
+        "technology": "Protecht's Analytics Engine provides real-time P29 compliance dashboards."
+      },
+      "ctaButton": {
+        "text": "Explore Protecht.ERM",
+        "url": "https://protecht.com.au/contact"
+      },
+      "contactPerson": {
+        "name": "Gary Lynam",
+        "title": "UK Regional Director",
+        "email": "gary.lynam@protecht.com",
+        "photo": "/vendors/gary-lynam.jpg"
+      }
+    },
+    "nooga": {
+      "id": "nooga",
+      "name": "Nooga",
+      "logo": "/vendors/nooga-logo.svg",
+      "primaryColor": "13 100% 61%",
+      "secondaryColor": "13 100% 69%",
+      "tagline": "Powered by Nooga GRC Suite",
+      "intro": "This assessment is powered by Nooga, the Nordic-born GRC platform now serving European enterprises.",
+      "recommendations": {
+        "governance": "Nooga's Board Reporting module simplifies P29 disclosure and declaration.",
+        "risk": "Nooga's Risk Register automatically links to material controls for full traceability.",
+        "control": "Nooga's Control Framework supports P29, SOX, and ISO standards in one platform.",
+        "assurance": "Nooga's Testing Engine schedules, tracks, and reports control effectiveness testing.",
+        "technology": "Nooga's Dashboards provide board-level visibility into material control health."
+      },
+      "ctaButton": {
+        "text": "Book Nooga Demo",
+        "url": "https://nooga.io/contact"
+      },
+      "contactPerson": {
+        "name": "Emelie Alftrén Hasslerud",
+        "title": "Customer Success Manager",
+        "email": "emelie@nooga.io",
+        "photo": "/vendors/emelie.jpg"
+      }
+    },
+    "impero": {
+      "id": "impero",
+      "name": "Impero",
+      "logo": "/vendors/impero-logo.svg",
+      "primaryColor": "234 27% 14%",
+      "secondaryColor": "222 29% 16%",
+      "tagline": "Powered by Impero Risk Intelligence",
+      "intro": "This P29 Readiness Assessment is delivered in partnership with Impero, the enterprise risk intelligence platform.",
+      "recommendations": {
+        "governance": "Impero's Board Insights module provides AI-powered material control summaries.",
+        "risk": "Impero's Risk Intelligence engine maps material controls to principal risks dynamically.",
+        "control": "Impero's Control Catalogue includes industry-specific material control templates.",
+        "assurance": "Impero's Assurance Workflow coordinates testing schedules across all three lines.",
+        "technology": "Impero's Platform integrates with your existing systems for seamless P29 reporting."
+      },
+      "ctaButton": {
+        "text": "Discover Impero",
+        "url": "https://impero.com/contact"
+      },
+      "contactPerson": {
+        "name": "Jacob Engedal Sørensen",
+        "title": "VP Sales & Partnerships",
+        "email": "jacob@impero.com",
+        "photo": "/vendors/jacob.jpg"
+      }
+    }
+  }
+}
