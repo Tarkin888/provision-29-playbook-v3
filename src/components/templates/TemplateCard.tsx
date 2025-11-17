@@ -1,8 +1,7 @@
 import { Template } from "@/types/data";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Download, FileText } from "lucide-react";
+import { FileText } from "lucide-react";
 
 interface TemplateCardProps {
   template: Template;
@@ -20,12 +19,6 @@ const ROLE_ICONS: Record<string, string> = {
 };
 
 const TemplateCard = ({ template, onViewDetails, phaseColor }: TemplateCardProps) => {
-  const handleDownload = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    // In a real app, this would trigger actual download
-    console.log("Download template:", template.downloadUrl);
-  };
-
   return (
     <Card 
       className="group cursor-pointer transition-all duration-300 hover:shadow-lg hover:scale-[1.03] h-full flex flex-col"
@@ -90,17 +83,6 @@ const TemplateCard = ({ template, onViewDetails, phaseColor }: TemplateCardProps
           </div>
         </div>
       </CardContent>
-
-      <CardFooter className="pt-4 border-t">
-        <Button
-          onClick={handleDownload}
-          className="w-full gap-2"
-          size="sm"
-        >
-          <Download className="h-4 w-4" />
-          Download Template
-        </Button>
-      </CardFooter>
     </Card>
   );
 };

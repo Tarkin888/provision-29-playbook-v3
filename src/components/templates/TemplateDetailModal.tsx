@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Download, CheckCircle2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 
 interface TemplateDetailModalProps {
   template: Template | null;
@@ -37,8 +37,12 @@ const TemplateDetailModal = ({
 }: TemplateDetailModalProps) => {
   if (!template) return null;
 
-  const handleDownload = () => {
-    console.log("Download template:", template.downloadUrl);
+  const handleRequestTemplate = () => {
+    const subject = encodeURIComponent(`P29 Template Request: ${template.name}`);
+    const body = encodeURIComponent(
+      `I'm interested in the ${template.name} template for Provision 29 implementation.\n\nMy details:\nCompany: \nRole: \nImplementation Phase: \n\nPlease send me this template or schedule a call to discuss.`
+    );
+    window.location.href = `mailto:zia@example.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -100,15 +104,22 @@ const TemplateDetailModal = ({
             </div>
           </div>
 
-          {/* Download Section */}
-          <div className="border-t pt-6">
+          {/* Action Buttons */}
+          <div className="border-t pt-6 space-y-3">
             <Button
-              onClick={handleDownload}
+              onClick={handleRequestTemplate}
               size="lg"
               className="w-full gap-2"
             >
-              <Download className="h-5 w-5" />
-              Download Template ({template.format})
+              Request This Template
+            </Button>
+            <Button
+              onClick={onClose}
+              size="lg"
+              variant="outline"
+              className="w-full"
+            >
+              View All Templates
             </Button>
           </div>
 
