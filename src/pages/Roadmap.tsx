@@ -4,7 +4,11 @@ import TimelineVisualization from "@/components/roadmap/TimelineVisualization";
 import PhaseCard from "@/components/roadmap/PhaseCard";
 import PhaseDetailModal from "@/components/roadmap/PhaseDetailModal";
 import UpcomingMilestones from "@/components/roadmap/UpcomingMilestones";
+import Breadcrumbs from "@/components/navigation/Breadcrumbs";
+import QuickLinks from "@/components/common/QuickLinks";
+import ContentRecommendations from "@/components/recommendations/ContentRecommendations";
 import { Phase } from "@/types/data";
+import { Calendar, FileText, Target } from "lucide-react";
 
 const Roadmap = () => {
   const [selectedPhase, setSelectedPhase] = useState<Phase | null>(null);
@@ -18,8 +22,63 @@ const Roadmap = () => {
   const currentQuarter = Math.ceil(currentWeek / 13);
   const currentYear = 2025;
 
+  // Quick links for roadmap
+  const quickLinks = [
+    {
+      label: 'View Templates',
+      icon: <FileText className="h-4 w-4" />,
+      href: '/templates',
+    },
+    {
+      label: 'Jump to Current Week',
+      icon: <Calendar className="h-4 w-4" />,
+      onClick: () => {
+        // Scroll to timeline or current week marker
+        window.scrollTo({ top: 300, behavior: 'smooth' });
+      },
+    },
+    {
+      label: 'Start Assessment',
+      icon: <Target className="h-4 w-4" />,
+      href: '/assessment',
+      variant: 'default' as const,
+    },
+  ];
+
+  // Related content recommendations
+  const recommendations = [
+    {
+      id: '1',
+      title: 'Template Library',
+      description: 'Access ready-to-use templates for each phase of your implementation',
+      category: 'Templates',
+      url: '/templates',
+      icon: '📄',
+    },
+    {
+      id: '2',
+      title: 'Role Guides',
+      description: 'Understand responsibilities for boards, CFOs, risk owners, and audit teams',
+      category: 'Roles',
+      url: '/roles',
+      icon: '👥',
+    },
+    {
+      id: '3',
+      title: 'Resources Hub',
+      description: 'Articles, case studies, and best practices from FTSE implementations',
+      category: 'Resources',
+      url: '/resources',
+      icon: '📚',
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
+      {/* Breadcrumbs */}
+      <div className="container mx-auto px-4 pt-20 md:pt-24 pb-4">
+        <Breadcrumbs items={[{ label: 'Implementation Roadmap' }]} />
+      </div>
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-primary/5 to-background py-12 md:py-16 px-4">
         <div className="container mx-auto max-w-6xl">
@@ -67,6 +126,20 @@ const Roadmap = () => {
           <h2 className="text-2xl sm:text-3xl font-bold mb-2">Upcoming Milestones</h2>
           <p className="text-sm sm:text-base text-muted-foreground mb-6 md:mb-8">Next 8 weeks</p>
           <UpcomingMilestones milestones={upcomingMilestones} />
+        </div>
+      </section>
+
+      {/* Quick Links */}
+      <section className="py-8 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-6xl">
+          <QuickLinks links={quickLinks} title="Quick Actions" />
+        </div>
+      </section>
+
+      {/* Content Recommendations */}
+      <section className="py-8 md:py-12 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <ContentRecommendations items={recommendations} title="Explore Related Content" />
         </div>
       </section>
 

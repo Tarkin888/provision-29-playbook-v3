@@ -5,6 +5,7 @@ import { Menu, X, FileCheck } from 'lucide-react';
 import { MobileMenu } from './MobileMenu';
 import VendorLogo from './vendor/VendorLogo';
 import VendorTagline from './vendor/VendorTagline';
+import SearchBar from './search/SearchBar';
 
 export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -46,8 +47,9 @@ export const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button - Desktop */}
-          <div className="hidden md:block">
+          {/* Desktop: Search & CTA */}
+          <div className="hidden md:flex items-center gap-3">
+            <SearchBar />
             <Button asChild className="bg-primary hover:bg-primary/90">
               <NavLink to="/assessment" className="flex items-center gap-2">
                 <FileCheck className="w-4 h-4" />
@@ -56,18 +58,21 @@ export const Header = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 hover:bg-accent rounded-md transition-colors"
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
-          </button>
+          {/* Mobile: Search & Menu */}
+          <div className="flex md:hidden items-center gap-2">
+            <SearchBar mobile />
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2 hover:bg-accent rounded-md transition-colors min-h-[44px] min-w-[44px]"
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
+          </div>
         </div>
       </header>
 
