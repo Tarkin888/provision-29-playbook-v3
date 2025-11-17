@@ -45,9 +45,13 @@ export interface Milestone {
   description: string;
   critical: boolean;
   decisionRequired: boolean;
+  decisionGate?: string;
   owner: string;
   deliverables: string[];
   successCriteria: string[];
+  goCriteria?: string[];
+  noGoCriteria?: string[];
+  declarationOptions?: string[];
 }
 
 export interface DecisionGate {
