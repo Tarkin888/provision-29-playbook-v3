@@ -1,0 +1,271 @@
+{
+  "templates": [
+    {
+      "id": "materiality-criteria",
+      "name": "Materiality Criteria Matrix",
+      "phase": 1,
+      "type": "Assessment",
+      "format": "Excel",
+      "roles": ["Board", "CFO", "CRO"],
+      "description": "Quantitative + qualitative thresholds for defining material controls. Includes financial impact thresholds, risk scoring criteria, and stakeholder significance assessment.",
+      "keyFeatures": [
+        "Quantitative thresholds (£X million, % of profit)",
+        "Qualitative factors (strategic, reputational, regulatory)",
+        "Decision tree for edge cases",
+        "Board approval section"
+      ],
+      "downloadUrl": "/templates/materiality-criteria-matrix.xlsx",
+      "previewUrl": "/previews/materiality-criteria-preview.png"
+    },
+    {
+      "id": "mci",
+      "name": "Material Control Inventory (MCI)",
+      "phase": 1,
+      "type": "Assessment",
+      "format": "Excel",
+      "roles": ["CRO", "Programme Manager"],
+      "description": "Structured list of 25-100 material controls with risk linkages, ownership, and preliminary documentation.",
+      "keyFeatures": [
+        "Control ID, description, objective",
+        "Risk category and principal risk linkage",
+        "Control owner and frequency",
+        "Effectiveness criteria placeholder",
+        "COSO/ISO mapping column"
+      ],
+      "downloadUrl": "/templates/material-control-inventory.xlsx",
+      "previewUrl": "/previews/mci-preview.png"
+    },
+    {
+      "id": "board-workshop-agenda",
+      "name": "Board Workshop Agenda",
+      "phase": 1,
+      "type": "Workshop",
+      "format": "PowerPoint",
+      "roles": ["Board", "CFO", "CRO"],
+      "description": "2-hour board session to secure mandate for P29 implementation. Includes FRC requirements overview, materiality criteria discussion, Q&A framework.",
+      "keyFeatures": [
+        "Regulatory context slides",
+        "Board accountability vs delegation",
+        "Materiality criteria discussion framework",
+        "Resource requirements overview",
+        "Approval resolution slide"
+      ],
+      "downloadUrl": "/templates/board-workshop-agenda.pptx",
+      "previewUrl": "/previews/board-workshop-preview.png"
+    },
+    {
+      "id": "control-documentation",
+      "name": "Control Documentation Template",
+      "phase": 2,
+      "type": "Documentation",
+      "format": "Word",
+      "roles": ["Control Owner", "CRO"],
+      "description": "Standardised format for documenting each material control. Sections: control objective, design, frequency, evidence, owner, testing approach.",
+      "keyFeatures": [
+        "Control objective statement",
+        "Detailed control design (what, how, when, by whom)",
+        "Frequency and timing",
+        "Evidence requirements",
+        "Effectiveness criteria",
+        "COSO/ISO framework mapping"
+      ],
+      "downloadUrl": "/templates/control-documentation-template.docx",
+      "previewUrl": "/previews/control-doc-preview.png"
+    },
+    {
+      "id": "raci-matrix",
+      "name": "RACI Matrix (Three Lines of Defence)",
+      "phase": 2,
+      "type": "RACI",
+      "format": "Excel",
+      "roles": ["CRO", "Internal Audit"],
+      "description": "Responsibility mapping for control execution, testing, assurance, and reporting across 1st, 2nd, and 3rd lines of defence.",
+      "keyFeatures": [
+        "Activities: Control design, execution, self-assessment, independent testing, framework assurance, board reporting, remediation, escalation",
+        "Roles: 1st Line (Control Owner), 2nd Line (Risk/Compliance), 3rd Line (Internal Audit), CFO, CRO, Board",
+        "RACI designation (Responsible, Accountable, Consulted, Informed)"
+      ],
+      "downloadUrl": "/templates/raci-matrix-3lod.xlsx",
+      "previewUrl": "/previews/raci-preview.png"
+    },
+    {
+      "id": "effectiveness-criteria",
+      "name": "Effectiveness Criteria Definition Guide",
+      "phase": 2,
+      "type": "Documentation",
+      "format": "PDF",
+      "roles": ["Control Owner", "CRO"],
+      "description": "How to define measurable effectiveness criteria for each control. Includes worked examples like '100% reconciliations within 5 days', 'Zero unauthorised access incidents'.",
+      "keyFeatures": [
+        "Framework for defining measurable outcomes",
+        "Quantified threshold examples by control type",
+        "Pass/fail criteria guidance",
+        "KPI dashboard integration"
+      ],
+      "downloadUrl": "/templates/effectiveness-criteria-guide.pdf",
+      "previewUrl": "/previews/effectiveness-criteria-preview.png"
+    },
+    {
+      "id": "board-dashboard",
+      "name": "Board Dashboard ('Approach on a Page')",
+      "phase": 3,
+      "type": "Dashboard",
+      "format": "PowerPoint",
+      "roles": ["Board", "CFO", "CRO"],
+      "description": "Quarterly board reporting template with RAG status. Sections: Material risks heatmap, control effectiveness summary, issues/remediations, assurance map.",
+      "keyFeatures": [
+        "Material Risks Summary (heatmap with RAG and trends)",
+        "Control Effectiveness (% effective, % requiring remediation)",
+        "Assurance Coverage Heatmap (1st, 2nd, 3rd line)",
+        "Top 5 Issues & Actions (owner, due date, status)",
+        "Emerging Risks section"
+      ],
+      "downloadUrl": "/templates/board-dashboard-template.pptx",
+      "previewUrl": "/previews/board-dashboard-preview.png"
+    },
+    {
+      "id": "assurance-mapping",
+      "name": "Assurance Mapping Template",
+      "phase": 3,
+      "type": "Assessment",
+      "format": "Excel",
+      "roles": ["CRO", "Internal Audit"],
+      "description": "Map assurance sources (1st, 2nd, 3rd line) to each material control. Identifies assurance gaps and documents coverage.",
+      "keyFeatures": [
+        "Control ID and title",
+        "1st Line Assurance (frequency, date, sign-off)",
+        "2nd Line Assurance (frequency, date, result, tester)",
+        "3rd Line Assurance (Internal Audit year, date, rating)",
+        "Overall Assurance Rating (High/Medium/Low)",
+        "Gaps & Actions column"
+      ],
+      "downloadUrl": "/templates/assurance-mapping-template.xlsx",
+      "previewUrl": "/previews/assurance-mapping-preview.png"
+    },
+    {
+      "id": "testing-protocols",
+      "name": "Testing Protocol Library",
+      "phase": 3,
+      "type": "Documentation",
+      "format": "Word",
+      "roles": ["Internal Audit", "Control Owner"],
+      "description": "Sample testing procedures for common control types: access controls, reconciliations, policy compliance, segregation of duties.",
+      "keyFeatures": [
+        "Testing methods (sample-based, continuous monitoring, attestation)",
+        "Sample size determination (statistical approaches)",
+        "Pass/fail criteria by control type",
+        "Evidence documentation requirements",
+        "Issue escalation process"
+      ],
+      "downloadUrl": "/templates/testing-protocol-library.docx",
+      "previewUrl": "/previews/testing-protocols-preview.png"
+    },
+    {
+      "id": "dry-run-plan",
+      "name": "Dry Run Project Plan",
+      "phase": 3,
+      "type": "Project Plan",
+      "format": "Excel",
+      "roles": ["Programme Manager", "CRO"],
+      "description": "6-8 week project plan for H2 2025 dress rehearsal. Includes testing schedule, evidence collection, board reporting simulation.",
+      "keyFeatures": [
+        "Week-by-week activity schedule",
+        "Control testing assignments",
+        "Evidence collection milestones",
+        "Board dashboard generation",
+        "Lessons learned capture process"
+      ],
+      "downloadUrl": "/templates/dry-run-project-plan.xlsx",
+      "previewUrl": "/previews/dry-run-preview.png"
+    },
+    {
+      "id": "evidence-repository",
+      "name": "Evidence Repository Structure",
+      "phase": 4,
+      "type": "Documentation",
+      "format": "PDF Guide",
+      "roles": ["Control Owner", "Internal Audit"],
+      "description": "How to organise control testing evidence for audit readiness. Folder structure, naming conventions, retention requirements.",
+      "keyFeatures": [
+        "Folder structure by control ID and period",
+        "File naming conventions",
+        "Evidence types by control category",
+        "Retention requirements (typically 7 years)",
+        "Access controls and audit trail"
+      ],
+      "downloadUrl": "/templates/evidence-repository-guide.pdf",
+      "previewUrl": "/previews/evidence-repository-preview.png"
+    },
+    {
+      "id": "board-declaration",
+      "name": "Board Declaration Template",
+      "phase": 4,
+      "type": "Board Paper",
+      "format": "Word",
+      "roles": ["Board", "CFO"],
+      "description": "Draft wording for annual report declaration of effectiveness. Includes variations: full effectiveness, effectiveness with exceptions, ineffectiveness with remediation.",
+      "keyFeatures": [
+        "Paragraph 1: Monitoring and review process description",
+        "Paragraph 2: Explicit effectiveness declaration",
+        "Paragraph 3: Ineffective controls and remediation (if applicable)",
+        "Paragraph 4: Prior year comparison",
+        "FRC-compliant language"
+      ],
+      "downloadUrl": "/templates/board-declaration-template.docx",
+      "previewUrl": "/previews/board-declaration-preview.png"
+    },
+    {
+      "id": "resource-planning",
+      "name": "Resource Planning Matrix",
+      "phase": 1,
+      "type": "Planning",
+      "format": "Excel",
+      "roles": ["CFO", "Programme Manager"],
+      "description": "Budget and headcount planning tool for 24-month implementation. Includes FTE by role, external consultant costs, GRC platform investment.",
+      "keyFeatures": [
+        "FTE requirements by phase and role",
+        "Budget breakdown (internal FTE costs, external support, GRC platform)",
+        "Cumulative spend tracking",
+        "Resource utilisation forecast",
+        "Peak activity period identification"
+      ],
+      "downloadUrl": "/templates/resource-planning-matrix.xlsx",
+      "previewUrl": "/previews/resource-planning-preview.png"
+    },
+    {
+      "id": "stakeholder-comms",
+      "name": "Stakeholder Communication Plan",
+      "phase": 1,
+      "type": "Planning",
+      "format": "PowerPoint",
+      "roles": ["Programme Manager"],
+      "description": "Who to inform, when, and how throughout implementation. Audiences: Board, Audit Committee, Steering Committee, Control Owners, All Staff.",
+      "keyFeatures": [
+        "Stakeholder mapping (power/interest matrix)",
+        "Communication schedule by audience",
+        "Message content by milestone",
+        "Channels (board meetings, town halls, email, intranet)",
+        "Feedback mechanisms"
+      ],
+      "downloadUrl": "/templates/stakeholder-communication-plan.pptx",
+      "previewUrl": "/previews/stakeholder-comms-preview.png"
+    },
+    {
+      "id": "readiness-assessment",
+      "name": "Readiness Self-Assessment Checklist",
+      "phase": 1,
+      "type": "Checklist",
+      "format": "PDF",
+      "roles": ["CFO", "CRO", "Board"],
+      "description": "30-question diagnostic to assess organisation's P29 readiness. Covers governance, risk management, control environment, assurance, and technology.",
+      "keyFeatures": [
+        "5 domains: Governance, Risk Framework, Control Environment, Assurance Capability, Technology",
+        "Scoring: Red/Amber/Green by domain",
+        "Gap analysis and priority actions",
+        "Benchmark against FTSE peer practices"
+      ],
+      "downloadUrl": "/templates/readiness-self-assessment.pdf",
+      "previewUrl": "/previews/readiness-assessment-preview.png"
+    }
+  ]
+}

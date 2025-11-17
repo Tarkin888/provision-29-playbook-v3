@@ -1,0 +1,647 @@
+{
+  "phases": [
+    {
+      "id": 1,
+      "name": "Definition & Scoping",
+      "shortName": "Definition",
+      "color": "#1e3a8a",
+      "duration": "8-12 weeks",
+      "timing": "Q1 2025 (January - March)",
+      "startWeek": 1,
+      "endWeek": 12,
+      "objective": "Establish the foundational elements of the Provision 29 framework by defining materiality criteria, identifying material controls through a top-down, risk-based approach, and securing board approval for the scope and governance structure.",
+      "keyActivities": [
+        {
+          "id": "1.1",
+          "name": "Establish Steering Committee",
+          "description": "Secure executive sponsorship and assemble cross-functional team",
+          "subTasks": [
+            "Secure executive sponsorship (CEO/CFO)",
+            "Appoint project lead (typically CRO or Head of Risk)",
+            "Assemble cross-functional team (Finance, Risk, Compliance, Internal Audit, IT, Operations, Legal, ESG)",
+            "Define governance structure, meeting cadence, and escalation protocols"
+          ]
+        },
+        {
+          "id": "1.2",
+          "name": "Define Materiality Criteria",
+          "description": "Develop quantitative and qualitative thresholds for material controls",
+          "subTasks": [
+            "Develop quantitative thresholds (financial impact, revenue impact, regulatory penalty exposure)",
+            "Establish qualitative criteria (strategic importance, reputational risk, stakeholder significance)",
+            "Create materiality decision tree for consistent application",
+            "Obtain board approval of criteria"
+          ]
+        },
+        {
+          "id": "1.3",
+          "name": "Map Principal Risks to Existing Controls",
+          "description": "Top-down approach starting from board-approved principal risks",
+          "subTasks": [
+            "Review board-approved principal risk register",
+            "Identify existing controls that mitigate each principal risk",
+            "Assess control coverage and identify gaps",
+            "Avoid bottom-up process inventories that lead to control proliferation"
+          ]
+        },
+        {
+          "id": "1.4",
+          "name": "Create Material Control Inventory (MCI)",
+          "description": "Apply materiality criteria to create comprehensive control list",
+          "subTasks": [
+            "Apply materiality criteria to identified controls",
+            "Document each material control (owner, description, frequency, type)",
+            "Target range: 25-100 controls (typical: 40-50)",
+            "Categorise by domain (financial, operational, compliance, reporting)"
+          ]
+        },
+        {
+          "id": "1.5",
+          "name": "Conduct Gap Assessment",
+          "description": "Identify control coverage gaps and prioritise remediation",
+          "subTasks": [
+            "Identify principal risks with insufficient control coverage",
+            "Assess maturity of controls in less-developed areas (operational, ESG)",
+            "Prioritise gaps based on risk severity and likelihood",
+            "Develop high-level remediation roadmap"
+          ]
+        },
+        {
+          "id": "1.6",
+          "name": "Develop Resource and Budget Plan",
+          "description": "Estimate FTE requirements and secure funding",
+          "subTasks": [
+            "Estimate FTE requirements for Phases 2-4",
+            "Assess need for external support (consultants, co-sourcing)",
+            "Develop business case for GRC technology platform",
+            "Secure budget approval"
+          ]
+        }
+      ],
+      "deliverables": [
+        {
+          "name": "Material Control Inventory (MCI)",
+          "description": "Comprehensive list of 25-100 material controls with preliminary documentation",
+          "templateId": "mci"
+        },
+        {
+          "name": "Materiality Definition Document",
+          "description": "Board-approved criteria and decision tree",
+          "templateId": "materiality-criteria"
+        },
+        {
+          "name": "Gap Assessment Report",
+          "description": "Identification of control coverage gaps and remediation priorities",
+          "templateId": "gap-assessment"
+        },
+        {
+          "name": "Steering Committee Charter",
+          "description": "Governance structure, roles, and responsibilities",
+          "templateId": "steering-committee-charter"
+        },
+        {
+          "name": "Resource and Budget Plan",
+          "description": "Approved funding and capacity allocation for Phases 2-4",
+          "templateId": "resource-planning"
+        }
+      ],
+      "milestones": [
+        { "week": 2, "name": "Steering Committee Established", "critical": false },
+        { "week": 4, "name": "Materiality Criteria Drafted", "critical": false },
+        { "week": 8, "name": "Material Control Inventory Completed", "critical": true },
+        { "week": 10, "name": "Gap Assessment Finalised", "critical": false },
+        { "week": 12, "name": "BOARD APPROVAL OF MCI", "critical": true, "decisionGate": true }
+      ],
+      "successMetrics": [
+        "Board approval of materiality criteria obtained",
+        "Material Control Inventory contains 25-100 controls (avoiding over-scoping)",
+        "All principal risks mapped to at least one material control",
+        "Steering committee established with executive sponsorship",
+        "Budget and resources secured for subsequent phases",
+        "GRC platform vendor selection process initiated"
+      ],
+      "decisionGate": {
+        "name": "Gate 1: Board Approval of MCI",
+        "criteria": {
+          "proceed": [
+            "All checklist items are complete",
+            "The board has formally approved the Material Control Inventory and materiality criteria",
+            "Budget and resources for Phase 2 are secured",
+            "Executive sponsorship is confirmed and active"
+          ],
+          "doNotProceed": [
+            "The MCI contains >100 controls (indicates insufficient materiality filtering; risk of unmanageable scope)",
+            "The board has not engaged with or approved the framework",
+            "Budget or resources are not secured (project will stall in Phase 2)"
+          ]
+        }
+      },
+      "resourceRequirements": {
+        "fte": "2-3 dedicated project team members",
+        "budget": "£50,000-£100,000",
+        "externalSupport": "Optional: External consulting for framework design; GRC vendor evaluation support"
+      },
+      "commonPitfalls": [
+        {
+          "pitfall": "Bottom-up control inventory approach",
+          "impact": "Results in 150+ controls; unmanageable scope",
+          "solution": "Start top-down from principal risks; apply strict materiality criteria"
+        },
+        {
+          "pitfall": "Delayed board engagement",
+          "impact": "Lack of organisational prioritisation and resource allocation",
+          "solution": "Schedule board workshop in Week 1-2; secure executive sponsor immediately"
+        },
+        {
+          "pitfall": "Insufficient materiality criteria",
+          "impact": "Ambiguous control selection; scope creep",
+          "solution": "Combine quantitative thresholds with qualitative factors; document decision tree"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Design & Documentation",
+      "shortName": "Design",
+      "color": "#06A77D",
+      "duration": "12-16 weeks",
+      "timing": "Q2-Q3 2025 (April - August)",
+      "startWeek": 13,
+      "endWeek": 32,
+      "objective": "Formalise control definitions, remediate design gaps, define effectiveness criteria, and establish testing protocols for all material controls.",
+      "keyActivities": [
+        {
+          "id": "2.1",
+          "name": "Formalise Control Definitions",
+          "description": "Document who, what, how often for each material control",
+          "subTasks": [
+            "Create standardised control documentation template",
+            "Document control objective, design, frequency, and evidence for each control",
+            "Assign named control owners (individuals, not departments)",
+            "Store definitions in centralised repository"
+          ]
+        },
+        {
+          "id": "2.2",
+          "name": "Map Controls to Framework",
+          "description": "Align material controls to COSO 2013 or ISO 31000",
+          "subTasks": [
+            "Map each control to relevant COSO component or ISO 31000 process",
+            "Document framework alignment for audit trail",
+            "Identify any framework coverage gaps",
+            "Create control-to-framework mapping matrix"
+          ]
+        },
+        {
+          "id": "2.3",
+          "name": "Define Effectiveness Criteria",
+          "description": "Establish measurable outcomes for each control",
+          "subTasks": [
+            "Define quantified effectiveness criteria (e.g., '100% of reconciliations within 5 days')",
+            "Establish pass/fail thresholds",
+            "Document KPIs for continuous monitoring",
+            "Obtain control owner agreement on criteria"
+          ]
+        },
+        {
+          "id": "2.4",
+          "name": "Implement Remediation Plans",
+          "description": "Address gaps identified in Phase 1",
+          "subTasks": [
+            "Execute high-priority remediation actions",
+            "Track remediation progress against milestones",
+            "Validate remediated controls through design testing",
+            "Update MCI with remediated controls"
+          ]
+        },
+        {
+          "id": "2.5",
+          "name": "Define Testing Protocols",
+          "description": "Establish testing methodologies by control type",
+          "subTasks": [
+            "Document testing methods (sample-based, continuous monitoring, attestation)",
+            "Define sample sizes and statistical approaches",
+            "Establish evidence requirements",
+            "Create testing calendar and frequency plan"
+          ]
+        },
+        {
+          "id": "2.6",
+          "name": "Confirm Control Ownership",
+          "description": "Secure formal acceptance of control ownership",
+          "subTasks": [
+            "Conduct control owner workshops (1st line of defence)",
+            "Obtain signed acknowledgement of ownership",
+            "Document ownership in control library",
+            "Clarify escalation paths and accountabilities"
+          ]
+        }
+      ],
+      "deliverables": [
+        {
+          "name": "Updated Risk & Control Framework",
+          "description": "Fully documented material controls with ownership and definitions",
+          "templateId": "control-documentation"
+        },
+        {
+          "name": "Control Effectiveness Criteria Document",
+          "description": "Measurable outcomes and KPIs for each material control",
+          "templateId": "effectiveness-criteria"
+        },
+        {
+          "name": "Testing Protocol Manual",
+          "description": "Standardised testing methodologies by control type",
+          "templateId": "testing-protocols"
+        },
+        {
+          "name": "Remediation Log",
+          "description": "Tracking of gap closure and action completion",
+          "templateId": "remediation-log"
+        },
+        {
+          "name": "COSO/ISO Mapping Matrix",
+          "description": "Alignment of controls to framework components",
+          "templateId": "framework-mapping"
+        }
+      ],
+      "milestones": [
+        { "week": 16, "name": "Control Definitions Formalised", "critical": true },
+        { "week": 20, "name": "Effectiveness Criteria Defined", "critical": true },
+        { "week": 24, "name": "Framework Mapping Complete", "critical": false },
+        { "week": 28, "name": "Testing Protocols Approved", "critical": true },
+        { "week": 32, "name": "CONTROL OWNERSHIP CONFIRMED", "critical": true, "decisionGate": true }
+      ],
+      "successMetrics": [
+        "All material controls have documented ownership, frequency, and effectiveness criteria",
+        "100% of controls mapped to COSO/ISO 31000 framework",
+        "Control design gaps remediated or on remediation track",
+        "Testing protocols defined and approved by 2nd line",
+        "First-line control owners formally accepted ownership"
+      ],
+      "decisionGate": {
+        "name": "Gate 2: Control Framework Complete",
+        "criteria": {
+          "proceed": [
+            "All checklist items are complete",
+            "Control framework is fully documented with clear ownership and effectiveness criteria",
+            "GRC platform implementation is on track (even if not fully complete, must be progressing)",
+            "First-line control owners are trained and aware of their responsibilities"
+          ],
+          "doNotProceed": [
+            "Control definitions are incomplete or unclear (will undermine testing in Phase 3)",
+            "Control ownership is not formally accepted (creates accountability gaps)",
+            "GRC platform implementation is significantly delayed (risk of manual processes in Phase 4)"
+          ]
+        }
+      },
+      "resourceRequirements": {
+        "fte": "3-5 FTE (project team + business unit participation)",
+        "budget": "£150,000-£300,000",
+        "externalSupport": "Optional: Control documentation support; GRC platform implementation partner"
+      },
+      "commonPitfalls": [
+        {
+          "pitfall": "Vague effectiveness criteria",
+          "impact": "Subjective testing; inability to declare effectiveness",
+          "solution": "Use quantified, measurable criteria with clear thresholds"
+        },
+        {
+          "pitfall": "Departmental (not individual) control ownership",
+          "impact": "Accountability gaps; controls fall through cracks",
+          "solution": "Assign named individuals as control owners; document in control library"
+        },
+        {
+          "pitfall": "Insufficient 1st line engagement",
+          "impact": "Control owners don't understand their role; poor execution in Phase 4",
+          "solution": "Run interactive workshops; secure written ownership acknowledgement"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Assurance Preparation",
+      "shortName": "Assurance",
+      "color": "#F18F01",
+      "duration": "16-20 weeks",
+      "timing": "Q3-Q4 2025 (July - December)",
+      "startWeek": 27,
+      "endWeek": 52,
+      "objective": "Build assurance infrastructure for FY2026 evidence collection, conduct dry run effectiveness assessment, and prepare board reporting mechanisms.",
+      "keyActivities": [
+        {
+          "id": "3.1",
+          "name": "Establish Three Lines of Defence RACI",
+          "description": "Clarify roles and responsibilities across 3LoD",
+          "subTasks": [
+            "Create RACI matrix for control design, execution, testing, reporting",
+            "Define 1st line (control execution), 2nd line (oversight), 3rd line (assurance) boundaries",
+            "Obtain steering committee approval of RACI",
+            "Communicate roles to all three lines"
+          ]
+        },
+        {
+          "id": "3.2",
+          "name": "Complete Assurance Mapping",
+          "description": "Map assurance sources across 1st, 2nd, 3rd lines",
+          "subTasks": [
+            "Identify assurance sources for each material control",
+            "Document assurance frequency and methodology",
+            "Identify and address assurance gaps",
+            "Create comprehensive assurance map"
+          ]
+        },
+        {
+          "id": "3.3",
+          "name": "Deploy GRC Platform",
+          "description": "Implement technology platform for control management",
+          "subTasks": [
+            "Complete platform configuration and integration",
+            "Migrate control library to GRC platform",
+            "Set up workflows, testing schedules, and dashboards",
+            "Conduct user acceptance testing"
+          ]
+        },
+        {
+          "id": "3.4",
+          "name": "Train First-Line Control Owners",
+          "description": "Build capability in control execution and self-assessment",
+          "subTasks": [
+            "Develop training materials (guides, videos, workshops)",
+            "Deliver training sessions to all control owners",
+            "Test knowledge through simulations",
+            "Track training completion"
+          ]
+        },
+        {
+          "id": "3.5",
+          "name": "Develop Board Dashboard",
+          "description": "Create executive reporting mechanism ('Approach on a Page')",
+          "subTasks": [
+            "Design dashboard with Material Risks, Control Effectiveness, Assurance Coverage",
+            "Test dashboard with sample data",
+            "Obtain Audit Committee feedback",
+            "Finalise dashboard format and refresh cadence"
+          ]
+        },
+        {
+          "id": "3.6",
+          "name": "Conduct Dry Run",
+          "description": "Execute 6-8 week pilot effectiveness assessment",
+          "subTasks": [
+            "Test full control execution and evidence collection cycle",
+            "Conduct sample testing of controls",
+            "Generate draft board dashboard",
+            "Present dry run results to board",
+            "Document lessons learned and implement improvements"
+          ]
+        }
+      ],
+      "deliverables": [
+        {
+          "name": "Assurance Coverage Matrix",
+          "description": "Complete mapping of 1st, 2nd, 3rd line assurance by control",
+          "templateId": "assurance-mapping"
+        },
+        {
+          "name": "RACI Matrix (Three Lines of Defence)",
+          "description": "Role clarity for control framework governance",
+          "templateId": "raci-matrix"
+        },
+        {
+          "name": "Operational GRC Platform",
+          "description": "Fully configured technology platform with control library",
+          "templateId": null
+        },
+        {
+          "name": "Board Dashboard",
+          "description": "Real-time executive reporting on control effectiveness",
+          "templateId": "board-dashboard"
+        },
+        {
+          "name": "Dry Run Report",
+          "description": "Pilot test results, lessons learned, and improvement actions",
+          "templateId": "dry-run-report"
+        },
+        {
+          "name": "FY2026 Testing Calendar",
+          "description": "Scheduled testing plan for full-year evidence collection",
+          "templateId": "testing-calendar"
+        }
+      ],
+      "milestones": [
+        { "week": 30, "name": "Assurance Mapping Complete", "critical": true },
+        { "week": 36, "name": "Board Dashboard Tested", "critical": true },
+        { "week": 40, "name": "First-Line Training Complete", "critical": true },
+        { "week": 44, "name": "Dry Run Commenced", "critical": true },
+        { "week": 48, "name": "GRC Platform Go-Live", "critical": true },
+        { "week": 52, "name": "DRY RUN SUCCESS & BOARD CONFIDENCE", "critical": true, "decisionGate": true }
+      ],
+      "successMetrics": [
+        "Dry run successfully completed with board review",
+        "GRC platform operational and integrated with business systems",
+        "Board dashboard tested and approved",
+        "Assurance mapping complete with no gaps",
+        "Board expresses confidence in readiness for 2026",
+        "Training completion: 100% of control owners"
+      ],
+      "decisionGate": {
+        "name": "Gate 3: Dry Run Success & Board Confidence",
+        "criteria": {
+          "proceed": [
+            "Dry run executed without major failures",
+            "Board dashboard operational and informative",
+            "GRC platform fully deployed and stable",
+            "Lessons learned documented and remediation plan in place",
+            "Board expresses confidence in readiness for FY2026"
+          ],
+          "doNotProceed": [
+            "Dry run revealed fundamental control design flaws",
+            "GRC platform not operational (cannot support FY2026 evidence collection)",
+            "Board lacks confidence; significant concerns raised",
+            "Assurance gaps not addressed"
+          ]
+        }
+      },
+      "resourceRequirements": {
+        "fte": "4-6 FTE (peak activity during dry run)",
+        "budget": "£100,000-£200,000",
+        "externalSupport": "GRC platform implementation partner; training delivery support"
+      },
+      "commonPitfalls": [
+        {
+          "pitfall": "Dry run treated as 'tick-box' exercise",
+          "impact": "Lessons not learned; issues surface in FY2026",
+          "solution": "Conduct genuine stress-test; treat failures as learning opportunities"
+        },
+        {
+          "pitfall": "Board dashboard too detailed or too vague",
+          "impact": "Board disengagement or lack of insight",
+          "solution": "Focus on 'Approach on a Page': RAG status, key issues, trends"
+        },
+        {
+          "pitfall": "GRC platform implementation delayed",
+          "impact": "Manual processes in FY2026; scalability issues",
+          "solution": "Start GRC vendor selection in Phase 1; have platform operational by Week 48"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Effectiveness Testing & Declaration",
+      "shortName": "Declaration",
+      "color": "#10b981",
+      "duration": "52 weeks",
+      "timing": "FY 2026 (Full Financial Year)",
+      "startWeek": 53,
+      "endWeek": 104,
+      "objective": "Collect full-year assurance evidence, conduct structured testing, remediate any ineffective controls, and prepare board declaration for inclusion in 2026 annual report.",
+      "keyActivities": [
+        {
+          "id": "4.1",
+          "name": "Execute Continuous Testing Programme",
+          "description": "Ongoing control execution and evidence collection throughout FY2026",
+          "subTasks": [
+            "1st line: Execute controls per defined frequency",
+            "1st line: Conduct monthly self-assessments",
+            "2nd line: Perform quarterly independent testing",
+            "3rd line: Conduct annual framework assurance (Internal Audit)"
+          ]
+        },
+        {
+          "id": "4.2",
+          "name": "Quarterly Board Reporting",
+          "description": "Regular updates on control effectiveness",
+          "subTasks": [
+            "Generate board dashboard quarterly (Q1, Q2, Q3, Q4 FY2026)",
+            "Present dashboard to Audit Committee, then Board",
+            "Conduct deep-dive sessions on control domains",
+            "Track and report issues and remediations"
+          ]
+        },
+        {
+          "id": "4.3",
+          "name": "Issue Remediation & Tracking",
+          "description": "Address any control deficiencies identified during testing",
+          "subTasks": [
+            "Log all control failures with root cause analysis",
+            "Develop and implement remediation plans",
+            "Track remediation progress",
+            "Re-test remediated controls",
+            "Escalate persistent issues to Audit Committee"
+          ]
+        },
+        {
+          "id": "4.4",
+          "name": "Compile Evidence Dossier",
+          "description": "Assemble comprehensive evidence supporting board declaration",
+          "subTasks": [
+            "Collect testing evidence from 1st, 2nd, 3rd lines",
+            "Organise evidence by control and timeframe",
+            "Document evidence gaps (if any)",
+            "Prepare audit-ready evidence repository"
+          ]
+        },
+        {
+          "id": "4.5",
+          "name": "Prepare Board Declaration",
+          "description": "Draft declaration statement for annual report",
+          "subTasks": [
+            "Draft declaration wording (effectiveness or explanation of ineffectiveness)",
+            "Obtain CFO, CRO, and Audit Committee review",
+            "Present draft to full Board for approval",
+            "Finalise declaration for inclusion in annual report"
+          ]
+        },
+        {
+          "id": "4.6",
+          "name": "Annual Report Disclosure",
+          "description": "Complete public disclosure in compliance with Provision 29",
+          "subTasks": [
+            "Draft monitoring and review process description",
+            "Document any ineffective controls and remediation plans",
+            "Prepare comparison to prior year (if applicable)",
+            "Obtain Board approval of final annual report content"
+          ]
+        }
+      ],
+      "deliverables": [
+        {
+          "name": "Assurance Evidence Dossier",
+          "description": "Complete evidence supporting control effectiveness for FY2026",
+          "templateId": "evidence-dossier"
+        },
+        {
+          "name": "Board Declaration Support Pack",
+          "description": "Executive summary, RAG status, evidence summary for Board approval",
+          "templateId": "declaration-support"
+        },
+        {
+          "name": "Annual Report Disclosure Content",
+          "description": "Final wording for annual report Provision 29 compliance",
+          "templateId": "board-declaration"
+        },
+        {
+          "name": "Year-End Control Effectiveness Report",
+          "description": "Comprehensive assessment of material controls performance",
+          "templateId": "year-end-report"
+        }
+      ],
+      "milestones": [
+        { "week": 66, "name": "Q1 FY2026 Board Dashboard Reviewed", "critical": true },
+        { "week": 79, "name": "Q2 FY2026 Board Dashboard Reviewed", "critical": true },
+        { "week": 92, "name": "Q3 FY2026 Board Dashboard Reviewed", "critical": true },
+        { "week": 98, "name": "Internal Audit Framework Assurance Complete", "critical": true },
+        { "week": 102, "name": "Evidence Dossier Compiled", "critical": true },
+        { "week": 104, "name": "BOARD DECLARATION APPROVED", "critical": true, "decisionGate": true }
+      ],
+      "successMetrics": [
+        "Board able to declare effectiveness (or explain ineffectiveness with remediation plans)",
+        "Full-year evidence collected and organised",
+        "Quarterly board reviews completed",
+        "Any ineffective controls remediated or on remediation track",
+        "Annual report disclosure complies with FRC requirements",
+        "Board confidence in declaration"
+      ],
+      "decisionGate": {
+        "name": "Gate 4: Board Declaration Approved",
+        "criteria": {
+          "proceed": [
+            "Evidence dossier is complete and audit-ready",
+            "All material controls tested throughout FY2026",
+            "Board has reviewed quarterly dashboards and is informed",
+            "Any ineffective controls are documented with remediation plans",
+            "Board approves declaration for annual report"
+          ],
+          "explanation": [
+            "Board declares effectiveness if all controls effective",
+            "Board explains ineffectiveness with remediation if 1+ controls ineffective",
+            "Declaration includes: monitoring process description, explicit effectiveness statement, remediation details (if applicable)"
+          ]
+        }
+      },
+      "resourceRequirements": {
+        "fte": "2-3 FTE (ongoing coordination and reporting)",
+        "budget": "£50,000-£150,000",
+        "externalSupport": "Optional: External assurance provider; annual report drafting support"
+      },
+      "commonPitfalls": [
+        {
+          "pitfall": "Treating testing as 'once and done'",
+          "impact": "Insufficient evidence for board declaration",
+          "solution": "Continuous testing throughout FY2026; quarterly evidence reviews"
+        },
+        {
+          "pitfall": "Hiding ineffective controls from board",
+          "impact": "Board cannot make informed declaration; FRC scrutiny",
+          "solution": "Transparent escalation of issues; robust remediation tracking"
+        },
+        {
+          "pitfall": "Last-minute evidence scramble in Q4",
+          "impact": "Incomplete evidence; board hesitation",
+          "solution": "Monthly evidence collection; quarterly completeness checks"
+        }
+      ]
+    }
+  ]
+}
+

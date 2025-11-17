@@ -1,0 +1,404 @@
+{
+  "articles": [
+    {
+      "id": "art1",
+      "title": "5 Mistakes Companies Make Defining Material Controls",
+      "author": "Zia Rezvi ACMA CGMA",
+      "date": "2025-01-15",
+      "readTime": "8 minutes",
+      "category": "Thought Leadership",
+      "tags": ["Materiality", "Common Pitfalls", "Phase 1"],
+      "excerpt": "Drawing from 16 months of FTSE 100 implementation experience, this article identifies the five most common mistakes companies make when defining material controls—and how to avoid them. From bottom-up control inventories that produce 150+ controls to vague materiality criteria that create scope ambiguity, learn the practical lessons that separate successful implementations from struggling ones.",
+      "keyTakeaways": [
+        "Mistake #1: Starting bottom-up instead of top-down from principal risks",
+        "Mistake #2: Vague materiality criteria that lead to scope creep",
+        "Mistake #3: Confusing 'important' with 'material'",
+        "Mistake #4: Delayed board engagement",
+        "Mistake #5: Copying peer company control lists without applying your own materiality"
+      ],
+      "url": "/articles/5-mistakes-material-controls"
+    },
+    {
+      "id": "art2",
+      "title": "Why the 2025 Dry Run is Non-Negotiable",
+      "author": "Zia Rezvi ACMA CGMA",
+      "date": "2025-02-20",
+      "readTime": "6 minutes",
+      "category": "Best Practice",
+      "tags": ["Dry Run", "Phase 3", "Board Confidence"],
+      "excerpt": "Companies that skip or skimp on the H2 2025 dry run consistently struggle in FY2026. This article makes the case for why a genuine 6-8 week stress-test is not optional, drawing on real examples of dry runs that uncovered critical issues before they became board-level problems. Learn what a good dry run looks like and how to sell it to your CFO.",
+      "keyTakeaways": [
+        "Dry runs typically uncover 10-15 issues that would have surfaced in FY2026",
+        "Board confidence is built through seeing the process work, not through presentations",
+        "GRC platform validation is critical—dry run is the first real-world test",
+        "Companies that conduct dry runs are 3x more likely to declare effectiveness confidently",
+        "Cost of dry run (£20k-£50k) is negligible compared to risk of FY2026 failure"
+      ],
+      "url": "/articles/why-dry-run-non-negotiable"
+    },
+    {
+      "id": "art3",
+      "title": "Board Communication Strategies for Provision 29",
+      "author": "Zia Rezvi ACMA CGMA",
+      "date": "2025-03-10",
+      "readTime": "10 minutes",
+      "category": "Board Engagement",
+      "tags": ["Board", "Communication", "Stakeholder Management"],
+      "excerpt": "How do you engage a busy board on a complex technical topic like Provision 29? This article provides a complete toolkit for board communication, from the initial Q1 2025 workshop to quarterly dashboard reviews. Includes sample board packs, effective questions directors should be asking, and red flags that indicate board disengagement.",
+      "keyTakeaways": [
+        "Start with a 2-hour board workshop in Q1 2025—make it interactive, not a lecture",
+        "Use 'Approach on a Page' dashboards—boards don't want 50-slide decks",
+        "Focus on 'so what?'—what does this mean for strategy and stakeholders?",
+        "Encourage challenge—good boards ask tough questions",
+        "Make it a standing full board agenda item, not just Audit Committee"
+      ],
+      "url": "/articles/board-communication-strategies"
+    },
+    {
+      "id": "art4",
+      "title": "Integrating Provision 29 with SOX 404: A Dual-Listed Company's Guide",
+      "author": "Zia Rezvi ACMA CGMA",
+      "date": "2025-04-05",
+      "readTime": "12 minutes",
+      "category": "Frameworks",
+      "tags": ["SOX 404", "Dual-Listed", "Integration"],
+      "excerpt": "If you're dual-listed (US and UK), you're sitting on a goldmine: your existing SOX 404 framework. This article shows how to leverage SOX for P29 efficiency, where to expand scope, and how to create a unified control library. Includes a gap analysis template and case study from a FTSE 100/S&P 500 company that reduced P29 implementation effort by 40%.",
+      "keyTakeaways": [
+        "Financial reporting controls: ~80-90% SOX/P29 overlap",
+        "Expand P29 scope to operational, cyber, ESG controls not in SOX",
+        "Create unified control library with SOX/P29 tags",
+        "Use SOX testing results as P29 evidence where applicable",
+        "Enhance SOX dashboards for full board (P29 requires board visibility)"
+      ],
+      "url": "/articles/integrating-p29-sox-404"
+    },
+    {
+      "id": "art5",
+      "title": "Provision 29 and ESG: The Emerging Control Domain",
+      "author": "Zia Rezvi ACMA CGMA",
+      "date": "2025-05-15",
+      "readTime": "9 minutes",
+      "category": "Emerging Risks",
+      "tags": ["ESG", "Sustainability", "Emerging Risks"],
+      "excerpt": "ESG and sustainability reporting controls are rapidly becoming material. With mandatory climate disclosures (TCFD, SDR) and increasing investor scrutiny, boards can no longer ignore ESG data quality. This article explores how to assess ESG controls for P29 materiality, provides examples from early adopters, and looks ahead to 'material controls in waiting' like AI governance.",
+      "keyTakeaways": [
+        "68% of FTSE companies now include ESG controls in their MCI",
+        "Common ESG material controls: Scope 1/2/3 emissions calculation, ESG data aggregation, third-party data validation",
+        "ESG control failures can be material: Greenwashing accusations, regulatory penalties, investor backlash",
+        "Emerging 'material controls in waiting': AI governance, climate scenario analysis",
+        "ESG controls require specialist expertise—don't delegate to Finance alone"
+      ],
+      "url": "/articles/p29-esg-emerging-domain"
+    }
+  ],
+  "caseStudies": [
+    {
+      "id": "case1",
+      "title": "FTSE 100 Retailer: 16-Month Journey to P29 Compliance",
+      "sector": "Retail",
+      "companySize": "FTSE 100",
+      "complexity": "High",
+      "date": "2024-2025",
+      "duration": "16 months",
+      "controlCount": 25,
+      "totalCost": "£800,000",
+      "summary": "Large UK retailer with £30bn+ revenue and complex operations (retail, logistics, property) successfully implemented Provision 29 in 16 months. Started in Q4 2023, conducted dry run in Q2 2025, and is on track for confident declaration in 2027 annual report.",
+      "approach": [
+        "Top-down from 8 principal risks",
+        "25 material controls identified (lean approach)",
+        "Strong board engagement from day 1 (CEO/CFO championship)",
+        "Leveraged existing SOX controls for financial reporting",
+        "Expanded scope to operational (Health & Safety, Supply Chain) and ESG (Modern Slavery, Carbon Reporting)",
+        "Implemented GRC platform in Q1 2025",
+        "Conducted rigorous 8-week dry run in Q2 2025"
+      ],
+      "lessonsLearned": [
+        "Top-down approach prevented scope creep—started with 40 controls, refined to 25 truly material ones",
+        "Board workshop in Month 1 was critical—created urgency and secured resources",
+        "Dry run uncovered 12 issues—all remediated before FY2026 start",
+        "Operational controls (H&S, Supply Chain) required more effort than anticipated—often informal and undocumented",
+        "Control owner workshops were essential—1st line needed training and context"
+      ],
+      "results": [
+        "Board expressed high confidence after dry run review",
+        "On track for 'full effectiveness' declaration in 2027",
+        "GRC platform now used for BAU risk management beyond P29",
+        "Cultural shift: Increased accountability and control awareness across organisation"
+      ],
+      "keyMetrics": {
+        "phaseBreakdown": {
+          "phase1": "3 months (vs planned 3 months)",
+          "phase2": "5 months (vs planned 5 months)",
+          "phase3": "4 months (vs planned 4 months)",
+          "phase4": "Ongoing (FY2026)"
+        },
+        "resourceUtilisation": "3-5 FTE throughout; peaked at 8 FTE during dry run",
+        "budgetBreakdown": {
+          "internalFTE": "£450k",
+          "externalConsulting": "£150k",
+          "grcPlatform": "£200k"
+        }
+      }
+    },
+    {
+      "id": "case2",
+      "title": "FTSE 250 Industrial: Rapid 12-Month Implementation",
+      "sector": "Manufacturing/Industrial",
+      "companySize": "FTSE 250",
+      "complexity": "Medium",
+      "date": "2024-2025",
+      "duration": "12 months",
+      "controlCount": 42,
+      "totalCost": "£400,000",
+      "summary": "Mid-cap manufacturing company with strong existing control environment (ISO 9001, 14001, 27001) completed compressed 12-month P29 implementation. Started in Q1 2024, leveraged existing frameworks, and conducted dry run in Q4 2024.",
+      "approach": [
+        "Leveraged existing ISO 27001 (cyber), ISO 9001 (quality), ISO 14001 (environmental) frameworks",
+        "Conducted gap analysis: Identified 42 material controls (20 from existing ISO, 22 new)",
+        "Used existing control documentation formats—adapted for P29",
+        "Built on existing risk management platform—added P29 module",
+        "Compressed Phases 1-2 to 8 months due to strong foundation"
+      ],
+      "lessonsLearned": [
+        "Existing frameworks accelerated implementation significantly",
+        "Gap: Financial reporting controls were less mature than operational controls—required more effort",
+        "Board initially disengaged—treated as 'compliance project'—mid-course correction needed",
+        "Compressed timeline was ambitious but achievable due to existing infrastructure",
+        "Control owner engagement critical—held 3 workshops across sites"
+      ],
+      "results": [
+        "Dry run successful with only 3 minor issues identified",
+        "Board confidence built through quarterly deep-dives",
+        "Unified control framework across ISO and P29",
+        "Positioned for 'full effectiveness' declaration"
+      ],
+      "keyMetrics": {
+        "phaseBreakdown": {
+          "phase1": "2 months (accelerated due to existing risk register)",
+          "phase2": "4 months",
+          "phase3": "3 months",
+          "phase4": "Ongoing (FY2026)"
+        },
+        "resourceUtilisation": "2-3 FTE throughout",
+        "budgetBreakdown": {
+          "internalFTE": "£180k",
+          "externalConsulting": "£70k",
+          "grcPlatformEnhancements": "£150k"
+        }
+      }
+    },
+    {
+      "id": "case3",
+      "title": "Listed Financial Services Firm: Leveraging SOX 404",
+      "sector": "Financial Services",
+      "companySize": "FTSE 250 / NYSE Listed",
+      "complexity": "High",
+      "date": "2024-2025",
+      "duration": "14 months",
+      "controlCount": 65,
+      "totalCost": "£600,000",
+      "summary": "Dual-listed financial services firm (UK and US) with mature SOX 404 programme leveraged existing framework for P29. 80% of material controls were already SOX controls; expanded scope to regulatory compliance, AML, and cyber resilience.",
+      "approach": [
+        "Started with SOX 404 control population (90 controls)",
+        "Applied P29 materiality criteria—identified 65 material controls (55 SOX + 10 new)",
+        "New controls: AML transaction monitoring, regulatory compliance (FCA), cyber incident response",
+        "Used existing SOX platform—added P29 tagging and reporting",
+        "Leveraged SOX testing results for P29 evidence"
+      ],
+      "lessonsLearned": [
+        "SOX foundation saved ~40% implementation effort",
+        "Board education needed: P29 is broader than SOX—not just financial controls",
+        "Regulatory controls (FCA, AML) required specialist input—not covered by SOX",
+        "SOX management certification vs P29 board declaration—different governance level",
+        "Unified board dashboard combining SOX and P29 was highly effective"
+      ],
+      "results": [
+        "Seamless integration of SOX and P29—single control library",
+        "Board receives quarterly unified dashboard (SOX + P29)",
+        "Dry run leveraged SOX Q3 testing—efficient and audit-ready",
+        "Positioned for 'full effectiveness' declaration with high confidence"
+      ],
+      "keyMetrics": {
+        "phaseBreakdown": {
+          "phase1": "2 months (leveraged SOX scope)",
+          "phase2": "4 months",
+          "phase3": "4 months",
+          "phase4": "Ongoing (FY2026)"
+        },
+        "resourceUtilisation": "2 FTE dedicated + shared SOX team resources",
+        "budgetBreakdown": {
+          "internalFTE": "£250k",
+          "externalConsulting": "£100k",
+          "platformEnhancements": "£250k"
+        }
+      }
+    }
+  ],
+  "videos": [
+    {
+      "id": "vid1",
+      "title": "Provision 29 Overview: What Boards Need to Know",
+      "duration": "5 minutes",
+      "category": "Introduction",
+      "audience": ["Board", "CFO", "CRO"],
+      "description": "A concise video introduction to Provision 29, covering: What changed from the 2018 Code, why it matters, timeline for compliance, and what the board needs to do in the next 6 months. Perfect for board workshops or executive briefings.",
+      "keyTopics": [
+        "What is Provision 29?",
+        "Key changes from 2018 Code",
+        "Board vs Audit Committee roles",
+        "2026-2027 compliance timeline",
+        "First steps: Q1 2025 board workshop"
+      ],
+      "embedUrl": "https://youtube.com/embed/p29-overview",
+      "thumbnailUrl": "/thumbnails/p29-overview.jpg"
+    },
+    {
+      "id": "vid2",
+      "title": "How to Define Materiality Criteria (Practical Workshop)",
+      "duration": "10 minutes",
+      "category": "Implementation",
+      "audience": ["CRO", "Programme Manager", "Steering Committee"],
+      "description": "A practical, step-by-step guide to defining materiality criteria for material controls. Covers quantitative thresholds, qualitative factors, decision tree creation, and common pitfalls. Includes worked examples from different sectors (retail, financial services, industrial).",
+      "keyTopics": [
+        "Quantitative thresholds: £X million, Y% of profit, regulatory penalty",
+        "Qualitative factors: Strategic importance, reputational impact, stakeholder significance",
+        "Decision tree for edge cases",
+        "Common mistake: Setting thresholds too low (results in 100+ controls)",
+        "Real examples: How FTSE companies set their thresholds"
+      ],
+      "embedUrl": "https://youtube.com/embed/materiality-criteria",
+      "thumbnailUrl": "/thumbnails/materiality-criteria.jpg"
+    },
+    {
+      "id": "vid3",
+      "title": "Running a Control Documentation Workshop",
+      "duration": "15 minutes",
+      "category": "Implementation",
+      "audience": ["CRO", "Control Owner", "Programme Manager"],
+      "description": "How to run an effective workshop with control owners (1st Line) to document material controls, assign ownership, and define effectiveness criteria. Includes facilitation tips, sample agendas, and real examples of well-documented vs poorly-documented controls.",
+      "keyTopics": [
+        "Workshop objectives and structure (90-120 minutes)",
+        "How to explain 'what is a material control?' to operational managers",
+        "Documenting: What, How, When, By Whom",
+        "Defining measurable effectiveness criteria",
+        "Securing formal ownership acceptance",
+        "Common pushback and how to address it"
+      ],
+      "embedUrl": "https://youtube.com/embed/control-workshop",
+      "thumbnailUrl": "/thumbnails/control-workshop.jpg"
+    },
+    {
+      "id": "vid4",
+      "title": "Preparing for Your Board Declaration: A Year-End Checklist",
+      "duration": "12 minutes",
+      "category": "Declaration",
+      "audience": ["Board", "CFO", "CRO"],
+      "description": "As you approach the end of FY2026, what do you need to have in place to support the board's declaration? This video provides a comprehensive year-end checklist, sample board packs, and guidance on drafting declaration language for effectiveness, partial effectiveness, or ineffectiveness scenarios.",
+      "keyTopics": [
+        "Evidence dossier completeness check",
+        "Quarterly board reviews: Were they substantive?",
+        "Ineffective controls: Remediation status",
+        "Board confidence assessment: Is the board ready to declare?",
+        "Declaration wording: Effectiveness vs explanation",
+        "Annual report disclosure: What to include"
+      ],
+      "embedUrl": "https://youtube.com/embed/board-declaration",
+      "thumbnailUrl": "/thumbnails/board-declaration.jpg"
+    }
+  ],
+  "externalLinks": [
+    {
+      "id": "link1",
+      "title": "UK Corporate Governance Code 2024 (Official FRC Publication)",
+      "url": "https://www.frc.org.uk/library/standards-codes-policy/corporate-governance/uk-corporate-governance-code/",
+      "category": "Regulatory",
+      "description": "The official Financial Reporting Council publication of the UK Corporate Governance Code 2024, including Provision 29 and accompanying guidance."
+    },
+    {
+      "id": "link2",
+      "title": "Chartered Institute of Internal Auditors: Provision 29 Key Considerations",
+      "url": "https://www.iia.org.uk/resources/provision-29/",
+      "category": "Professional Body",
+      "description": "Guidance from the Chartered IIA on the role of Internal Audit in supporting Provision 29 compliance, including assurance mapping and testing protocols."
+    },
+    {
+      "id": "link3",
+      "title": "FRC Guidance on Risk Management and Internal Control",
+      "url": "https://www.frc.org.uk/library/standards-codes-policy/corporate-governance/risk-management-internal-control-guidance/",
+      "category": "Regulatory",
+      "description": "FRC's accompanying guidance on the 2024 Code's risk management and internal control provisions, providing context for Provision 29."
+    },
+    {
+      "id": "link4",
+      "title": "COSO Internal Control Framework (2013)",
+      "url": "https://www.coso.org/guidance-on-internal-control",
+      "category": "Framework",
+      "description": "The Committee of Sponsoring Organizations' Internal Control - Integrated Framework, widely used for mapping material controls under Provision 29."
+    },
+    {
+      "id": "link5",
+      "title": "ISO 31000 Risk Management Standard",
+      "url": "https://www.iso.org/iso-31000-risk-management.html",
+      "category": "Framework",
+      "description": "International standard for risk management, providing principles and guidelines applicable to Provision 29 implementation."
+    },
+    {
+      "id": "link6",
+      "title": "ICAEW Governance Resources",
+      "url": "https://www.icaew.com/technical/corporate-governance",
+      "category": "Professional Body",
+      "description": "Institute of Chartered Accountants in England and Wales guidance on corporate governance, including Provision 29 implementation considerations."
+    },
+    {
+      "id": "link7",
+      "title": "GRC World Forums",
+      "url": "https://www.grcworldforums.com/",
+      "category": "Events & Community",
+      "description": "Leading GRC events and community platform, hosting Provision 29 roundtables, webinars, and peer learning sessions."
+    },
+    {
+      "id": "link8",
+      "title": "Risk.net: Corporate Governance Coverage",
+      "url": "https://www.risk.net/topics/corporate-governance",
+      "category": "News & Analysis",
+      "description": "Risk management and corporate governance news, including Provision 29 implementation case studies and regulatory updates."
+    }
+  ],
+  "downloads": [
+    {
+      "id": "dl1",
+      "title": "P29 in 10 Minutes (Executive Summary)",
+      "fileType": "PDF",
+      "fileSize": "2.5 MB",
+      "pages": 5,
+      "description": "A concise 5-page executive summary covering: What is P29, why it matters, timeline, key milestones, and first actions. Perfect for board packs or executive briefings.",
+      "downloadUrl": "/downloads/p29-in-10-minutes.pdf"
+    },
+    {
+      "id": "dl2",
+      "title": "Getting Started Checklist: First 30 Days",
+      "fileType": "PDF",
+      "fileSize": "1.2 MB",
+      "pages": 3,
+      "description": "A practical checklist for the first 30 days of P29 implementation, including: Secure executive sponsor, establish steering committee, schedule board workshop, draft project plan.",
+      "downloadUrl": "/downloads/first-30-days-checklist.pdf"
+    },
+    {
+      "id": "dl3",
+      "title": "Board Presentation Template (PowerPoint)",
+      "fileType": "PowerPoint",
+      "fileSize": "8.5 MB",
+      "slides": 15,
+      "description": "A ready-to-use PowerPoint template for the Q1 2025 board workshop, including: Regulatory context, board accountability, materiality criteria discussion, resource requirements, approval resolution.",
+      "downloadUrl": "/downloads/board-presentation-template.pptx"
+    },
+    {
+      "id": "dl4",
+      "title": "Full Implementation Playbook (PDF)",
+      "fileType": "PDF",
+      "fileSize": "15 MB",
+      "pages": 100,
+      "description": "The complete Provision 29 Implementation Playbook covering all 4 phases, templates, checklists, and best practices. Based on 16 months of FTSE 100 implementation experience.",
+      "downloadUrl": "/downloads/full-implementation-playbook.pdf"
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "glossary": [
+    {
+      "term": "Material Control",
+      "definition": "A control that, if it were to fail, could reasonably be expected to result in a material misstatement in the financial statements, significant operational disruption, material regulatory breach, or loss of stakeholder confidence. Material controls are identified through a top-down, risk-based assessment starting from principal risks.",
+      "example": "Example: A revenue recognition control ensuring all sales transactions are recorded in the correct accounting period would be material because failure could lead to material misstatement of revenue. A control over privileged IT access would be material because failure could result in data breach or fraud.",
+      "relatedTerms": ["Principal Risk", "Materiality Criteria", "Material Control Inventory (MCI)"]
+    },
+    {
+      "term": "Principal Risk",
+      "definition": "A risk that would threaten the organisation's business model, future performance, solvency, or liquidity. Principal risks are identified and disclosed by the board in the annual report's Strategic Report. They form the starting point for identifying material controls under Provision 29.",
+      "example": "Example: For a retail company, principal risks might include: supply chain disruption, cyber security breach, health & safety incidents, regulatory non-compliance, financial misstatement. Each principal risk would be mapped to 2-5 material controls that mitigate it.",
+      "relatedTerms": ["Material Control", "Risk Appetite", "Risk-Based Approach"]
+    },
+    {
+      "term": "Material Control Inventory (MCI)",
+      "definition": "A comprehensive, board-approved list of all material controls, typically containing 25-100 controls (average 40-50 for FTSE 250). The MCI documents each control's ID, description, objective, owner, frequency, risk linkage, and effectiveness criteria. It is created in Phase 1 and maintained throughout implementation.",
+      "example": "Example MCI entry:\n• Control ID: MC-FIN-001\n• Title: Month-End Financial Close Reconciliation\n• Objective: Ensure accuracy and completeness of financial statements\n• Owner: Finance Director\n• Frequency: Monthly\n• Linked Risk: PR-02 (Financial Reporting Accuracy)\n• Effectiveness Criteria: 100% of reconciliations completed within 5 business days; all exceptions resolved",
+      "relatedTerms": ["Material Control", "Control Documentation", "Control Owner"]
+    },
+    {
+      "term": "Materiality Criteria",
+      "definition": "Board-approved quantitative and qualitative thresholds used to determine whether a control is 'material' and should be included in the MCI. Materiality criteria combine financial impact thresholds (e.g., >£X million, >Y% of profit), regulatory penalty exposure, reputational impact, and strategic importance.",
+      "example": "Example quantitative criteria:\n• Financial impact >£5 million or >5% of pre-tax profit\n• Regulatory penalty >£2 million\n• Revenue impact >2% of annual revenue\n\nExample qualitative criteria:\n• Could undermine a strategic objective\n• Could result in material reputational damage\n• Could breach a material regulatory requirement\n• Would be of significant concern to stakeholders (investors, customers, regulators)",
+      "relatedTerms": ["Material Control", "Decision Tree", "Jenga Test"]
+    },
+    {
+      "term": "Three Lines of Defence (3LoD)",
+      "definition": "A risk management and assurance model that delineates roles and responsibilities across three levels: 1st Line (operational management who own and execute controls), 2nd Line (risk, compliance, and oversight functions who provide independent challenge), and 3rd Line (internal audit who provide independent assurance). Used to structure P29 assurance approach.",
+      "example": "Example for a financial reporting control:\n• 1st Line: Finance team executes monthly bank reconciliation\n• 2nd Line: Risk team reviews reconciliation quality quarterly; challenges exceptions\n• 3rd Line: Internal Audit tests reconciliation control annually; provides independent assurance to Audit Committee",
+      "relatedTerms": ["Control Owner", "Assurance Mapping", "RACI Matrix"]
+    },
+    {
+      "term": "Effectiveness Criteria",
+      "definition": "Measurable, quantified outcomes that define what 'effective' looks like for each material control. Effectiveness criteria enable objective testing and support the board's declaration. They typically include thresholds, completion rates, or incident counts.",
+      "example": "Examples by control type:\n• Reconciliation control: '100% of reconciliations completed within 5 business days; all exceptions resolved within 10 days'\n• Access control: 'Zero unauthorised access incidents resulting in data breach'\n• Approval control: '100% of invoices >£50k approved by Finance Director'\n• Training control: '98% completion rate for mandatory compliance training within 30 days of hire'\n• Disaster recovery: 'DR tested annually with <4 hour RTO achieved'",
+      "relatedTerms": ["Control Testing", "Pass/Fail Criteria", "KPI"]
+    },
+    {
+      "term": "Control Owner",
+      "definition": "A named individual (not a department) who is responsible for executing a material control, maintaining evidence of its performance, conducting self-assessments, and remediating failures. Control owners are part of the 1st Line of Defence. Ownership must be formally accepted (signed acknowledgement).",
+      "example": "Example: The 'Month-End Financial Close Reconciliation' control is owned by Sarah Johnson, Finance Director. Sarah is responsible for ensuring the reconciliation is completed monthly, exceptions are resolved, and evidence is stored. If the control fails, Sarah escalates to the CFO and implements remediation.",
+      "relatedTerms": ["1st Line of Defence", "Control Execution", "Self-Assessment"]
+    },
+    {
+      "term": "Decision Gate",
+      "definition": "A formal checkpoint at the end of each implementation phase where the steering committee and/or board assess whether the phase objectives have been met and whether it is appropriate to proceed to the next phase. Decision gates use 'Go/No-Go' criteria. There are 4 decision gates in the P29 roadmap.",
+      "example": "Example: Gate 1 (End of Phase 1) - Go/No-Go Criteria:\n• GO if: Board has approved MCI and materiality criteria; budget secured; executive sponsorship confirmed\n• NO-GO if: MCI contains >100 controls; board has not approved framework; resources not secured\n\nIf NO-GO, the project pauses to address issues before proceeding to Phase 2.",
+      "relatedTerms": ["Phase", "Milestone", "Go/No-Go Criteria"]
+    },
+    {
+      "term": "Dry Run",
+      "definition": "A 6-8 week pilot effectiveness assessment conducted in H2 2025 (Phase 3) that simulates the full control execution, testing, evidence collection, and board reporting cycle. The dry run is a 'dress rehearsal' for FY2026 and is critical for identifying issues, building board confidence, and validating the GRC platform.",
+      "example": "Example: In Q4 2025, a FTSE 250 company executed a dry run:\n• All 45 material controls executed per frequency (weekly/monthly)\n• Evidence collected and stored in GRC platform\n• 2nd line tested sample of 15 controls\n• Board dashboard generated with RAG status\n• Issues identified: 3 controls had unclear effectiveness criteria; evidence storage was disorganised\n• Remediation: Effectiveness criteria clarified; evidence repository restructured\n• Result: Board gained confidence; entered FY2026 prepared",
+      "relatedTerms": ["Phase 3", "Board Confidence", "Lessons Learned"]
+    },
+    {
+      "term": "RAG Status",
+      "definition": "Red/Amber/Green status indicator used to communicate control effectiveness in board dashboards and reports. Red = ineffective or high risk; Amber = partially effective or medium risk; Green = effective or low risk. RAG status provides at-a-glance visibility for the board.",
+      "example": "Example RAG logic:\n• GREEN: Control tested and found effective; no issues; effectiveness criteria met\n• AMBER: Control tested; minor issues identified; remediation in progress; expected resolution within 30 days\n• RED: Control tested and found ineffective; material issue; remediation required; Audit Committee escalation",
+      "relatedTerms": ["Board Dashboard", "Control Effectiveness", "Issue Escalation"]
+    },
+    {
+      "term": "Assurance Mapping",
+      "definition": "A structured assessment that documents the sources of assurance for each material control across the three lines of defence. Assurance mapping identifies coverage (who provides assurance, how often, and what methodology) and highlights gaps where additional assurance is needed.",
+      "example": "Example assurance map for 'Revenue Recognition Control':\n• 1st Line: Finance team self-assessment (monthly)\n• 2nd Line: Revenue Assurance team independent review (quarterly)\n• 3rd Line: Internal Audit testing (annually)\n• External: External auditors SOX 404 testing (annually)\n• Overall Rating: High assurance coverage; no gaps",
+      "relatedTerms": ["Three Lines of Defence", "Assurance Gap", "Assurance Coverage"]
+    },
+    {
+      "term": "GRC Platform",
+      "definition": "Governance, Risk, and Compliance technology platform used to centralise control documentation, automate testing workflows, store evidence, and generate real-time board dashboards. A GRC platform is highly recommended for P29 implementation to manage scale, maintain audit trail, and enable efficient reporting.",
+      "example": "Example GRC platforms commonly used for P29: ServiceNow GRC, SAP GRC, Oracle Risk Management, RSA Archer, LogicGate, Protecht, ReadiNow, Impero.\n\nKey features needed:\n• Control library management\n• Testing workflow automation\n• Evidence repository with version control\n• Board dashboard generation\n• Integration with ERP, risk registers, audit tools",
+      "relatedTerms": ["Control Library", "Testing Workflow", "Board Dashboard"]
+    },
+    {
+      "term": "COSO Framework",
+      "definition": "Committee of Sponsoring Organizations (COSO) Internal Control - Integrated Framework (2013). A widely adopted framework for designing, implementing, and evaluating internal control systems. Many P29 implementations map material controls to the five COSO components: Control Environment, Risk Assessment, Control Activities, Information & Communication, and Monitoring.",
+      "example": "Example COSO mapping:\n• Control: 'Segregation of Duties in Financial Reporting'\n• COSO Component: Control Activities\n• COSO Principle: Principle 10 - The organization selects and develops control activities that contribute to the mitigation of risks\n\nUsing COSO provides a structured approach and aligns with SOX 404 for dual-listed companies.",
+      "relatedTerms": ["ISO 31000", "Framework Mapping", "SOX 404"]
+    },
+    {
+      "term": "ISO 31000",
+      "definition": "International standard for risk management providing principles, framework, and process for managing risk. ISO 31000 is broader than COSO (which focuses on internal control) and is commonly used for operational and strategic risk management. Some P29 implementations use ISO 31000, especially for operational and ESG controls.",
+      "example": "Example ISO 31000 mapping:\n• Control: 'Supply Chain Disruption Monitoring'\n• ISO 31000 Process: Risk Assessment → Risk Treatment\n• ISO 31000 Component: Monitoring and Review\n\nISO 31000 is particularly useful for companies with mature Enterprise Risk Management (ERM) programmes.",
+      "relatedTerms": ["COSO Framework", "Enterprise Risk Management", "Risk-Based Approach"]
+    },
+    {
+      "term": "Comply or Explain",
+      "definition": "The UK Corporate Governance Code operates on a 'comply or explain' basis. Companies must either comply with the Code's provisions or explain why they have chosen not to comply. 'Explain' is not a failure, but the explanation must be high-quality: clear, cogent, and demonstrate how the alternative approach achieves good governance.",
+      "example": "Example valid 'explain':\n'We listed on the London Stock Exchange in June 2025 and are building our Provision 29 framework. Given our listing date, we will not have a full year of evidence collection for FY2026. We expect to make our first declaration of effectiveness in our 2027 annual report (for FY2027). We have established a steering committee and approved our Material Control Inventory of 38 controls in Q3 2025.'\n\nExample invalid 'explain':\n'We did not have sufficient time to implement Provision 29.'",
+      "relatedTerms": ["FRC", "Annual Report Disclosure", "Provision 29"]
+    },
+    {
+      "term": "FRC (Financial Reporting Council)",
+      "definition": "The UK's independent regulator responsible for promoting high-quality corporate governance and reporting. The FRC publishes the UK Corporate Governance Code (including Provision 29) and monitors compliance. The FRC will begin reviewing Provision 29 disclosures in 2027 annual reports and may challenge weak or unconvincing disclosures.",
+      "example": "FRC monitoring approach:\n• Reviews annual report disclosures for substance and transparency\n• Challenges boilerplate or generic language\n• May issue queries to companies with weak disclosures\n• Does not provide 'safe harbour' templates or prescriptive guidance\n• Expects principles-based, company-specific approaches",
+      "relatedTerms": ["UK Corporate Governance Code", "Provision 29", "Comply or Explain"]
+    },
+    {
+      "term": "SOX 404",
+      "definition": "Section 404 of the US Sarbanes-Oxley Act (2002) requires management of US-listed companies to assess and report on the effectiveness of internal control over financial reporting (ICFR). SOX 404 has significant overlap with Provision 29 for financial controls, and dual-listed companies can leverage their SOX framework for P29 efficiency.",
+      "example": "Overlap and differences:\n• Overlap: Financial reporting controls (~80-90% of SOX controls are material for P29)\n• Difference - Scope: P29 is broader (operational, cyber, ESG controls); SOX focuses on ICFR\n• Difference - Certification: SOX is management certification; P29 is board declaration\n• Difference - Materiality: SOX is rules-based (financial statement materiality); P29 is principles-based (risk to business model)",
+      "relatedTerms": ["COSO Framework", "Financial Reporting Controls", "Dual-Listed"]
+    },
+    {
+      "term": "RACI Matrix",
+      "definition": "A responsibility assignment matrix that clarifies who is Responsible (executes the task), Accountable (ultimate owner), Consulted (provides input), and Informed (kept updated) for each activity. Used in P29 to delineate roles across the Three Lines of Defence for control design, execution, testing, reporting, and remediation.",
+      "example": "Example RACI for 'Control Testing':\n• Responsible: 2nd Line (Risk/Compliance team conducts testing)\n• Accountable: CRO (ultimate owner of testing programme)\n• Consulted: 1st Line (Control Owner provides evidence and context)\n• Informed: Audit Committee (receives testing results report)\n\nClear RACI prevents confusion, gaps, and duplication.",
+      "relatedTerms": ["Three Lines of Defence", "Control Owner", "Accountability"]
+    },
+    {
+      "term": "Board Declaration",
+      "definition": "An explicit statement by the board in the annual report confirming whether material controls were operating effectively during the financial year. The declaration is the ultimate deliverable of Provision 29 implementation and must be evidence-backed, transparent, and board-approved.",
+      "example": "Example board declaration (full effectiveness):\n'The Board has monitored and reviewed the effectiveness of the Company's material controls throughout the year. Based on the assurance obtained from management, the work of the Audit Committee, and independent testing by Internal Audit, the Board confirms that the material controls were operating effectively as at 31 December 2026.'\n\nThe board can also declare ineffectiveness with explanation and remediation plan if controls failed.",
+      "relatedTerms": ["Annual Report Disclosure", "Board Confidence", "FRC Expectations"]
+    },
+    {
+      "term": "Control Testing",
+      "definition": "The process of evaluating whether a control is operating effectively by examining evidence, performing walkthroughs, and testing samples. Control testing is performed by the 2nd Line (quarterly or annually) and 3rd Line (Internal Audit, annually). Testing methodologies include sample-based testing, continuous monitoring, and management attestation.",
+      "example": "Example control testing:\n• Control: 'Invoice Approval Control (>£50k must be approved by Finance Director)'\n• Testing method: Sample-based testing\n• Sample size: 25 invoices >£50k from Q1 2026\n• Test procedure: Verify Finance Director signature on approval form; confirm approval date within policy threshold\n• Pass criteria: 100% of sampled invoices have timely Finance Director approval\n• Result: 24/25 passed; 1 invoice approved 2 days late → Amber status; remediation required",
+      "relatedTerms": ["Effectiveness Criteria", "Evidence", "Pass/Fail Criteria"]
+    },
+    {
+      "term": "Evidence Repository",
+      "definition": "A centralised, audit-ready storage location for all evidence supporting control execution and effectiveness. Evidence repositories are typically structured by control ID, time period, and evidence type. They must have version control, access controls, and retention policies (typically 7 years).",
+      "example": "Example evidence repository structure:\n• /Material_Controls/\n  • /MC-FIN-001_Revenue_Recognition/\n    • /2026/\n      • /Q1/\n        • approval_logs.pdf\n        • reconciliation_summary.xlsx\n        • self_assessment_Jan2026.pdf\n      • /Q2/\n        • ...\n\nEvidence types: Approval logs, reconciliations, system reports, training records, attestations, meeting minutes.",
+      "relatedTerms": ["Control Testing", "Audit Trail", "GRC Platform"]
+    },
+    {
+      "term": "Remediation",
+      "definition": "The process of fixing or addressing a control deficiency, gap, or failure. Remediation includes root cause analysis, action plan development, owner assignment, tracking, and re-testing. Effective remediation is critical for maintaining control effectiveness and supporting the board's declaration.",
+      "example": "Example remediation workflow:\n1. Control failure identified: 'Segregation of Duties control failed - 2 users have conflicting roles'\n2. Root cause analysis: 'Access provisioning process does not check for conflicts'\n3. Remediation plan: 'Implement automated conflict check in user access request workflow'\n4. Owner: IT Director\n5. Due date: 30 days\n6. Tracking: Weekly steering committee update\n7. Re-test: After 30 days, 2nd line re-tests control\n8. Closure: If re-test passes, issue closed; if fails, escalate to Audit Committee",
+      "relatedTerms": ["Control Failure", "Root Cause Analysis", "Issue Escalation"]
+    },
+    {
+      "term": "Jenga Test",
+      "definition": "An informal but useful materiality assessment heuristic: 'If you removed this control, would the business wobble or fall?' (like removing a Jenga block). If removing the control would cause material impact, it is likely a material control. The Jenga Test helps apply materiality criteria intuitively.",
+      "example": "Example Jenga Test application:\n• Control: 'Monthly bank reconciliation' → Remove it → Financial statements could be materially misstated; cash position unclear → Business would wobble → Material control ✓\n• Control: 'Office supplies approval (items <£100)' → Remove it → Minor cost overrun; no material impact → Business would not wobble → Not material ✗",
+      "relatedTerms": ["Materiality Criteria", "Material Control", "Risk-Based Approach"]
+    },
+    {
+      "term": "Risk Appetite",
+      "definition": "The amount and type of risk an organisation is willing to accept in pursuit of its strategic objectives. Risk appetite is set by the board and informs materiality criteria for Provision 29. Controls that protect against risks outside risk appetite (i.e., unacceptable risks) are likely material.",
+      "example": "Example risk appetite statement:\n'The Board has zero appetite for risks that could result in material financial misstatement, material regulatory breach, or loss of life. The Board has low appetite for reputational risks and medium appetite for strategic/market risks.'\n\nImplication for P29: Financial reporting, regulatory compliance, and health & safety controls are almost certainly material given the zero/low appetite.",
+      "relatedTerms": ["Principal Risk", "Materiality Criteria", "Board Oversight"]
+    }
+  ],
+  "usage": {
+    "searchEnabled": true,
+    "filterByFirstLetter": true,
+    "relatedTermsClickable": true
+  }
+}

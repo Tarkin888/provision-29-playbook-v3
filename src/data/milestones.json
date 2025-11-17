@@ -1,0 +1,457 @@
+{
+  "milestones": [
+    {
+      "id": "m1",
+      "week": 2,
+      "date": "2025-01-15",
+      "phase": 1,
+      "name": "Steering Committee Established",
+      "description": "Cross-functional steering committee formed with executive sponsor, project lead, and representatives from Finance, Risk, Compliance, Internal Audit, IT, Operations, Legal, and ESG.",
+      "critical": true,
+      "decisionRequired": false,
+      "owner": "CEO/CFO",
+      "deliverables": ["Steering Committee Charter", "Governance Structure Document"],
+      "successCriteria": [
+        "Executive sponsor identified and committed",
+        "Project lead appointed (CRO or Head of Risk)",
+        "All functional areas represented",
+        "Meeting cadence established (fortnightly)"
+      ]
+    },
+    {
+      "id": "m2",
+      "week": 4,
+      "date": "2025-01-29",
+      "phase": 1,
+      "name": "Materiality Criteria Drafted",
+      "description": "Initial materiality criteria developed combining quantitative thresholds and qualitative factors, ready for board review.",
+      "critical": true,
+      "decisionRequired": false,
+      "owner": "CRO",
+      "deliverables": ["Draft Materiality Criteria Document", "Decision Tree"],
+      "successCriteria": [
+        "Quantitative thresholds defined (£X million, % of profit)",
+        "Qualitative factors documented",
+        "Decision tree created for edge cases",
+        "Steering committee consensus achieved"
+      ]
+    },
+    {
+      "id": "m3",
+      "week": 8,
+      "date": "2025-02-26",
+      "phase": 1,
+      "name": "Material Control Inventory (MCI) Completed",
+      "description": "Comprehensive list of 25-100 material controls identified through top-down risk mapping, documented with preliminary details.",
+      "critical": true,
+      "decisionRequired": false,
+      "owner": "CRO",
+      "deliverables": ["Material Control Inventory", "Risk-to-Control Mapping"],
+      "successCriteria": [
+        "25-100 controls identified (typical: 40-50)",
+        "All principal risks mapped to at least one control",
+        "Controls categorised by domain",
+        "Preliminary ownership assigned"
+      ]
+    },
+    {
+      "id": "m4",
+      "week": 10,
+      "date": "2025-03-12",
+      "phase": 1,
+      "name": "Gap Assessment Finalised",
+      "description": "Control coverage gaps identified, prioritised by risk severity, with high-level remediation roadmap developed.",
+      "critical": false,
+      "decisionRequired": false,
+      "owner": "CRO",
+      "deliverables": ["Gap Assessment Report", "Remediation Roadmap"],
+      "successCriteria": [
+        "All gaps documented with risk rating",
+        "Remediation priorities established",
+        "Resource requirements estimated",
+        "High-priority gaps have owners assigned"
+      ]
+    },
+    {
+      "id": "m5",
+      "week": 12,
+      "date": "2025-03-26",
+      "phase": 1,
+      "name": "BOARD APPROVAL OF MCI",
+      "description": "Board formally approves materiality criteria and Material Control Inventory. Critical decision gate for Phase 2 commencement.",
+      "critical": true,
+      "decisionRequired": true,
+      "decisionGate": "Gate 1: Board Approval of MCI",
+      "owner": "Board",
+      "deliverables": ["Board Resolution", "Approved MCI", "Approved Materiality Criteria"],
+      "successCriteria": [
+        "Board approves materiality criteria",
+        "Board approves MCI scope (25-100 controls)",
+        "Budget and resources approved for Phase 2",
+        "Board resolution documented"
+      ],
+      "goCriteria": [
+        "All checklist items complete",
+        "Board formally approved MCI and criteria",
+        "Budget secured",
+        "Executive sponsorship confirmed"
+      ],
+      "noGoCriteria": [
+        "MCI contains >100 controls",
+        "Board has not approved framework",
+        "Budget not secured"
+      ]
+    },
+    {
+      "id": "m6",
+      "week": 16,
+      "date": "2025-04-23",
+      "phase": 2,
+      "name": "Control Definitions Formalised",
+      "description": "All material controls documented using standardised template including objective, design, frequency, and preliminary effectiveness criteria.",
+      "critical": true,
+      "decisionRequired": false,
+      "owner": "CRO",
+      "deliverables": ["Control Documentation Library", "Control Definitions (all controls)"],
+      "successCriteria": [
+        "100% of controls documented",
+        "Standardised template used consistently",
+        "Control objectives clearly stated",
+        "What, how, when, by whom specified"
+      ]
+    },
+    {
+      "id": "m7",
+      "week": 20,
+      "date": "2025-05-21",
+      "phase": 2,
+      "name": "Effectiveness Criteria Defined",
+      "description": "Measurable effectiveness criteria established for each material control with quantified thresholds and KPIs.",
+      "critical": true,
+      "decisionRequired": false,
+      "owner": "CRO / Control Owners",
+      "deliverables": ["Effectiveness Criteria Document", "Control KPI Dashboard Specification"],
+      "successCriteria": [
+        "All controls have measurable criteria",
+        "Quantified thresholds defined (e.g., '100% within 5 days')",
+        "Pass/fail criteria documented",
+        "Control owners agree with criteria"
+      ]
+    },
+    {
+      "id": "m8",
+      "week": 24,
+      "date": "2025-06-18",
+      "phase": 2,
+      "name": "Framework Mapping Complete (COSO/ISO 31000)",
+      "description": "All material controls mapped to relevant COSO component or ISO 31000 process category, demonstrating framework alignment.",
+      "critical": false,
+      "decisionRequired": false,
+      "owner": "CRO",
+      "deliverables": ["COSO/ISO Mapping Matrix", "Framework Alignment Report"],
+      "successCriteria": [
+        "100% of controls mapped to framework",
+        "Framework coverage gaps identified",
+        "Mapping documented for audit trail",
+        "Alignment with existing SOX controls (if applicable)"
+      ]
+    },
+    {
+      "id": "m9",
+      "week": 28,
+      "date": "2025-07-16",
+      "phase": 2,
+      "name": "Testing Protocols Approved",
+      "description": "Standardised testing methodologies defined by control type, including sample sizes, pass/fail criteria, and evidence requirements.",
+      "critical": true,
+      "decisionRequired": false,
+      "owner": "Internal Audit / 2nd Line",
+      "deliverables": ["Testing Protocol Manual", "Testing Frequency Schedule"],
+      "successCriteria": [
+        "Testing methods documented by control type",
+        "Sample sizes and statistical approaches defined",
+        "Evidence requirements specified",
+        "2nd and 3rd line approval obtained"
+      ]
+    },
+    {
+      "id": "m10",
+      "week": 32,
+      "date": "2025-08-13",
+      "phase": 2,
+      "name": "CONTROL OWNERSHIP CONFIRMED",
+      "description": "All control owners formally accept ownership with signed acknowledgement. Critical decision gate for Phase 3 commencement.",
+      "critical": true,
+      "decisionRequired": true,
+      "decisionGate": "Gate 2: Control Framework Complete",
+      "owner": "Control Owners",
+      "deliverables": ["Signed Ownership Acknowledgements", "Control Library with Named Owners"],
+      "successCriteria": [
+        "100% of controls have named individual owners",
+        "Ownership formally accepted (signed)",
+        "Owners trained on their responsibilities",
+        "Escalation paths documented"
+      ],
+      "goCriteria": [
+        "All controls documented with ownership",
+        "GRC platform implementation on track",
+        "First-line trained"
+      ],
+      "noGoCriteria": [
+        "Control definitions incomplete",
+        "Ownership not formally accepted",
+        "GRC platform significantly delayed"
+      ]
+    },
+    {
+      "id": "m11",
+      "week": 30,
+      "date": "2025-07-30",
+      "phase": 3,
+      "name": "Assurance Mapping Complete",
+      "description": "Comprehensive assurance map created showing 1st, 2nd, and 3rd line coverage for each material control, with gaps identified.",
+      "critical": true,
+      "decisionRequired": false,
+      "owner": "CRO / Internal Audit",
+      "deliverables": ["Assurance Coverage Matrix", "Gap Remediation Plan"],
+      "successCriteria": [
+        "All controls have assurance sources identified",
+        "1st, 2nd, 3rd line roles clarified",
+        "Assurance gaps documented and addressed",
+        "Overall assurance rating per control"
+      ]
+    },
+    {
+      "id": "m12",
+      "week": 36,
+      "date": "2025-09-10",
+      "phase": 3,
+      "name": "Board Dashboard Tested",
+      "description": "Executive dashboard ('Approach on a Page') developed and tested with sample data, ready for board review.",
+      "critical": true,
+      "decisionRequired": false,
+      "owner": "CRO",
+      "deliverables": ["Board Dashboard Template", "Sample Dashboard with Test Data"],
+      "successCriteria": [
+        "Dashboard includes Material Risks, Control Effectiveness, Assurance Coverage, Issues",
+        "RAG status logic validated",
+        "Audit Committee feedback incorporated",
+        "Refresh cadence agreed (quarterly)"
+      ]
+    },
+    {
+      "id": "m13",
+      "week": 40,
+      "date": "2025-10-08",
+      "phase": 3,
+      "name": "First-Line Training Complete",
+      "description": "All control owners trained on control execution, evidence collection, and self-assessment processes.",
+      "critical": true,
+      "decisionRequired": false,
+      "owner": "Programme Manager",
+      "deliverables": ["Training Materials", "Training Completion Register", "Post-Training Assessment Results"],
+      "successCriteria": [
+        "100% of control owners trained",
+        "Training includes: Control objectives, execution, evidence, escalation",
+        "Post-training knowledge check passed",
+        "Training materials available for ongoing reference"
+      ]
+    },
+    {
+      "id": "m14",
+      "week": 44,
+      "date": "2025-11-05",
+      "phase": 3,
+      "name": "Dry Run Commenced",
+      "description": "6-8 week pilot effectiveness assessment begins, simulating full control execution, testing, and board reporting cycle.",
+      "critical": true,
+      "decisionRequired": false,
+      "owner": "CRO / Programme Manager",
+      "deliverables": ["Dry Run Project Plan", "Testing Schedule"],
+      "successCriteria": [
+        "All controls executed per frequency",
+        "Evidence collected and stored",
+        "Sample testing conducted",
+        "Issues logged and remediation tracked"
+      ]
+    },
+    {
+      "id": "m15",
+      "week": 48,
+      "date": "2025-12-03",
+      "phase": 3,
+      "name": "GRC Platform Go-Live",
+      "description": "GRC technology platform fully deployed, integrated with business systems, and operational for control management.",
+      "critical": true,
+      "decisionRequired": false,
+      "owner": "IT / Programme Manager",
+      "deliverables": ["Operational GRC Platform", "User Acceptance Testing Sign-Off"],
+      "successCriteria": [
+        "Platform configured with control library",
+        "Workflows operational (testing, approvals, escalations)",
+        "Integration with ERP/risk systems complete",
+        "User acceptance testing passed"
+      ]
+    },
+    {
+      "id": "m16",
+      "week": 52,
+      "date": "2025-12-31",
+      "phase": 3,
+      "name": "DRY RUN SUCCESS & BOARD CONFIDENCE",
+      "description": "Dry run completed, lessons learned documented, board reviews results and expresses confidence in FY2026 readiness. Critical decision gate for Phase 4.",
+      "critical": true,
+      "decisionRequired": true,
+      "decisionGate": "Gate 3: Dry Run Success & Board Confidence",
+      "owner": "Board",
+      "deliverables": ["Dry Run Report", "Lessons Learned Document", "Improvement Action Plan", "Board Confidence Statement"],
+      "successCriteria": [
+        "Dry run executed without major failures",
+        "Board dashboard generated and reviewed",
+        "Lessons learned documented",
+        "Improvements implemented or scheduled",
+        "Board expresses confidence for FY2026"
+      ],
+      "goCriteria": [
+        "Dry run successful",
+        "Board dashboard operational",
+        "GRC platform stable",
+        "Lessons learned remediated"
+      ],
+      "noGoCriteria": [
+        "Fundamental control design flaws revealed",
+        "GRC platform not operational",
+        "Board lacks confidence"
+      ]
+    },
+    {
+      "id": "m17",
+      "week": 66,
+      "date": "2026-04-08",
+      "phase": 4,
+      "name": "Q1 FY2026 Board Dashboard Reviewed",
+      "description": "First quarterly board dashboard for FY2026 presented to Audit Committee and Board, showing control effectiveness for Q1.",
+      "critical": true,
+      "decisionRequired": false,
+      "owner": "CRO",
+      "deliverables": ["Q1 FY2026 Board Dashboard", "Audit Committee Meeting Minutes"],
+      "successCriteria": [
+        "Dashboard shows all control testing results for Q1",
+        "RAG status current and accurate",
+        "Issues and remediations tracked",
+        "Board receives and reviews dashboard"
+      ]
+    },
+    {
+      "id": "m18",
+      "week": 79,
+      "date": "2026-07-08",
+      "phase": 4,
+      "name": "Q2 FY2026 Board Dashboard Reviewed",
+      "description": "Second quarterly board dashboard for FY2026 presented, showing half-year control effectiveness trends.",
+      "critical": true,
+      "decisionRequired": false,
+      "owner": "CRO",
+      "deliverables": ["Q2 FY2026 Board Dashboard", "Half-Year Effectiveness Report"],
+      "successCriteria": [
+        "Q2 testing complete",
+        "Trends vs Q1 identified",
+        "Any ineffective controls remediated or on track",
+        "Board satisfied with progress"
+      ]
+    },
+    {
+      "id": "m19",
+      "week": 92,
+      "date": "2026-10-07",
+      "phase": 4,
+      "name": "Q3 FY2026 Board Dashboard Reviewed",
+      "description": "Third quarterly board dashboard for FY2026 presented, with focus on year-end readiness and evidence completeness.",
+      "critical": true,
+      "decisionRequired": false,
+      "owner": "CRO",
+      "deliverables": ["Q3 FY2026 Board Dashboard", "Evidence Completeness Assessment"],
+      "successCriteria": [
+        "Q3 testing complete",
+        "Evidence dossier 75% complete",
+        "Q4 testing plan confirmed",
+        "Year-end declaration preparation commenced"
+      ]
+    },
+    {
+      "id": "m20",
+      "week": 98,
+      "date": "2026-11-18",
+      "phase": 4,
+      "name": "Internal Audit Framework Assurance Complete",
+      "description": "Third line (Internal Audit) completes annual framework assurance, validating control design and operating effectiveness across all material controls.",
+      "critical": true,
+      "decisionRequired": false,
+      "owner": "Internal Audit",
+      "deliverables": ["Internal Audit Assurance Report", "Framework Assurance Rating"],
+      "successCriteria": [
+        "All material controls reviewed by Internal Audit",
+        "Framework design validated",
+        "Operating effectiveness assessed",
+        "Issues identified and communicated to management"
+      ]
+    },
+    {
+      "id": "m21",
+      "week": 102,
+      "date": "2026-12-16",
+      "phase": 4,
+      "name": "Evidence Dossier Compiled",
+      "description": "Comprehensive evidence dossier assembled containing full-year testing results, evidence artifacts, and assurance documentation.",
+      "critical": true,
+      "decisionRequired": false,
+      "owner": "CRO / Programme Manager",
+      "deliverables": ["Evidence Dossier (all controls)", "Evidence Completeness Report"],
+      "successCriteria": [
+        "Evidence for all controls for full FY2026",
+        "Organised by control and period",
+        "Audit-ready repository",
+        "Evidence gaps documented (if any)"
+      ]
+    },
+    {
+      "id": "m22",
+      "week": 104,
+      "date": "2026-12-31",
+      "phase": 4,
+      "name": "BOARD DECLARATION APPROVED",
+      "description": "Board approves declaration of effectiveness (or explanation of ineffectiveness) for inclusion in 2026 annual report. Final decision gate.",
+      "critical": true,
+      "decisionRequired": true,
+      "decisionGate": "Gate 4: Board Declaration Approved",
+      "owner": "Board",
+      "deliverables": ["Board Declaration Statement", "Board Approval Resolution", "Annual Report Disclosure Content"],
+      "successCriteria": [
+        "Board receives comprehensive evidence summary",
+        "Board approves declaration wording",
+        "Declaration complies with FRC requirements",
+        "Annual report disclosure finalised"
+      ],
+      "goCriteria": [
+        "Evidence dossier complete",
+        "All controls tested throughout FY2026",
+        "Board informed via quarterly reviews",
+        "Ineffective controls documented with remediation"
+      ],
+      "declarationOptions": [
+        "Full effectiveness: All material controls operating effectively",
+        "Effectiveness with exceptions: Controls effective except [X], which is subject to remediation",
+        "Ineffectiveness with remediation: Controls ineffective; remediation plan in progress"
+      ]
+    }
+  ],
+  "timeline": {
+    "startDate": "2025-01-01",
+    "endDate": "2026-12-31",
+    "totalWeeks": 104,
+    "totalMonths": 24,
+    "phases": 4,
+    "decisionGates": 4,
+    "criticalMilestones": 16
+  }
+}

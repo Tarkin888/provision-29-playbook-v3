@@ -1,0 +1,544 @@
+{
+  "roles": [
+    {
+      "id": "board",
+      "name": "Board Director / Non-Executive Director",
+      "icon": "👔",
+      "color": "#1e3a8a",
+      "description": "Responsible for strategic oversight, approval of materiality criteria and MCI, quarterly review of control effectiveness, and final declaration approval.",
+      "keyResponsibilities": [
+        "Approve materiality criteria and Material Control Inventory (Q1 2025)",
+        "Review quarterly control effectiveness dashboards",
+        "Challenge management's assurance processes",
+        "Approve board declaration (Q4 2026)",
+        "Ensure adequate resources allocated to P29 implementation"
+      ],
+      "criticalQuestions": [
+        "How confident are we in the materiality thresholds we've set?",
+        "Do control owners truly understand their accountability?",
+        "What's our Plan B if controls are found ineffective?",
+        "Are we getting independent assurance, or just management attestation?",
+        "How does our approach compare to peers in our sector?"
+      ],
+      "timeline": [
+        {
+          "period": "Q1 2025",
+          "activity": "Board workshop (2 hours): P29 overview, materiality criteria discussion, approval of MCI"
+        },
+        {
+          "period": "Q2-Q4 2025",
+          "activity": "Quarterly dashboard review (30 mins per Audit Committee, brief to full Board)"
+        },
+        {
+          "period": "Q3 2025",
+          "activity": "Dry run results review (1 hour Audit Committee deep-dive)"
+        },
+        {
+          "period": "FY2026 (Quarterly)",
+          "activity": "Control effectiveness dashboard review (ongoing monitoring)"
+        },
+        {
+          "period": "Q4 2026",
+          "activity": "Declaration approval (Board meeting agenda item)"
+        }
+      ],
+      "recommendedTemplates": [
+        "board-workshop-agenda",
+        "board-dashboard",
+        "board-declaration",
+        "readiness-assessment"
+      ],
+      "trainingResources": [
+        {
+          "title": "Provision 29 for Non-Executives",
+          "type": "video",
+          "duration": "15 minutes",
+          "description": "Overview of P29 requirements, board accountability, and key decision points"
+        },
+        {
+          "title": "How to Challenge Management on Material Controls",
+          "type": "article",
+          "duration": "10 minutes",
+          "description": "Effective questions to ask and red flags to watch for"
+        }
+      ],
+      "successMetrics": [
+        "Board members can articulate the organisation's material controls and why they are material",
+        "Board demonstrates active engagement (not passive sign-off)",
+        "Board challenges management assumptions and assurance quality"
+      ]
+    },
+    {
+      "id": "cfo",
+      "name": "Chief Financial Officer (CFO)",
+      "icon": "💼",
+      "color": "#059669",
+      "description": "Executive sponsor of P29 programme, responsible for resource allocation, budget approval, and ultimate accountability for declaration.",
+      "keyResponsibilities": [
+        "Executive sponsor of P29 programme",
+        "Define financial materiality thresholds",
+        "Approve control documentation and framework",
+        "Allocate budget and FTE resources",
+        "Sign off on board declaration",
+        "Ensure coordination with SOX, ECCTA, other compliance programmes"
+      ],
+      "criticalDecisions": [
+        {
+          "decision": "Set materiality thresholds",
+          "timing": "Week 4 (Q1 2025)",
+          "guidance": "Typical: £X million (absolute), Y% of profit (relative), regulatory penalty exposure"
+        },
+        {
+          "decision": "Approve GRC platform investment",
+          "timing": "Week 12-24 (Q1-Q2 2025)",
+          "guidance": "Budget: £50,000-£500,000 depending on company size and platform selection"
+        },
+        {
+          "decision": "Allocate FTE resources",
+          "timing": "Week 12 (Q1 2025)",
+          "guidance": "Typical: 2-3 FTE (Phase 1), 3-5 FTE (Phase 2-3), 2-3 FTE (Phase 4)"
+        }
+      ],
+      "timeline": [
+        {
+          "period": "Week 1-4",
+          "activity": "Secure board mandate; approve project initiation"
+        },
+        {
+          "period": "Month 3 (Week 12)",
+          "activity": "Approve MCI and materiality criteria at board"
+        },
+        {
+          "period": "Month 6 (Week 24)",
+          "activity": "Approve control documentation framework"
+        },
+        {
+          "period": "Month 18 (Week 78)",
+          "activity": "Review dry run results; assess readiness for FY2026"
+        },
+        {
+          "period": "Month 24 (Week 104)",
+          "activity": "Approve board declaration for annual report"
+        }
+      ],
+      "budgetPlanning": {
+        "phase1": {
+          "range": "£50,000-£100,000",
+          "includes": ["Project team FTE", "External consulting (optional)", "GRC vendor evaluation"]
+        },
+        "phase2": {
+          "range": "£150,000-£300,000",
+          "includes": ["Project team FTE", "Control documentation support", "GRC platform implementation", "Training delivery"]
+        },
+        "phase3": {
+          "range": "£100,000-£200,000",
+          "includes": ["Project team FTE", "GRC platform go-live support", "Dry run execution", "Testing infrastructure"]
+        },
+        "phase4": {
+          "range": "£50,000-£150,000",
+          "includes": ["Project team FTE", "Ongoing assurance", "Board reporting", "Annual report drafting support"]
+        },
+        "total": {
+          "range": "£350,000-£750,000",
+          "context": "FTSE 250 estimate; FTSE 100 typically higher (£500k-£1.5m)"
+        }
+      },
+      "recommendedTemplates": [
+        "resource-planning",
+        "materiality-criteria",
+        "board-workshop-agenda",
+        "board-declaration"
+      ],
+      "riskFlags": [
+        {
+          "flag": "Insufficient budget allocated",
+          "impact": "Incomplete framework; inability to declare effectiveness",
+          "mitigation": "Secure £350k-£750k minimum for FTSE 250; scale for complexity"
+        },
+        {
+          "flag": "Weak ownership acceptance",
+          "impact": "Control failures during FY2026",
+          "mitigation": "Ensure signed ownership acknowledgements; hold 1st line accountable"
+        },
+        {
+          "flag": "Late start (post-Q2 2025)",
+          "impact": "Rushed implementation; quality compromised",
+          "mitigation": "Start Phase 1 by Q1 2025; communicate urgency to board"
+        }
+      ]
+    },
+    {
+      "id": "cro",
+      "name": "Chief Risk Officer / Head of Risk",
+      "icon": "🎯",
+      "color": "#dc2626",
+      "description": "Programme lead and day-to-day owner of P29 implementation. Coordinates cross-functional team, builds MCI, manages GRC platform, and prepares board reports.",
+      "keyResponsibilities": [
+        "Programme lead and day-to-day owner",
+        "Facilitate materiality assessment workshops",
+        "Coordinate cross-functional steering committee",
+        "Build and maintain Material Control Inventory",
+        "Manage GRC platform implementation",
+        "Prepare quarterly board dashboards",
+        "Own relationship with Internal Audit and external auditors"
+      ],
+      "taskList": {
+        "phase1": [
+          "Establish steering committee with cross-functional members",
+          "Draft materiality criteria (quantitative + qualitative)",
+          "Facilitate materiality workshops with Finance, Legal, Compliance, Operations",
+          "Map principal risks to existing controls (top-down approach)",
+          "Apply materiality criteria to create MCI (25-100 controls)",
+          "Conduct gap assessment (missing controls, immature controls)",
+          "Develop resource and budget plan for Phases 2-4",
+          "Prepare board workshop materials",
+          "Present MCI to board for approval",
+          "Initiate GRC vendor selection process",
+          "Document steering committee governance and meeting cadence",
+          "Establish communication plan for all stakeholders",
+          "Define Phase 2 kick-off plan"
+        ],
+        "phase2": [
+          "Formalise control definitions using standardised template",
+          "Assign named control owners (individuals, not departments)",
+          "Define effectiveness criteria for each control (measurable, quantified)",
+          "Map controls to COSO/ISO 31000 framework",
+          "Implement remediation plans for identified gaps",
+          "Develop testing protocols by control type",
+          "Document evidence requirements for each control",
+          "Conduct control owner workshops (1st line training)",
+          "Obtain signed ownership acknowledgements",
+          "Update control library in GRC platform",
+          "Prepare Phase 3 kick-off plan",
+          "Present control framework to Audit Committee"
+        ],
+        "phase3": [
+          "Create RACI matrix (3 lines of defence)",
+          "Complete assurance mapping (1st, 2nd, 3rd line coverage)",
+          "Oversee GRC platform implementation and go-live",
+          "Develop board dashboard ('Approach on a Page')",
+          "Plan and execute dry run (6-8 weeks)",
+          "Collect dry run evidence and testing results",
+          "Generate draft board dashboard with dry run data",
+          "Present dry run results to board",
+          "Document lessons learned and improvement actions",
+          "Prepare FY2026 testing calendar",
+          "Draft annual report disclosure content (template)",
+          "Confirm Phase 4 readiness with steering committee"
+        ],
+        "phase4": [
+          "Coordinate ongoing control execution (1st line)",
+          "Oversee quarterly testing (2nd line)",
+          "Generate quarterly board dashboards (Q1, Q2, Q3, Q4 FY2026)",
+          "Present dashboards to Audit Committee and Board",
+          "Track issues and remediation progress",
+          "Compile evidence dossier throughout FY2026",
+          "Coordinate with Internal Audit for 3rd line assurance",
+          "Prepare year-end effectiveness assessment",
+          "Draft board declaration statement",
+          "Finalise annual report disclosure content",
+          "Present declaration support pack to board",
+          "Obtain board approval for declaration"
+        ]
+      },
+      "resourceRequirements": {
+        "yourTeam": "2-3 FTE dedicated (you + 1-2 analysts/project managers)",
+        "supportNeeded": {
+          "internalAudit": "0.5 FTE (testing protocol design, framework assurance)",
+          "it": "0.3 FTE (GRC platform implementation, integration support)",
+          "finance": "0.2 FTE (financial controls documentation, materiality thresholds)",
+          "legal": "0.1 FTE (regulatory interpretation, board paper review)",
+          "esg": "0.1 FTE (ESG/sustainability controls)"
+        }
+      },
+      "commonChallenges": [
+        {
+          "challenge": "Control owners don't understand P29 requirements",
+          "solution": "Run 90-minute interactive workshop using control owner training template; provide user guides and FAQs"
+        },
+        {
+          "challenge": "Too many controls identified (150+)",
+          "solution": "Re-apply materiality filter; consolidate related controls; focus on 'Jenga test' (does removal cause business to wobble?)"
+        },
+        {
+          "challenge": "Board disengaged or delegating entirely to Audit Committee",
+          "solution": "Schedule full board workshop in Q1 2025; insist on quarterly dashboard review at full board, not just Audit Committee"
+        },
+        {
+          "challenge": "GRC platform implementation delayed",
+          "solution": "Escalate to Steering Committee; consider interim manual processes but flag risk of scalability issues"
+        }
+      ],
+      "recommendedTemplates": [
+        "materiality-criteria",
+        "mci",
+        "raci-matrix",
+        "board-dashboard",
+        "control-documentation",
+        "assurance-mapping",
+        "dry-run-plan"
+      ]
+    },
+    {
+      "id": "control-owner",
+      "name": "Control Owner (1st Line of Defence)",
+      "icon": "⚙️",
+      "color": "#f59e0b",
+      "description": "Executes controls daily/weekly/monthly, maintains evidence, conducts self-assessments, and reports to 2nd line. Foundation of the control framework.",
+      "keyResponsibilities": [
+        "Execute assigned controls per defined frequency",
+        "Maintain evidence of control performance",
+        "Conduct monthly self-assessments",
+        "Remediate control failures promptly",
+        "Report issues to 2nd line (CRO/Risk team)",
+        "Participate in control testing by 2nd and 3rd line"
+      ],
+      "whatYouNeedToKnow": [
+        {
+          "topic": "Which controls you own",
+          "detail": "Review your assigned controls in the MCI; understand which principal risks they mitigate"
+        },
+        {
+          "topic": "Control frequency",
+          "detail": "Know whether your controls are daily, weekly, monthly, or quarterly"
+        },
+        {
+          "topic": "Effectiveness criteria",
+          "detail": "Understand what 'good' looks like (e.g., '100% of invoices approved within 48 hours')"
+        },
+        {
+          "topic": "Evidence requirements",
+          "detail": "Know what evidence to keep, where to store it, and how long to retain it (typically 7 years)"
+        },
+        {
+          "topic": "Escalation process",
+          "detail": "Know who to contact if a control fails or if you need support"
+        }
+      ],
+      "timeline": [
+        {
+          "period": "Q2-Q3 2025",
+          "activity": "Training on your assigned controls (workshops, user guides, simulations)"
+        },
+        {
+          "period": "Q3 2025",
+          "activity": "Document your controls using standardised template"
+        },
+        {
+          "period": "Q4 2025",
+          "activity": "Participate in dry run (execute controls, collect evidence, complete self-assessment)"
+        },
+        {
+          "period": "FY2026 (Monthly)",
+          "activity": "Execute controls per frequency; collect evidence; complete monthly self-assessment"
+        }
+      ],
+      "trainingChecklist": [
+        "Understand what 'material control' means and why your controls are material",
+        "Know your control objectives (what the control is designed to prevent/detect)",
+        "Understand effectiveness criteria (how to know if your control is working)",
+        "Know where to store evidence (GRC platform, shared drive, or other repository)",
+        "Understand escalation process (who to contact for issues, when to escalate)"
+      ],
+      "quickReferenceGuide": {
+        "controlExecution": {
+          "steps": [
+            "Review control definition (what, how, when, by whom)",
+            "Execute control per defined procedure",
+            "Collect evidence (approvals, logs, reconciliations, reports)",
+            "Store evidence in designated repository",
+            "Complete self-assessment (pass/fail; if fail, document reason and remediation)"
+          ]
+        },
+        "evidenceCollection": {
+          "types": [
+            "Approval logs (e.g., signed purchase orders, invoice approvals)",
+            "Reconciliations (e.g., bank recs, inventory counts)",
+            "System reports (e.g., access logs, transaction reports)",
+            "Training records (e.g., completion certificates)",
+            "Attestations (e.g., policy acknowledgements)"
+          ],
+          "storage": "GRC platform or designated shared repository",
+          "retention": "Typically 7 years for audit purposes"
+        },
+        "issueEscalation": {
+          "whenToEscalate": [
+            "Control fails (effectiveness criteria not met)",
+            "Unable to execute control (system down, resource unavailable)",
+            "Evidence cannot be collected",
+            "Unsure how to interpret control definition"
+          ],
+          "whoToContact": "Your 2nd line contact (CRO/Risk team) or designated escalation point",
+          "howToEscalate": "Log issue in GRC platform or email escalation contact with: Control ID, description of issue, impact, proposed remediation"
+        }
+      },
+      "recommendedTemplates": [
+        "control-documentation",
+        "evidence-repository"
+      ]
+    },
+    {
+      "id": "internal-audit",
+      "name": "Internal Audit / 2nd Line Assurance",
+      "icon": "🔍",
+      "color": "#8b5cf6",
+      "description": "Provides independent testing of material controls, validates effectiveness assessments, and delivers assurance reporting to Audit Committee and Board.",
+      "keyResponsibilities": [
+        "Independent testing of material controls (3rd line)",
+        "Assurance reporting to Audit Committee",
+        "Challenge control documentation and design",
+        "Validate 1st line self-assessments",
+        "Framework assurance (overall P29 framework effectiveness)"
+      ],
+      "testingPlan": {
+        "phase3": "Define testing protocols, sample sizes, and methodologies",
+        "phase4": "Execute testing quarterly or annually per control"
+      },
+      "sampleSizes": {
+        "guidance": "Risk-based sampling",
+        "typical": "10-25 samples per control",
+        "high-risk": "25-50 samples",
+        "low-risk": "5-10 samples",
+        "statistical": "Use statistical sampling for high-volume, automated controls"
+      },
+      "assuranceMapping": {
+        "firstLine": {
+          "role": "Self-assessment",
+          "frequency": "Continuous (daily/weekly/monthly)",
+          "coverage": "All controls"
+        },
+        "secondLine": {
+          "role": "Independent review/oversight",
+          "frequency": "Quarterly",
+          "coverage": "All controls"
+        },
+        "thirdLine": {
+          "role": "Independent testing",
+          "frequency": "Annually",
+          "coverage": "100% of material controls"
+        }
+      },
+      "testingProtocolLibrary": [
+        {
+          "controlType": "Access control testing",
+          "method": "Review user access logs; test segregation of duties; validate privileged access approvals",
+          "sampleSize": "20-30 user accounts",
+          "passCriteria": "Zero unauthorised access incidents; 100% of privileged access approved"
+        },
+        {
+          "controlType": "Reconciliation testing",
+          "method": "Select sample of reconciliations; verify completion, approval, and timely resolution of exceptions",
+          "sampleSize": "15-25 reconciliations",
+          "passCriteria": "100% completed within defined timeframe; all exceptions resolved"
+        },
+        {
+          "controlType": "Segregation of duties testing",
+          "method": "Review user roles and permissions; identify conflicts; validate mitigating controls",
+          "sampleSize": "All high-risk role combinations",
+          "passCriteria": "Zero unmitigated conflicts"
+        }
+      ],
+      "reportingRequirements": {
+        "to": "Audit Committee",
+        "frequency": "Quarterly",
+        "format": "Board Dashboard + detailed findings report",
+        "content": [
+          "Controls tested this quarter",
+          "Testing results (pass/fail)",
+          "Issues identified (with severity)",
+          "Management response and remediation",
+          "Overall assurance opinion"
+        ]
+      },
+      "recommendedTemplates": [
+        "testing-protocols",
+        "assurance-mapping",
+        "board-dashboard"
+      ]
+    },
+    {
+      "id": "programme-manager",
+      "name": "Programme Manager / Project Lead",
+      "icon": "📊",
+      "color": "#ec4899",
+      "description": "Day-to-day project management, maintains timeline, coordinates workstreams, tracks deliverables, manages risks and issues, reports to steering committee.",
+      "keyResponsibilities": [
+        "Day-to-day project management",
+        "Maintain project plan and timeline (Gantt chart, milestone tracking)",
+        "Coordinate cross-functional workstreams",
+        "Track deliverables and milestones",
+        "Manage risks and issues register",
+        "Report to steering committee (monthly)",
+        "Stakeholder communication"
+      ],
+      "projectGovernance": {
+        "steeringCommittee": {
+          "frequency": "Monthly",
+          "members": ["CFO", "CRO", "Head of Internal Audit", "Chief Legal Officer"],
+          "agenda": ["Progress vs plan", "Risks and issues", "Budget vs actual", "Decisions required"]
+        },
+        "workingGroup": {
+          "frequency": "Bi-weekly",
+          "members": ["Functional leads (Finance, IT, Ops, Legal, ESG)"],
+          "agenda": ["Workstream updates", "Dependencies", "Blockers", "Next 2 weeks plan"]
+        },
+        "controlOwnerForum": {
+          "frequency": "Monthly",
+          "audience": "All 1st line control owners",
+          "format": "Town hall / webinar",
+          "agenda": ["Programme progress", "Training updates", "Q&A", "Reminders"]
+        },
+        "allStaff": {
+          "frequency": "Quarterly",
+          "format": "Email update / intranet",
+          "content": ["What is P29?", "Why it matters", "Progress update", "What's expected of staff"]
+        }
+      },
+      "dashboard": {
+        "ragStatus": "RAG status by phase (Red/Amber/Green)",
+        "deliverables": "Deliverables tracker (planned vs actual)",
+        "riskRegister": "Top 10 risks with mitigation",
+        "budget": "Budget vs actual spend",
+        "resources": "Resource utilisation (FTE allocation vs actuals)"
+      },
+      "stakeholderCommunication": [
+        {
+          "audience": "Board",
+          "frequency": "Quarterly",
+          "channel": "Board meetings",
+          "content": "Executive summary, RAG status, key milestones, decisions required"
+        },
+        {
+          "audience": "Steering Committee",
+          "frequency": "Monthly",
+          "channel": "Formal meetings",
+          "content": "Detailed progress, risks/issues, budget, resource needs"
+        },
+        {
+          "audience": "Control Owners",
+          "frequency": "Monthly",
+          "channel": "Town halls / webinars",
+          "content": "Training updates, expectations, Q&A, success stories"
+        },
+        {
+          "audience": "All Staff",
+          "frequency": "Quarterly",
+          "channel": "Email / intranet",
+          "content": "What is P29, why it matters, progress, what's expected"
+        }
+      ],
+      "criticalSuccessFactors": [
+        "Secure executive sponsor (CFO/CEO) and maintain their visibility",
+        "Define clear governance (steering committee, working groups, escalation)",
+        "Build cross-functional team with empowered representatives",
+        "Maintain momentum (don't pause between phases)",
+        "Celebrate milestones (board approval, dry run success, go-live)"
+      ],
+      "recommendedTemplates": [
+        "resource-planning",
+        "stakeholder-comms",
+        "dry-run-plan"
+      ]
+    }
+  ]
+}

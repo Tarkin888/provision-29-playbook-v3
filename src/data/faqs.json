@@ -1,0 +1,104 @@
+{
+  "faqs": [
+    {
+      "id": "faq1",
+      "category": "General",
+      "question": "What is Provision 29?",
+      "answer": "Provision 29 is part of the UK Corporate Governance Code 2024, published by the Financial Reporting Council (FRC). It requires boards of Premium-listed companies to monitor and review the effectiveness of the company's material controls and to make an explicit declaration in the annual report about their effectiveness. This represents a significant strengthening from the 2018 Code, which only required a general statement about risk management and internal control systems."
+    },
+    {
+      "id": "faq2",
+      "category": "General",
+      "question": "Who does Provision 29 apply to?",
+      "answer": "Provision 29 applies to all companies with a Premium listing on the London Stock Exchange (approximately 350 companies, including the FTSE 100 and FTSE 250). The Code operates on a 'comply or explain' basis, meaning companies must either comply with the provision or explain why they have chosen an alternative approach. First compliance is required for financial years beginning on or after 1 January 2026, with the first declarations appearing in 2027 annual reports."
+    },
+    {
+      "id": "faq3",
+      "category": "General",
+      "question": "When do I need to comply with Provision 29?",
+      "answer": "First compliance is required for financial years beginning on or after 1 January 2026. This means:\n\n• Companies with a calendar year-end: First declaration in 2027 annual report (published early 2028)\n• Companies with a March year-end: First declaration in March 2027 annual report (published mid-2027)\n\nKey dates:\n• Now - Q1 2025: Start Phase 1 (Definition & Scoping)\n• 2025: Build framework and conduct dry run\n• 2026: Full-year evidence collection and testing\n• 2027: Board declaration in annual report\n\nThe FRC will begin monitoring disclosures in 2027 annual reports."
+    },
+    {
+      "id": "faq4",
+      "category": "Implementation",
+      "question": "How many material controls should I have?",
+      "answer": "The typical range is 25-100 material controls, with most FTSE 250 companies landing around 40-50 controls. The FRC deliberately does not specify a number—it's principles-based.\n\nThe number depends on:\n• Business complexity and number of business units\n• Risk profile and industry\n• Regulatory environment\n• Geographic spread\n\nGuidance:\n• Start with principal risks (typically 8-15)\n• Map 2-5 material controls per principal risk\n• Apply materiality criteria (quantitative + qualitative)\n• Avoid control proliferation: >100 controls indicates insufficient materiality filtering and creates unmanageable scope\n\nReal example: Sainsbury's (FTSE 100 retailer) identified 25 material controls covering Financial Reporting (8), IT/Cyber (5), Health & Safety (4), Supply Chain (4), and ESG (4)."
+    },
+    {
+      "id": "faq5",
+      "category": "Implementation",
+      "question": "Do I need a GRC platform?",
+      "answer": "While not strictly required, a GRC platform is highly recommended for companies implementing Provision 29, especially for FTSE 250 and above.\n\nWhy?\n• Scale: Managing 40-50 material controls, quarterly testing, and evidence collection across multiple business units is unmanageable in spreadsheets\n• Audit trail: GRC platforms provide version control, approval workflows, and audit logs\n• Real-time reporting: Automated board dashboards with RAG status\n• Integration: Connects to ERP, risk registers, and other systems\n\nWhen to procure:\n• Start vendor selection: Q1 2025 (Phase 1)\n• Implementation: Q1-Q3 2025 (Phases 1-2)\n• Go-live: Q4 2025 (Phase 3), in time for FY2026 evidence collection\n\nBudget:\n• FTSE 250: £50,000-£150,000\n• FTSE 100: £150,000-£500,000\n\nAlternatives:\n• Manual (spreadsheets + shared drives): Only viable for smaller companies with <30 controls and simple structures\n• Leverage existing SOX platform: If you already have a SOX compliance platform, extend it for P29"
+    },
+    {
+      "id": "faq6",
+      "category": "Implementation",
+      "question": "What if I find ineffective controls during testing?",
+      "answer": "Finding ineffective controls is not a Provision 29 failure—it's the process working as intended. Transparency is key.\n\nFRC Expectations:\n• If controls are ineffective, the board must EXPLAIN in the annual report\n• Include: Nature of ineffectiveness, root cause, remediation plan, expected completion\n• Demonstrate robust response, not perfection\n\nResponse Protocol:\n1. Document the deficiency (what failed, when, impact)\n2. Perform root cause analysis (design flaw? execution gap? resources?)\n3. Develop remediation plan with milestones\n4. Assign owner and governance (e.g., Audit Committee oversight)\n5. Re-test post-remediation\n6. Prepare board disclosure wording\n\nReal Example:\nA FTSE 250 company found 3 of 45 material controls ineffective in their 2025 dry run. They:\n• Initiated immediate remediation (Q3 2025)\n• Provided quarterly Audit Committee updates\n• Re-tested in Q1 2026\n• Made transparent disclosure in 2026 annual report\n• Result: FRC praised their transparency\n\nKey Point: It's better to find and fix ineffective controls in 2025 than to have them surface via incident in 2027."
+    },
+    {
+      "id": "faq7",
+      "category": "Frameworks",
+      "question": "Can I use my existing SOX 404 framework for Provision 29?",
+      "answer": "Yes, absolutely—if you're dual-listed (US and UK), leveraging your existing SOX 404 framework is highly efficient and recommended.\n\nOverlap:\n• Financial reporting controls: ~80-90% overlap between SOX and P29\n• Control documentation, testing protocols, and evidence requirements are similar\n• Three Lines of Defence model aligns well\n\nDifferences:\n• Scope: P29 is broader than SOX. P29 includes operational, compliance, and ESG/reporting controls, not just financial reporting\n• Materiality: P29 materiality is principles-based (risk to business model, stakeholders), while SOX is rules-based (financial statement materiality)\n• Board accountability: P29 requires explicit board declaration; SOX is management certification\n\nImplementation Approach:\n1. Gap Analysis: Compare SOX control population to P29 materiality criteria\n2. Expand Scope: Identify operational, cyber, ESG controls not in SOX\n3. Unified Control Library: Create single repository with SOX/P29 tags\n4. Leverage Testing: Use SOX testing results as evidence for P29 (where applicable)\n5. Board Reporting: Enhance SOX dashboards for board (not just Audit Committee)\n\nEstimated Effort Reduction: 30-40% if you leverage SOX effectively"
+    },
+    {
+      "id": "faq8",
+      "category": "Frameworks",
+      "question": "Should I use COSO or ISO 31000?",
+      "answer": "Either framework is acceptable—choose the one that aligns with your existing risk and control infrastructure.\n\nCOSO 2013 Internal Control Framework:\n• Strengths: Widely adopted for financial controls; aligns well with SOX; detailed guidance on control components\n• Best for: Companies with strong financial controls heritage; dual-listed (US/UK) companies\n• Components: Control Environment, Risk Assessment, Control Activities, Information & Communication, Monitoring\n\nISO 31000 Risk Management:\n• Strengths: Broader risk management focus; international standard; flexible and principles-based\n• Best for: Companies with mature ERM programmes; non-financial services sectors\n• Components: Governance, Risk Assessment, Risk Treatment, Communication, Monitoring & Review\n\nHybrid Approach:\n• Many companies use COSO for financial controls and ISO 31000 for operational/ESG controls\n• Document your framework choice and mapping in Phase 1\n\nFRC View:\n• FRC does not mandate a specific framework\n• Expects you to articulate which framework you use and demonstrate how material controls map to it\n\nPractical Tip: If you're already using a framework for existing compliance (SOX, GDPR, ISO 27001), extend it rather than introducing a new one."
+    },
+    {
+      "id": "faq9",
+      "category": "Cost & Resources",
+      "question": "How much will Provision 29 implementation cost?",
+      "answer": "Total cost varies by company size, complexity, and existing infrastructure:\n\nFTSE 100:\n• Total: £500,000-£1,500,000\n• Breakdown:\n  - Internal FTE costs: £300k-£800k (5-8 FTE over 24 months)\n  - External consulting: £100k-£400k (framework design, training, dry run support)\n  - GRC platform: £150k-£500k (software, implementation, integration)\n  - Training & change management: £50k-£200k\n\nFTSE 250:\n• Total: £350,000-£750,000\n• Breakdown:\n  - Internal FTE costs: £200k-£450k (3-5 FTE over 24 months)\n  - External consulting: £50k-£200k\n  - GRC platform: £50k-£150k\n  - Training & change management: £50k-£100k\n\nCost Drivers:\n• Number of business units and geographies\n• Maturity of existing control environment\n• Whether you have existing GRC infrastructure (SOX, ISO)\n• In-house capability vs need for external support\n\nCost Avoidance:\n• Starting early (Q1 2025) reduces rushed implementation costs\n• Leveraging existing frameworks (SOX, ISO) reduces duplication\n• Investing in GRC platform upfront reduces long-term operational costs"
+    },
+    {
+      "id": "faq10",
+      "category": "Cost & Resources",
+      "question": "Can I implement Provision 29 in 12 months instead of 24?",
+      "answer": "While theoretically possible, a 12-month implementation is not recommended and carries significant risks.\n\nWhy 24 months?\n1. Phase 1 (Definition): Requires thoughtful board engagement, cross-functional workshops, and materiality assessment—cannot be rushed\n2. Phase 2 (Documentation): Control owners need time to understand, document, and accept ownership\n3. Phase 3 (Dry Run): Critical learning opportunity; cutting this short means issues surface in FY2026 when stakes are higher\n4. Phase 4 (Full Year Testing): Requires full financial year of evidence collection\n\nCompressed Timeline Risks:\n• Superficial materiality assessment → wrong controls identified\n• Rushed control documentation → poor quality, lack of ownership\n• No dry run → issues discovered in FY2026 when it matters\n• Board disengagement → lack of confidence to declare effectiveness\n• Quality compromised → FRC scrutiny\n\nAccelerated Approach (18 months minimum):\n• Requires: Strong existing control environment (SOX, ISO), dedicated full-time team, executive sponsorship\n• Start: Q3 2024 (instead of Q1 2025)\n• Compress: Phases 1-2 to 4 months each; still retain full dry run and FY2026 testing\n\nBottom Line: If you haven't started by Q2 2025, you're at risk. Starting in H2 2025 or later will compromise quality and board confidence."
+    },
+    {
+      "id": "faq11",
+      "category": "Governance",
+      "question": "Is Provision 29 the Board's responsibility or the Audit Committee's?",
+      "answer": "It is the BOARD'S responsibility, with the Audit Committee providing support and detailed oversight.\n\nProvision 29 explicitly states: 'The board should...' (not 'The Audit Committee should...')\n\nResponsibility Split:\n\nBOARD:\n• Ultimate accountability for declaration of effectiveness\n• Approves materiality criteria and Material Control Inventory (Q1 2025)\n• Reviews quarterly control effectiveness dashboards\n• Challenges management's assurance quality\n• Approves final declaration for annual report (Q4 2026)\n\nAUDIT COMMITTEE:\n• Detailed oversight and technical review\n• Reviews control documentation and testing protocols\n• Monitors remediation of ineffective controls\n• Oversees dry run execution and results\n• Recommends declaration wording to full Board\n\nRed Flag:\n• Treating P29 as 'Audit Committee project' → Board disengagement → lack of confidence to declare\n\nBest Practice:\n• Full Board workshop in Q1 2025 (2 hours)\n• Quarterly dashboard review at full Board meetings (not just Audit Committee)\n• Board members can articulate material controls and why they matter\n\nReal Example: HSBC expanded Audit Committee remit but retained explicit Board accountability and involvement."
+    },
+    {
+      "id": "faq12",
+      "category": "Governance",
+      "question": "What's the role of the Three Lines of Defence?",
+      "answer": "The Three Lines of Defence model is the recommended framework for P29 assurance:\n\n1ST LINE (CONTROL OWNERS):\n• Role: Execute controls, maintain evidence, conduct self-assessments\n• Frequency: Continuous (daily/weekly/monthly per control frequency)\n• Example: Finance team performs monthly bank reconciliations; IT team monitors access logs daily\n\n2ND LINE (RISK, COMPLIANCE, LEGAL):\n• Role: Independent oversight, challenge, and testing\n• Frequency: Quarterly review and testing\n• Example: Risk team reviews control owner self-assessments; Compliance tests policy adherence\n\n3RD LINE (INTERNAL AUDIT):\n• Role: Independent assurance on framework design and operating effectiveness\n• Frequency: Annual framework assurance\n• Example: Internal Audit tests sample of material controls; validates control documentation quality; assesses overall framework adequacy\n\nCritical Success Factor:\n• Clear RACI matrix (Responsible, Accountable, Consulted, Informed) across all three lines\n• No confusion about who does what\n• No gaps (controls without assurance) or duplication (over-testing)\n\nCommon Pitfall:\n• Blurred lines between 2nd and 3rd line → independence concerns\n• Solution: 3rd line (Internal Audit) focuses on framework assurance; 2nd line does ongoing control testing"
+    },
+    {
+      "id": "faq13",
+      "category": "Disclosure",
+      "question": "What must I disclose in the annual report?",
+      "answer": "Provision 29 requires two key disclosures in the annual report:\n\n1. DESCRIPTION OF MONITORING AND REVIEW PROCESS:\nInclude:\n• Framework used (COSO, ISO 31000, etc.)\n• How material controls were identified (top-down from principal risks)\n• Three Lines of Defence model and assurance approach\n• Board and Audit Committee meeting frequency dedicated to controls\n• Technology enablers deployed (GRC platform)\n• External assurance obtained (if any)\n\n2. EXPLICIT DECLARATION OF EFFECTIVENESS:\nThree scenarios:\n\nA) Full Effectiveness:\n'The Board has monitored and reviewed the effectiveness of the Company's material controls throughout the year and up to the date of this report. Based on the assurance obtained from the three lines of defence and the work of the Audit Committee, the Board confirms that the material controls were operating effectively as at [balance sheet date].'\n\nB) Effectiveness with Exceptions:\n'The Board confirms that the material controls were operating effectively throughout the year, with the exception of [Control X], which was found to be ineffective in [Quarter]. The root cause was [brief description]. A remediation plan has been implemented and is expected to be complete by [date]. The Board has satisfied itself that this deficiency did not result in material misstatement or significant operational impact.'\n\nC) Ineffectiveness with Remediation:\n'The Board has identified that [number] material controls were not operating effectively during the year. These relate to [brief description of control domains]. The Board has implemented a comprehensive remediation programme overseen by the Audit Committee, with expected completion by [date]. The Board will provide an update on remediation progress in next year's annual report.'\n\nFRC Expectations:\n• Transparency and substance over boilerplate language\n• Year-on-year consistency and comparability\n• Clear linkage between principal risks and material controls"
+    },
+    {
+      "id": "faq14",
+      "category": "Compliance",
+      "question": "What if I choose to 'explain' rather than 'comply'?",
+      "answer": "The UK Corporate Governance Code operates on a 'comply or explain' principle. You can choose not to comply with Provision 29, but you must provide a clear, high-quality explanation.\n\nFRC Expectations for 'Explain':\n• Explanation must be clear, cogent, and specific to your circumstances\n• Explain WHY you are not complying (not just THAT you are not complying)\n• Demonstrate you have considered the underlying objective of the provision\n• Show how your alternative approach achieves good governance\n\nWhat 'Explain' is NOT:\n• A 'get out of jail free' card\n• An excuse for lack of preparation\n• A permanent state—FRC expects movement towards compliance\n\nValid Reasons to Explain:\n• Newly listed company: 'We listed in [date] and are building our P29 framework; we expect to comply by [year]'\n• Significant restructuring: 'Following [merger/acquisition], we are integrating control frameworks; we expect to comply by [year]'\n• Alternative framework: 'We operate under [other regulatory regime] which we consider provides equivalent assurance'\n\nInvalid Reasons:\n• 'We didn't have time'\n• 'It's too expensive'\n• 'We don't think it's necessary'\n\nFRC Scrutiny:\n• The FRC monitors 'explain' statements and may challenge weak explanations\n• Persistent 'explainers' attract regulatory attention\n• Investors and proxy advisors scrutinise and may vote against directors\n\nBottom Line: 'Explain' should be rare and temporary. Start preparing now to comply."
+    },
+    {
+      "id": "faq15",
+      "category": "Best Practice",
+      "question": "Should I conduct a dry run before the 2026 reporting year?",
+      "answer": "YES—a dry run in H2 2025 is non-negotiable and a critical success factor.\n\nWhy?\n1. Stress-Test: Identify control execution issues, evidence gaps, and testing bottlenecks before it matters\n2. Board Confidence: Board needs to see the process work before committing to declaration\n3. Lessons Learned: Time to remediate issues found during dry run before FY2026 starts\n4. Platform Validation: Confirms GRC platform is operational and fit-for-purpose\n\nDry Run Scope:\n• Duration: 6-8 weeks (typically Q4 2025)\n• Covers: All material controls executed per frequency, evidence collected, sample testing conducted, board dashboard generated\n• Output: Dry run report with RAG status, lessons learned, improvement actions\n\nReal Example:\nA FTSE 250 company conducted a dry run in Q4 2025 and discovered:\n• 15% of controls had unclear effectiveness criteria → remediated before FY2026\n• Evidence repository structure was confusing → reorganised\n• Board dashboard had too much detail → simplified to 'Approach on a Page'\n• 2 controls found ineffective → remediation plan implemented in Q1 2026\n\nResult: Entered FY2026 with confidence; board approved declaration without hesitation\n\nCompanies that skip the dry run typically face:\n• Scrambled evidence collection in Q4 2026\n• Board hesitation to declare\n• Last-minute control failures\n• Rushed remediation\n\nDry Run Cost: £20,000-£50,000 (worth every penny for the risk mitigation)"
+    }
+  ],
+  "categories": [
+    "General",
+    "Implementation",
+    "Frameworks",
+    "Cost & Resources",
+    "Governance",
+    "Disclosure",
+    "Compliance",
+    "Best Practice"
+  ]
+}
