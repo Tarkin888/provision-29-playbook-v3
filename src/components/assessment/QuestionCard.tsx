@@ -31,19 +31,19 @@ const QuestionCard = ({
   totalQuestions,
 }: QuestionCardProps) => {
   return (
-    <Card className="p-6 md:p-8">
-      <div className="mb-6">
+    <Card className="p-4 sm:p-6 md:p-8">
+      <div className="mb-4 md:mb-6">
         <Badge 
           variant="secondary" 
-          className="mb-4"
+          className="mb-3 md:mb-4 text-xs sm:text-sm"
           style={{ backgroundColor: `${domainColor}20`, color: domainColor }}
         >
           {domainName}
         </Badge>
-        <p className="text-sm text-muted-foreground mb-2">
+        <p className="text-xs sm:text-sm text-muted-foreground mb-2">
           Question {questionNumber} of {totalQuestions}
         </p>
-        <h3 className="text-2xl font-bold">{question}</h3>
+        <h3 className="text-lg sm:text-xl md:text-2xl font-bold leading-tight">{question}</h3>
       </div>
 
       <RadioGroup value={selectedValue} onValueChange={(value) => {
@@ -52,13 +52,13 @@ const QuestionCard = ({
           onSelect(value, selectedOption.points);
         }
       }}>
-        <div className="space-y-3">
+        <div className="space-y-2 md:space-y-3">
           {options.map((option, index) => (
             <Label
               key={index}
               htmlFor={`option-${index}`}
               className={cn(
-                "flex items-start gap-3 p-4 rounded-lg border-2 cursor-pointer transition-all hover:border-primary/50",
+                "flex items-start gap-3 p-4 rounded-lg border-2 cursor-pointer transition-all hover:border-primary/50 min-h-[60px]",
                 selectedValue === index.toString()
                   ? "border-primary bg-primary/5"
                   : "border-border"
@@ -67,9 +67,9 @@ const QuestionCard = ({
               <RadioGroupItem
                 value={index.toString()}
                 id={`option-${index}`}
-                className="mt-0.5"
+                className="mt-0.5 flex-shrink-0"
               />
-              <span className="text-base flex-1">{option.text}</span>
+              <span className="text-sm sm:text-base flex-1 leading-relaxed">{option.text}</span>
             </Label>
           ))}
         </div>

@@ -21,17 +21,17 @@ const Roadmap = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-primary/5 to-background py-16 px-4">
+      <section className="bg-gradient-to-b from-primary/5 to-background py-12 md:py-16 px-4">
         <div className="container mx-auto max-w-6xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4 animate-fade-in">
             Your 24-Month Journey to Provision 29 Compliance
           </h1>
-          <p className="text-lg text-muted-foreground mb-6 animate-fade-in">
+          <p className="text-base md:text-lg text-muted-foreground mb-4 md:mb-6 animate-fade-in">
             A proven implementation framework based on FTSE 100 delivery
           </p>
-          <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full animate-fade-in">
+          <div className="inline-flex items-center gap-2 bg-primary/10 px-3 md:px-4 py-2 rounded-full animate-fade-in">
             <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-            <span className="text-sm font-medium">
+            <span className="text-xs sm:text-sm font-medium">
               You are currently in Week {currentWeek} (Q{currentQuarter} {currentYear})
             </span>
           </div>
@@ -39,17 +39,17 @@ const Roadmap = () => {
       </section>
 
       {/* Timeline Visualization */}
-      <section className="py-12 px-4">
+      <section className="py-8 md:py-12 px-4">
         <div className="container mx-auto max-w-6xl">
           <TimelineVisualization phases={phases} currentWeek={currentWeek} />
         </div>
       </section>
 
       {/* Phase Cards */}
-      <section className="py-12 px-4 bg-muted/30">
+      <section className="py-8 md:py-12 px-4 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold mb-8">Implementation Phases</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 md:mb-8">Implementation Phases</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {phases.map((phase) => (
               <PhaseCard
                 key={phase.id}
@@ -62,10 +62,10 @@ const Roadmap = () => {
       </section>
 
       {/* Upcoming Milestones */}
-      <section className="py-12 px-4">
+      <section className="py-8 md:py-12 px-4">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold mb-2">Upcoming Milestones</h2>
-          <p className="text-muted-foreground mb-8">Next 8 weeks</p>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-2">Upcoming Milestones</h2>
+          <p className="text-sm sm:text-base text-muted-foreground mb-6 md:mb-8">Next 8 weeks</p>
           <UpcomingMilestones milestones={upcomingMilestones} />
         </div>
       </section>

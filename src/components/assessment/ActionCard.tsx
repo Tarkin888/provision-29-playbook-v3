@@ -31,24 +31,24 @@ const ActionCard = ({ title, description, domain, priority, effort, resources }:
   const priorityStyle = getPriorityStyle();
 
   return (
-    <Card className={`p-6 ${planned ? 'border-primary bg-primary/5' : ''}`}>
-      <div className="space-y-4">
+    <Card className={`p-4 md:p-6 ${planned ? 'border-primary bg-primary/5' : ''}`}>
+      <div className="space-y-3 md:space-y-4">
         <div className="flex items-start justify-between">
           <div className="flex-1">
-            <div className="flex items-center space-x-2 mb-2">
-              <Badge className={`${priorityStyle.bg} ${priorityStyle.text} border ${priorityStyle.border}`}>
+            <div className="flex flex-wrap items-center gap-2 mb-2">
+              <Badge className={`${priorityStyle.bg} ${priorityStyle.text} border ${priorityStyle.border} text-xs sm:text-sm`}>
                 {priority}
               </Badge>
-              <Badge variant="outline">{domain}</Badge>
+              <Badge variant="outline" className="text-xs sm:text-sm">{domain}</Badge>
             </div>
-            <h3 className="text-lg font-bold text-foreground">{title}</h3>
+            <h3 className="text-base sm:text-lg font-bold text-foreground leading-tight">{title}</h3>
           </div>
         </div>
 
-        <p className="text-muted-foreground">{description}</p>
+        <p className="text-sm sm:text-base text-muted-foreground">{description}</p>
 
-        <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-          <div className="flex items-center space-x-1">
+        <div className="flex items-center flex-wrap gap-3 sm:gap-4 text-xs sm:text-sm text-muted-foreground">
+          <div className="flex items-center gap-1 sm:gap-2">
             <Clock className="h-4 w-4" />
             <span>Est. {effort}</span>
           </div>
@@ -56,22 +56,23 @@ const ActionCard = ({ title, description, domain, priority, effort, resources }:
 
         {resources && resources.length > 0 && (
           <div className="pt-2 border-t">
-            <Button variant="link" className="p-0 h-auto text-primary">
+            <Button variant="link" className="p-0 h-auto text-primary text-sm">
               View Recommended Resources
               <ExternalLink className="h-3 w-3 ml-1" />
             </Button>
           </div>
         )}
 
-        <div className="flex items-center space-x-2 pt-2">
+        <div className="flex items-center gap-2 pt-2">
           <Checkbox
             id={`planned-${title}`}
             checked={planned}
             onCheckedChange={(checked) => setPlanned(checked as boolean)}
+            className="min-h-[24px] min-w-[24px]"
           />
           <label
             htmlFor={`planned-${title}`}
-            className="text-sm font-medium cursor-pointer text-foreground"
+            className="text-xs sm:text-sm font-medium cursor-pointer text-foreground min-h-[44px] flex items-center"
           >
             Mark as planned
           </label>
