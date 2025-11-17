@@ -1,4 +1,6 @@
 import { P29Data } from "@/data";
+import SEOHead from "@/components/common/SEOHead";
+import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import RoleCard from "@/components/roles/RoleCard";
 
 const Roles = () => {
@@ -6,13 +8,23 @@ const Roles = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Role Guides"
+        description="Tailored guidance for boards, CFOs, risk officers, control owners, audit teams, and programme managers implementing Provision 29."
+        canonical={`${window.location.origin}/roles`}
+      />
+      
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-primary/5 to-background py-16 px-4">
+      <section className="bg-gradient-to-b from-primary/5 to-background py-12 md:py-16 px-4">
         <div className="container mx-auto max-w-6xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
+          <Breadcrumbs 
+            items={[{ label: 'Role Guides' }]} 
+            className="mb-6"
+          />
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
             Role-Specific Guidance for Provision 29
           </h1>
-          <p className="text-lg text-muted-foreground animate-fade-in">
+          <p className="text-base sm:text-lg text-muted-foreground animate-fade-in">
             Tailored advice for your specific responsibilities in the P29 journey
           </p>
         </div>

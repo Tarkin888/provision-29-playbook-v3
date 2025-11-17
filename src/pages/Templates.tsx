@@ -1,6 +1,8 @@
 import { useState, useMemo } from "react";
 import { P29Data } from "@/data";
 import { Template } from "@/types/data";
+import SEOHead from "@/components/common/SEOHead";
+import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import SearchBar from "@/components/templates/SearchBar";
 import FilterBar from "@/components/templates/FilterBar";
 import TemplateCard from "@/components/templates/TemplateCard";
@@ -86,13 +88,23 @@ const Templates = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Template Library"
+        description="Browse 15+ ready-to-use Provision 29 templates to accelerate your implementation. Filter by phase, role, and template type."
+        canonical={`${window.location.origin}/templates`}
+      />
+      
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-primary/5 to-background py-16 px-4">
+      <section className="bg-gradient-to-b from-primary/5 to-background py-12 md:py-16 px-4">
         <div className="container mx-auto max-w-7xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
+          <Breadcrumbs 
+            items={[{ label: 'Templates' }]} 
+            className="mb-6"
+          />
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
             Provision 29 Template Library
           </h1>
-          <p className="text-lg text-muted-foreground animate-fade-in">
+          <p className="text-base sm:text-lg text-muted-foreground animate-fade-in">
             {allTemplates.length} ready-to-use templates to accelerate your implementation
           </p>
         </div>

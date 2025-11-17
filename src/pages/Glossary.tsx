@@ -1,6 +1,8 @@
 import { useState, useMemo, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { P29Data } from "@/data";
+import SEOHead from "@/components/common/SEOHead";
+import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { ArrowUp, Download } from "lucide-react";
 import GlossarySearch from "@/components/glossary/GlossarySearch";
@@ -133,12 +135,22 @@ const Glossary = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Glossary"
+        description="Comprehensive glossary of Provision 29 terminology and definitions. Essential terms for successful regulatory compliance."
+        canonical={`${window.location.origin}/glossary`}
+      />
+      
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-primary/5 to-background py-16 px-4">
-        <div className="container mx-auto max-w-4xl">
+      <section className="bg-gradient-to-b from-primary/5 to-background py-12 md:py-16 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <Breadcrumbs 
+            items={[{ label: 'Glossary' }]} 
+            className="mb-6"
+          />
           <div className="flex items-start justify-between gap-4 mb-4">
             <div className="flex-1">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
                 Provision 29 Glossary
               </h1>
               <p className="text-lg text-muted-foreground animate-fade-in">

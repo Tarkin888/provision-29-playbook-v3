@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { NavLink } from '@/components/NavLink';
+import SEOHead from '@/components/common/SEOHead';
 import ProgressWidget from '@/components/progress/ProgressWidget';
 import { 
   ArrowRight, 
@@ -84,6 +85,12 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead 
+        title="P29 Implementation Playbook"
+        description="Expert guidance for FTSE-listed companies implementing UK Corporate Governance Code Provision 29. 24-month roadmap, templates, and resources."
+        canonical={window.location.origin}
+      />
+      
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 via-blue-50/50 to-background">
         <div className="container mx-auto px-4 py-12 md:py-20 lg:py-28">

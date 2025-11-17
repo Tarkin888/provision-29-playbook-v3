@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { P29Data } from "@/data";
+import SEOHead from "@/components/common/SEOHead";
 import TimelineVisualization from "@/components/roadmap/TimelineVisualization";
 import PhaseCard from "@/components/roadmap/PhaseCard";
 import PhaseDetailModal from "@/components/roadmap/PhaseDetailModal";
@@ -75,6 +76,12 @@ const Roadmap = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Implementation Roadmap"
+        description="24-month structured journey through all phases of Provision 29 compliance. Plan your implementation with our comprehensive roadmap."
+        canonical={`${window.location.origin}/roadmap`}
+      />
+      
       {/* Breadcrumbs */}
       <div className="container mx-auto px-4 pt-20 md:pt-24 pb-4">
         <Breadcrumbs items={[{ label: 'Implementation Roadmap' }]} />

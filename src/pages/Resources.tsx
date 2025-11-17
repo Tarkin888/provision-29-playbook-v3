@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { P29Data } from "@/data";
+import SEOHead from "@/components/common/SEOHead";
+import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { FileText, BookOpen, Video as VideoIcon } from "lucide-react";
 import ArticleCard from "@/components/resources/ArticleCard";
@@ -20,13 +22,23 @@ const Resources = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Resources Hub"
+        description="Expert insights, case studies, and guidance for Provision 29 implementation. Articles, videos, and practical resources."
+        canonical={`${window.location.origin}/resources`}
+      />
+      
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-primary/5 to-background py-16 px-4">
+      <section className="bg-gradient-to-b from-primary/5 to-background py-12 md:py-16 px-4">
         <div className="container mx-auto max-w-6xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
+          <Breadcrumbs 
+            items={[{ label: 'Resources' }]} 
+            className="mb-6"
+          />
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
             Resources Hub
           </h1>
-          <p className="text-lg text-muted-foreground mb-8 animate-fade-in">
+          <p className="text-base sm:text-lg text-muted-foreground mb-8 animate-fade-in">
             Expert insights, real-world case studies, and essential P29 guidance
           </p>
           

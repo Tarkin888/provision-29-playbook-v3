@@ -1,5 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { P29Data } from "@/data";
+import SEOHead from "@/components/common/SEOHead";
+import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, FileText, Calendar, BookOpen } from "lucide-react";
@@ -37,26 +39,28 @@ const RoleDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title={role.name}
+        description={role.description}
+        canonical={`${window.location.origin}/roles/${role.id}`}
+      />
+      
       {/* Hero Section */}
       <section 
-        className="py-16 px-4 relative overflow-hidden"
+        className="py-12 md:py-16 px-4 relative overflow-hidden"
         style={{ 
           background: `linear-gradient(135deg, ${role.color}15 0%, ${role.color}05 100%)` 
         }}
       >
         <div className="container mx-auto max-w-5xl">
           {/* Breadcrumb */}
-          <div className="mb-6">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => navigate("/roles")}
-              className="gap-2"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Roles
-            </Button>
-          </div>
+          <Breadcrumbs 
+            items={[
+              { label: 'Roles', href: '/roles' },
+              { label: role.name }
+            ]} 
+            className="mb-6"
+          />
 
           {/* Role Header */}
           <div className="flex items-start gap-6 mb-6">

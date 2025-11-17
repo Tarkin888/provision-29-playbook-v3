@@ -1,6 +1,8 @@
 import { useState, useMemo, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { P29Data } from "@/data";
+import SEOHead from "@/components/common/SEOHead";
+import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import { Accordion } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -88,13 +90,23 @@ const FAQ = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Frequently Asked Questions"
+        description="Find answers to common questions about Provision 29 implementation, regulatory requirements, and best practices."
+        canonical={`${window.location.origin}/faq`}
+      />
+      
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-primary/5 to-background py-16 px-4">
+      <section className="bg-gradient-to-b from-primary/5 to-background py-12 md:py-16 px-4">
         <div className="container mx-auto max-w-4xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center animate-fade-in">
+          <Breadcrumbs 
+            items={[{ label: 'FAQ' }]} 
+            className="mb-6"
+          />
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-center animate-fade-in">
             Frequently Asked Questions
           </h1>
-          <p className="text-lg text-muted-foreground text-center mb-8 animate-fade-in">
+          <p className="text-base sm:text-lg text-muted-foreground text-center mb-8 animate-fade-in">
             Everything you need to know about Provision 29 implementation
           </p>
           <FAQSearch 
