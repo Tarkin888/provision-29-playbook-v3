@@ -1,6 +1,26 @@
 {
   "templates": [
     {
+      "id": "material-control-definition",
+      "name": "Material Control Definition Template",
+      "phase": 2,
+      "type": "Documentation",
+      "format": "Excel",
+      "roles": ["Control Owner", "CRO", "Programme Manager"],
+      "description": "Comprehensive template for defining and documenting material controls with all required fields. Includes control identification, ownership, risk linkages, effectiveness criteria, testing approach, and evidence requirements.",
+      "keyFeatures": [
+        "Control ID and descriptive title",
+        "Control owner with role and business unit",
+        "Linked principal risks mapping",
+        "Control type and domain classification",
+        "Detailed effectiveness criteria",
+        "Testing frequency and methodology",
+        "Evidence requirements and storage locations"
+      ],
+      "downloadUrl": "/downloads/Template1_Material_Control_Definition.xlsx",
+      "previewUrl": "/previews/material-control-definition-preview.png"
+    },
+    {
       "id": "materiality-criteria",
       "name": "Materiality Criteria Matrix",
       "phase": 1,
