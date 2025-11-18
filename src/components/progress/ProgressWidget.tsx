@@ -56,9 +56,9 @@ const ProgressWidget = () => {
         {/* CTA */}
         {!hasAssessment && (
           <div className="p-3 bg-primary/5 rounded-lg border border-primary/20">
-            <p className="text-sm font-medium mb-1">Ready to begin?</p>
+            <p className="text-sm font-medium mb-1">Start your P29 journey</p>
             <p className="text-xs text-muted-foreground mb-3">
-              Complete your assessment to get started
+              Complete the readiness assessment
             </p>
             <Button size="sm" onClick={() => navigate('/assessment')} className="w-full">
               Start Assessment
