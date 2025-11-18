@@ -19,6 +19,8 @@ interface ArticleDetailModalProps {
 const ArticleDetailModal = ({ article, isOpen, onClose }: ArticleDetailModalProps) => {
   if (!article) return null;
 
+  const isExternalLink = article.url.startsWith('http');
+
   const handleDownload = () => {
     if (article.downloadUrl) {
       const link = document.createElement('a');
@@ -27,6 +29,12 @@ const ArticleDetailModal = ({ article, isOpen, onClose }: ArticleDetailModalProp
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+    }
+  };
+
+  const handleVisitExternal = () => {
+    if (isExternalLink) {
+      window.open(article.url, '_blank', 'noopener,noreferrer');
     }
   };
 
@@ -91,16 +99,24 @@ const ArticleDetailModal = ({ article, isOpen, onClose }: ArticleDetailModalProp
 
           {/* Actions */}
           <div className="flex gap-3 pt-4 border-t">
+            {isExternalLink && (
+              <Button variant="default" className="gap-2" onClick={handleVisitExternal}>
+                <Share2 className="w-4 h-4" />
+                Visit Resource
+              </Button>
+            )}
             {article.downloadUrl && (
               <Button variant="outline" className="gap-2" onClick={handleDownload}>
                 <Download className="w-4 h-4" />
                 Download Presentation
               </Button>
             )}
-            <Button variant="outline" className="gap-2">
-              <Share2 className="w-4 h-4" />
-              Share
-            </Button>
+            {!isExternalLink && (
+              <Button variant="outline" className="gap-2">
+                <Share2 className="w-4 h-4" />
+                Share
+              </Button>
+            )}
           </div>
         </div>
       </DialogContent>

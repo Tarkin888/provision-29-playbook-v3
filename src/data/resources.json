@@ -21,6 +21,25 @@
       "downloadUrl": "/downloads/PROVISION_29_PITFALLS_10_Risks_to_2026_Readiness.pptx"
     },
     {
+      "id": "ext1",
+      "title": "Comprehensive Provision 29 Implementation Guide",
+      "author": "External Resource",
+      "date": "2025-01-05",
+      "readTime": "20 minutes",
+      "category": "Implementation Guide",
+      "tags": ["P29 Overview", "Frameworks", "3LoD", "Implementation Timeline"],
+      "excerpt": "A comprehensive interactive guide covering everything from P29 fundamentals to implementation strategy. Includes detailed coverage of the 2025 Design Year approach, material control identification, Three Lines of Defence structure, testing protocols, and common challenges. Essential reference material for understanding the full scope of Provision 29 requirements.",
+      "keyTakeaways": [
+        "Complete overview of P29 requirements and the shift beyond financial controls",
+        "Strategic timeline with 2025 as crucial 'Design Year' for preparation",
+        "Risk-based materiality framework using COSO, ISO 31000, and SOX integration",
+        "Three Lines of Defence (3LoD) roles and responsibilities breakdown",
+        "Testing and assurance protocols for material controls",
+        "Technology requirements including GRC platforms and evidence management"
+      ],
+      "url": "https://zonkneky.gensparkspace.com"
+    },
+    {
       "id": "art1",
       "title": "5 Mistakes Companies Make Defining Material Controls",
       "author": "Zia Rezvi ACMA CGMA",
