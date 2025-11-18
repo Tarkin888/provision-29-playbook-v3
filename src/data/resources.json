@@ -1,6 +1,25 @@
 {
   "articles": [
     {
+      "id": "art0",
+      "title": "Provision 29 Pitfalls: 10 Risks to 2026 Readiness",
+      "author": "Zia Rezvi ACMA CGMA",
+      "date": "2025-01-10",
+      "readTime": "15 minutes",
+      "category": "Thought Leadership",
+      "tags": ["Common Pitfalls", "Risk Management", "Implementation"],
+      "excerpt": "Don't let these common mistakes derail your corporate governance transformation. This comprehensive guide identifies the 10 most critical risks to P29 readiness for 2026, including the timing trap, control inflation, governance gaps, and cultural friction. Essential reading for GRC, audit, and executive teams preparing for Provision 29 compliance.",
+      "keyTakeaways": [
+        "Pitfall 1: The Timing Trap - Failing to recognize that preparation must conclude in 2025",
+        "Pitfall 2: Control Inflation - Over-reliance on bottom-up inventories leading to control overload",
+        "Pitfall 3: The Governance Gap - Relying solely on management without board involvement",
+        "Pitfall 4: Defining Success - Postponing the definition of 'effectiveness' for material controls",
+        "Pitfall 7: Cultural Friction - Failing to manage the cultural shift required for formalization",
+        "Complete framework for avoiding common implementation mistakes"
+      ],
+      "url": "/articles/10-risks-2026-readiness"
+    },
+    {
       "id": "art1",
       "title": "5 Mistakes Companies Make Defining Material Controls",
       "author": "Zia Rezvi ACMA CGMA",
