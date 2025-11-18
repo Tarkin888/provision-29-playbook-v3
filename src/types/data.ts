@@ -143,6 +143,7 @@ export interface Resource {
   excerpt: string;
   keyTakeaways: string[];
   url: string;
+  downloadUrl?: string;
 }
 
 export interface CaseStudy {

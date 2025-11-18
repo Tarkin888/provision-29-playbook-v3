@@ -19,6 +19,17 @@ interface ArticleDetailModalProps {
 const ArticleDetailModal = ({ article, isOpen, onClose }: ArticleDetailModalProps) => {
   if (!article) return null;
 
+  const handleDownload = () => {
+    if (article.downloadUrl) {
+      const link = document.createElement('a');
+      link.href = article.downloadUrl;
+      link.download = article.downloadUrl.split('/').pop() || 'download';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  };
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
@@ -80,10 +91,12 @@ const ArticleDetailModal = ({ article, isOpen, onClose }: ArticleDetailModalProp
 
           {/* Actions */}
           <div className="flex gap-3 pt-4 border-t">
-            <Button variant="outline" className="gap-2">
-              <Download className="w-4 h-4" />
-              Download PDF
-            </Button>
+            {article.downloadUrl && (
+              <Button variant="outline" className="gap-2" onClick={handleDownload}>
+                <Download className="w-4 h-4" />
+                Download Presentation
+              </Button>
+            )}
             <Button variant="outline" className="gap-2">
               <Share2 className="w-4 h-4" />
               Share
