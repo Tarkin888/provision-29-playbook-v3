@@ -1,6 +1,9 @@
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import vendorConfigData from '@/data/vendorConfig.json';
 
+const ALLOWED_VENDORS = ['readinow', 'protecht', 'nooga', 'impero'] as const;
+const HSL_PATTERN = /^\d{1,3}\s+\d{1,3}%\s+\d{1,3}%$/;
+
 interface VendorData {
   id: string;
   name: string;
@@ -63,19 +66,27 @@ export const VendorProvider = ({ children }: VendorProviderProps) => {
     const params = new URLSearchParams(window.location.search);
     const vendorId = params.get('vendor');
 
-    if (vendorId && vendorConfigData.vendors[vendorId as keyof typeof vendorConfigData.vendors]) {
+    // Validate vendor ID against allowlist
+    if (vendorId && ALLOWED_VENDORS.includes(vendorId as any)) {
       const vendorData = vendorConfigData.vendors[vendorId as keyof typeof vendorConfigData.vendors] as VendorData;
       
-      // Inject CSS variables for dynamic theming
-      document.documentElement.style.setProperty('--vendor-primary', vendorData.primaryColor);
-      document.documentElement.style.setProperty('--vendor-secondary', vendorData.secondaryColor);
+      // Validate HSL color format before injection
+      if (HSL_PATTERN.test(vendorData.primaryColor) && HSL_PATTERN.test(vendorData.secondaryColor)) {
+        // Inject CSS variables for dynamic theming
+        document.documentElement.style.setProperty('--vendor-primary', vendorData.primaryColor);
+        document.documentElement.style.setProperty('--vendor-secondary', vendorData.secondaryColor);
 
-      setVendorConfig({
-        isVendorMode: true,
-        vendor: vendorData,
-        primaryColor: vendorData.primaryColor,
-        secondaryColor: vendorData.secondaryColor,
-      });
+        setVendorConfig({
+          isVendorMode: true,
+          vendor: vendorData,
+          primaryColor: vendorData.primaryColor,
+          secondaryColor: vendorData.secondaryColor,
+        });
+      } else {
+        if (import.meta.env.DEV) {
+          console.warn('Invalid vendor color format:', vendorId);
+        }
+      }
     } else {
       // Reset to default colors
       document.documentElement.style.setProperty('--vendor-primary', '221 83% 53%');

@@ -274,7 +274,9 @@ export const addRecentSearch = (query: string): void => {
     
     localStorage.setItem(RECENT_SEARCHES_KEY, JSON.stringify(recent));
   } catch (error) {
-    console.error('Error saving recent search:', error);
+    if (import.meta.env.DEV) {
+      console.error('Error saving recent search:', error);
+    }
   }
 };
 
@@ -282,6 +284,8 @@ export const clearRecentSearches = (): void => {
   try {
     localStorage.removeItem(RECENT_SEARCHES_KEY);
   } catch (error) {
-    console.error('Error clearing recent searches:', error);
+    if (import.meta.env.DEV) {
+      console.error('Error clearing recent searches:', error);
+    }
   }
 };

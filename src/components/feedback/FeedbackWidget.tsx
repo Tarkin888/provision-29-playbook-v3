@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
+import { z } from 'zod';
 import {
   Dialog,
   DialogContent,
@@ -14,6 +15,14 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { MessageSquare, Send, ThumbsUp } from 'lucide-react';
 import { toast } from 'sonner';
 
+const feedbackSchema = z.object({
+  type: z.enum(['general', 'bug', 'feature', 'content']),
+  message: z.string()
+    .trim()
+    .min(10, 'Feedback must be at least 10 characters')
+    .max(1000, 'Feedback must be under 1000 characters')
+});
+
 const FeedbackWidget = () => {
   const [open, setOpen] = useState(false);
   const [feedbackType, setFeedbackType] = useState<string>('general');
@@ -23,20 +32,20 @@ const FeedbackWidget = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!feedback.trim()) {
-      toast.error('Please enter your feedback');
-      return;
-    }
-
     setIsSubmitting(true);
 
     try {
+      // Validate input
+      const validatedData = feedbackSchema.parse({
+        type: feedbackType,
+        message: feedback
+      });
       // Store feedback in localStorage (in production, send to backend)
       const storedFeedback = JSON.parse(localStorage.getItem('p29-feedback') || '[]');
       const newFeedback = {
         id: Date.now(),
-        type: feedbackType,
-        message: feedback,
+        type: validatedData.type,
+        message: validatedData.message,
         timestamp: new Date().toISOString(),
         page: window.location.pathname,
         userAgent: navigator.userAgent,
@@ -61,10 +70,18 @@ const FeedbackWidget = () => {
       setFeedbackType('general');
       setOpen(false);
     } catch (error) {
-      console.error('Error submitting feedback:', error);
-      toast.error('Failed to submit feedback', {
-        description: 'Please try again later.',
-      });
+      if (error instanceof z.ZodError) {
+        toast.error('Invalid feedback', {
+          description: error.errors[0].message,
+        });
+      } else {
+        if (import.meta.env.DEV) {
+          console.error('Error submitting feedback:', error);
+        }
+        toast.error('Failed to submit feedback', {
+          description: 'Please try again later.',
+        });
+      }
     } finally {
       setIsSubmitting(false);
     }

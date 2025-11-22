@@ -1,6 +1,7 @@
 import { SearchResult } from '@/utils/searchUtils';
 import { Badge } from '@/components/ui/badge';
 import { useNavigate } from 'react-router-dom';
+import Highlighter from 'react-highlight-words';
 
 interface SearchResultsProps {
   results: {
@@ -33,18 +34,24 @@ const SearchResults = ({ results, query, onSelect }: SearchResultsProps) => {
         <span className="text-2xl flex-shrink-0">{result.icon}</span>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1">
-            <h4 
-              className="font-semibold text-foreground group-hover:text-primary transition-colors truncate"
-              dangerouslySetInnerHTML={{ __html: result.title }}
-            />
+            <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors truncate">
+              <Highlighter
+                searchWords={[query]}
+                textToHighlight={result.title}
+                highlightClassName="bg-yellow-200 dark:bg-yellow-800"
+              />
+            </h4>
             <Badge variant="outline" className="text-xs flex-shrink-0">
               {result.category}
             </Badge>
           </div>
-          <p 
-            className="text-sm text-muted-foreground line-clamp-2"
-            dangerouslySetInnerHTML={{ __html: result.snippet }}
-          />
+          <p className="text-sm text-muted-foreground line-clamp-2">
+            <Highlighter
+              searchWords={[query]}
+              textToHighlight={result.snippet}
+              highlightClassName="bg-yellow-200 dark:bg-yellow-800"
+            />
+          </p>
         </div>
       </div>
     </button>
