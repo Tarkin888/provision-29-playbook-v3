@@ -1,0 +1,281 @@
+{
+  "phases": [
+    {
+      "id": 1,
+      "name": "Definition & Design Sprint (COMPRESSED)",
+      "shortName": "Sprint 1-2",
+      "color": "#dc2626",
+      "duration": "6-8 weeks",
+      "timing": "Nov - Dec 2025",
+      "startWeek": 47,
+      "endWeek": 54,
+      "label": "🚨 CRITICAL PATH - Must complete by Dec 31, 2025",
+      "objective": "Emergency consolidation of Phase 1 and 2 activities. Rapid materiality assessment, control identification, GRC platform selection, and emergency board approval within 6-8 weeks.",
+      "keyActivities": [
+        {
+          "id": "A1.1",
+          "name": "WEEK 1: Emergency Board Workshop",
+          "description": "Secure immediate executive sponsorship and board approval",
+          "subTasks": [
+            "Emergency board presentation on P29 urgency and timeline risks",
+            "Secure CEO/CFO sponsorship within 48 hours",
+            "Obtain emergency budget approval (£300K-500K for accelerated implementation)",
+            "Approve use of external consultants to compress timeline"
+          ]
+        },
+        {
+          "id": "A1.2",
+          "name": "WEEKS 1-2: Rapid Materiality & Control Identification",
+          "description": "Fast-track control inventory using consultant-led workshops",
+          "subTasks": [
+            "Leverage existing risk register (no redesign)",
+            "Use industry benchmarks to identify 30-50 material controls quickly",
+            "Skip bottom-up process mapping (high risk but necessary time-saving)",
+            "Focus only on financial reporting and highest-risk operational controls"
+          ]
+        },
+        {
+          "id": "A1.3",
+          "name": "WEEKS 2-3: GRC Platform Emergency Selection",
+          "description": "Accelerated vendor selection from pre-vetted shortlist",
+          "subTasks": [
+            "Use pre-qualified vendor shortlist (ReadiNow, ServiceNow, SAP, MetricStream)",
+            "Single-day vendor demos (not full RFP process)",
+            "Select platform with fastest implementation time (not 'best fit')",
+            "Sign contract by Week 3 with expedited implementation clause"
+          ]
+        },
+        {
+          "id": "A1.4",
+          "name": "WEEKS 3-6: Compressed Control Documentation",
+          "description": "Rapid control definition and ownership assignment",
+          "subTasks": [
+            "Use standardised templates (no customisation)",
+            "Document 'who, what, how often' for each control (minimal detail)",
+            "Assign control owners and secure acceptance",
+            "Accept lower documentation quality initially (remediate in Q1 2026)"
+          ]
+        },
+        {
+          "id": "A1.5",
+          "name": "WEEKS 6-8: Minimal Viable Assurance Plan",
+          "description": "Establish basic testing approach for 2026",
+          "subTasks": [
+            "Define pass/fail criteria for top 20 controls only",
+            "Create simplified testing protocols",
+            "Deploy manual controls for Q1 2026 (GRC platform won't be ready)",
+            "Train control owners on self-assessment approach"
+          ]
+        }
+      ],
+      "deliverables": [
+        {
+          "name": "Emergency Board Approval Pack",
+          "description": "Board-approved scope, budget, and timeline"
+        },
+        {
+          "name": "Rapid Material Control Inventory",
+          "description": "30-50 controls with basic documentation"
+        },
+        {
+          "name": "GRC Platform Contract",
+          "description": "Signed agreement with accelerated implementation"
+        },
+        {
+          "name": "Q1 2026 Manual Control Plan",
+          "description": "Interim controls until platform is live"
+        }
+      ],
+      "compressionRisks": [
+        "Incomplete control identification (material gaps may exist)",
+        "Minimal board engagement time (reduced understanding)",
+        "GRC platform selection based on speed not fit",
+        "Lower quality control documentation",
+        "No time for dry run or pilot testing"
+      ],
+      "whatToSkip": [
+        "Bottom-up process mapping",
+        "Comprehensive gap assessment",
+        "Full RFP process for GRC platform",
+        "Detailed control documentation",
+        "Pilot testing in 2025"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Accelerated Assurance (COMPRESSED)",
+      "shortName": "Sprint 3",
+      "color": "#ea580c",
+      "duration": "4 weeks",
+      "timing": "Jan 2026",
+      "startWeek": 55,
+      "endWeek": 58,
+      "label": "⚠️ HIGH RISK - Reduced assurance coverage",
+      "objective": "Rapid-cycle testing of highest-risk controls only. Minimal dry run during live compliance period (risky but unavoidable). Establish board reporting mechanism.",
+      "keyActivities": [
+        {
+          "id": "A2.1",
+          "name": "WEEK 1: GRC Platform Go-Live (Partial)",
+          "description": "Launch platform with minimal configuration",
+          "subTasks": [
+            "Deploy GRC platform with basic workflows only",
+            "Migrate top 30 controls to platform (leave others manual)",
+            "Accept bugs and incomplete features initially",
+            "Plan iterative improvements throughout Q1-Q2 2026"
+          ]
+        },
+        {
+          "id": "A2.2",
+          "name": "WEEKS 1-2: High-Risk Control Testing",
+          "description": "Rapid testing of top 20 controls",
+          "subTasks": [
+            "Focus on financial reporting controls (CFO priority)",
+            "Use sampling (not continuous monitoring initially)",
+            "Accept higher detection risk",
+            "Document deficiencies for Q2 remediation"
+          ]
+        },
+        {
+          "id": "A2.3",
+          "name": "WEEKS 2-3: Board Dashboard Creation",
+          "description": "Minimal viable board reporting",
+          "subTasks": [
+            "Create simple dashboard (not 'Approach on a Page' initially)",
+            "Focus on control status and deficiencies only",
+            "Present to Audit Committee with caveat on limited assurance",
+            "Set expectation of likely qualification in 2027 report"
+          ]
+        },
+        {
+          "id": "A2.4",
+          "name": "WEEK 4: Dry Run (Limited Scope)",
+          "description": "Concurrent with live compliance period (HIGH RISK)",
+          "subTasks": [
+            "Test controls while also collecting live evidence (not ideal)",
+            "Identify immediate deficiencies and remediate in real-time",
+            "Accept that this is 'learning by doing' approach",
+            "Document lessons learned for Q2-Q4 improvements"
+          ]
+        }
+      ],
+      "deliverables": [
+        {
+          "name": "GRC Platform (Partial Deployment)",
+          "description": "Basic workflows for top 30 controls"
+        },
+        {
+          "name": "High-Risk Control Test Results",
+          "description": "Evidence for top 20 controls only"
+        },
+        {
+          "name": "Board Dashboard v1.0",
+          "description": "Simple status reporting mechanism"
+        },
+        {
+          "name": "Qualification Risk Assessment",
+          "description": "Documented likelihood of 2027 qualification"
+        }
+      ],
+      "compressionRisks": [
+        "GRC platform deployed with incomplete configuration",
+        "Testing only covers 60-70% of material controls in Q1",
+        "No proper dry run before live period (learning on the job)",
+        "High likelihood of control failures in Q1-Q2 2026",
+        "Significant remediation backlog building up"
+      ],
+      "whatToSkip": [
+        "Full platform configuration and testing",
+        "Testing of medium/low-risk controls in Q1",
+        "Separate dry run period (combined with live testing)",
+        "Comprehensive board reporting initially",
+        "Three lines of defence RACI refinement"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Ongoing Monitoring & Remediation",
+      "shortName": "FY 2026",
+      "color": "#16a34a",
+      "duration": "48 weeks",
+      "timing": "Feb - Dec 2026",
+      "startWeek": 59,
+      "endWeek": 106,
+      "label": "Compliance Period - Full-year evidence collection",
+      "objective": "Execute full-year control testing, evidence collection, deficiency remediation, and prepare for March 2027 declaration (likely qualified).",
+      "keyActivities": [
+        {
+          "id": "A3.1",
+          "name": "Q1-Q2 2026: Catch-Up and Expansion",
+          "description": "Expand control coverage and remediate Q1 findings",
+          "subTasks": [
+            "Bring remaining controls into GRC platform",
+            "Test medium-risk controls that were skipped in January",
+            "Remediate deficiencies identified in January",
+            "Improve board dashboard with additional metrics"
+          ]
+        },
+        {
+          "id": "A3.2",
+          "name": "Q2-Q4 2026: Continuous Monitoring",
+          "description": "Ongoing evidence collection for 2026 compliance",
+          "subTasks": [
+            "Execute control testing per defined frequency",
+            "Collect evidence for annual declaration",
+            "Monitor and report deficiencies to board quarterly",
+            "Conduct internal audit reviews"
+          ]
+        },
+        {
+          "id": "A3.3",
+          "name": "Q4 2026: Declaration Preparation",
+          "description": "Prepare for March 2027 annual report",
+          "subTasks": [
+            "Assess overall control effectiveness for FY 2026",
+            "Determine declaration outcome (likely qualified)",
+            "Prepare disclosure language with legal/audit support",
+            "Present recommendation to board in Q4 2026"
+          ]
+        },
+        {
+          "id": "A3.4",
+          "name": "Ongoing: Platform Optimisation",
+          "description": "Iteratively improve GRC platform throughout 2026",
+          "subTasks": [
+            "Add automation and continuous monitoring",
+            "Enhance dashboards and reporting",
+            "Train additional users",
+            "Integrate with other systems"
+          ]
+        }
+      ],
+      "deliverables": [
+        {
+          "name": "FY 2026 Evidence Repository",
+          "description": "Complete evidence for all material controls"
+        },
+        {
+          "name": "Quarterly Board Reports",
+          "description": "Deficiency tracking and effectiveness assessment"
+        },
+        {
+          "name": "Annual Declaration (FY 2026)",
+          "description": "Likely qualified declaration for March 2027"
+        },
+        {
+          "name": "Remediation Plan for FY 2027",
+          "description": "Path to unqualified declaration in 2028"
+        }
+      ],
+      "compressionRisks": [
+        "Deficiencies discovered throughout 2026 may not be remediable in time",
+        "Control testing may reveal material weaknesses requiring disclosure",
+        "Board and audit committee confidence may be lower",
+        "Higher likelihood of qualified declaration in March 2027",
+        "Increased external audit scrutiny and potential additional audit fees"
+      ],
+      "whatToSkip": [
+        "None - this is the live compliance period"
+      ]
+    }
+  ]
+}

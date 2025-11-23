@@ -3,46 +3,57 @@ import { P29Data } from "@/data";
 import SEOHead from "@/components/common/SEOHead";
 import TimelineVisualization from "@/components/roadmap/TimelineVisualization";
 import PhaseCard from "@/components/roadmap/PhaseCard";
+import AcceleratedPhaseCard from "@/components/roadmap/AcceleratedPhaseCard";
 import PhaseDetailModal from "@/components/roadmap/PhaseDetailModal";
 import UpcomingMilestones from "@/components/roadmap/UpcomingMilestones";
 import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import QuickLinks from "@/components/common/QuickLinks";
 import ContentRecommendations from "@/components/recommendations/ContentRecommendations";
+import UrgencyBanner from "@/components/roadmap/UrgencyBanner";
+import RoadmapViewToggle from "@/components/roadmap/RoadmapViewToggle";
+import StatusAssessment from "@/components/roadmap/StatusAssessment";
+import ComparisonChart from "@/components/roadmap/ComparisonChart";
+import LegalDisclaimer from "@/components/roadmap/LegalDisclaimer";
 import { Phase } from "@/types/data";
-import { Calendar, FileText, Target } from "lucide-react";
+import { Calendar, FileText, Target, Download } from "lucide-react";
+import { getCurrentWeek, getCurrentQuarter, getMonthsBehind } from "@/utils/dateUtils";
+import { Button } from "@/components/ui/button";
+import acceleratedPhasesData from "@/data/acceleratedPhases.json";
 
 const Roadmap = () => {
   const [selectedPhase, setSelectedPhase] = useState<Phase | null>(null);
+  const [roadmapView, setRoadmapView] = useState<'ideal' | 'accelerated'>('accelerated');
   
   const phases = P29Data.phases.getAll();
+  const acceleratedPhases = acceleratedPhasesData.phases;
   const allMilestones = P29Data.milestones.getAll();
   const upcomingMilestones = P29Data.milestones.getUpcoming(8);
   
-  // Calculate current week (example: Week 1 = Jan 2025)
-  const currentWeek = 1;
-  const currentQuarter = Math.ceil(currentWeek / 13);
-  const currentYear = 2025;
+  // Dynamic date calculations
+  const currentWeek = getCurrentWeek();
+  const { quarter: currentQuarter, year: currentYear } = getCurrentQuarter();
+  const monthsBehind = getMonthsBehind();
+  const isSignificantlyBehind = monthsBehind >= 6;
 
   // Quick links for roadmap
   const quickLinks = [
+    {
+      label: 'Download Emergency Action Plan',
+      icon: <Download className="h-4 w-4" />,
+      onClick: () => {
+        alert('PDF generation coming soon! This will download a 6-week critical sprint checklist.');
+      },
+      variant: 'default' as const,
+    },
     {
       label: 'View Templates',
       icon: <FileText className="h-4 w-4" />,
       href: '/templates',
     },
     {
-      label: 'Jump to Current Week',
-      icon: <Calendar className="h-4 w-4" />,
-      onClick: () => {
-        // Scroll to timeline or current week marker
-        window.scrollTo({ top: 300, behavior: 'smooth' });
-      },
-    },
-    {
-      label: 'Start Assessment',
+      label: 'Start Readiness Assessment',
       icon: <Target className="h-4 w-4" />,
       href: '/assessment',
-      variant: 'default' as const,
     },
   ];
 
@@ -77,8 +88,8 @@ const Roadmap = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="Implementation Roadmap"
-        description="24-month structured journey through all phases of Provision 29 compliance. Plan your implementation with our comprehensive roadmap."
+        title={isSignificantlyBehind ? "Provision 29 Accelerated Implementation: Catch-Up Roadmap for November 2025" : "Implementation Roadmap"}
+        description={isSignificantlyBehind ? "Realistic framework for organisations starting Provision 29 implementation behind schedule. Accelerated timeline with risk assessment and mitigation strategies." : "24-month structured journey through all phases of Provision 29 compliance. Plan your implementation with our comprehensive roadmap."}
         canonical={`${window.location.origin}/roadmap`}
       />
       
@@ -86,46 +97,130 @@ const Roadmap = () => {
       <div className="container mx-auto px-4 pt-20 md:pt-24 pb-4">
         <Breadcrumbs items={[{ label: 'Implementation Roadmap' }]} />
       </div>
+      
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-primary/5 to-background py-12 md:py-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4 animate-fade-in">
-            Your 24-Month Journey to Provision 29 Compliance
+            {isSignificantlyBehind 
+              ? "Provision 29 Accelerated Implementation: Catch-Up Roadmap for November 2025"
+              : "Your 24-Month Journey to Provision 29 Compliance"
+            }
           </h1>
           <p className="text-base md:text-lg text-muted-foreground mb-4 md:mb-6 animate-fade-in">
-            A proven implementation framework based on FTSE 100 delivery
+            {isSignificantlyBehind
+              ? "A realistic framework for organisations starting behind schedule"
+              : "A proven implementation framework based on FTSE 100 delivery"
+            }
           </p>
-          <div className="inline-flex items-center gap-2 bg-primary/10 px-3 md:px-4 py-2 rounded-full animate-fade-in">
-            <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-            <span className="text-xs sm:text-sm font-medium">
-              You are currently in Week {currentWeek} (Q{currentQuarter} {currentYear})
-            </span>
+          <div className="flex flex-wrap items-center gap-3 animate-fade-in">
+            <div className="inline-flex items-center gap-2 bg-primary/10 px-3 md:px-4 py-2 rounded-full">
+              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+              <span className="text-xs sm:text-sm font-medium">
+                Week {currentWeek} (Q{currentQuarter} {currentYear})
+              </span>
+            </div>
+            {isSignificantlyBehind && (
+              <div className="inline-flex items-center gap-2 bg-destructive/10 px-3 md:px-4 py-2 rounded-full border border-destructive/20">
+                <span className="text-xs sm:text-sm font-medium text-destructive">
+                  {monthsBehind} months behind schedule
+                </span>
+              </div>
+            )}
           </div>
         </div>
       </section>
 
+      {/* Urgency Banner */}
+      {isSignificantlyBehind && (
+        <section className="py-6 px-4 bg-muted/30">
+          <div className="container mx-auto max-w-6xl">
+            <UrgencyBanner />
+          </div>
+        </section>
+      )}
+
+      {/* Status Assessment (for late starters) */}
+      {isSignificantlyBehind && (
+        <section className="py-8 md:py-12 px-4">
+          <div className="container mx-auto max-w-6xl">
+            <StatusAssessment />
+          </div>
+        </section>
+      )}
+
+      {/* Roadmap View Toggle (for late starters) */}
+      {isSignificantlyBehind && (
+        <section className="py-8 px-4 bg-muted/30">
+          <div className="container mx-auto max-w-6xl">
+            <RoadmapViewToggle view={roadmapView} onViewChange={setRoadmapView} />
+          </div>
+        </section>
+      )}
+
       {/* Timeline Visualization */}
       <section className="py-8 md:py-12 px-4">
         <div className="container mx-auto max-w-6xl">
-          <TimelineVisualization phases={phases} currentWeek={currentWeek} />
+          <div className="mb-4">
+            <h2 className="text-2xl font-bold mb-2">
+              {roadmapView === 'accelerated' && isSignificantlyBehind
+                ? "Accelerated Implementation Timeline"
+                : "Ideal 24-Month Timeline"
+              }
+            </h2>
+            <p className="text-sm text-muted-foreground">
+              {roadmapView === 'accelerated' && isSignificantlyBehind
+                ? "Compressed timeline for organisations starting in November 2025"
+                : "Recommended timeline for organisations starting in Q1 2025"
+              }
+            </p>
+          </div>
+          <TimelineVisualization 
+            phases={roadmapView === 'accelerated' && isSignificantlyBehind ? acceleratedPhases : phases} 
+            currentWeek={currentWeek}
+            isAcceleratedView={roadmapView === 'accelerated'}
+          />
         </div>
       </section>
 
       {/* Phase Cards */}
       <section className="py-8 md:py-12 px-4 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 md:mb-8">Implementation Phases</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 md:mb-8">
+            {roadmapView === 'accelerated' && isSignificantlyBehind
+              ? "Accelerated Implementation Phases"
+              : "Implementation Phases"
+            }
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-            {phases.map((phase) => (
-              <PhaseCard
-                key={phase.id}
-                phase={phase}
-                onViewDetails={() => setSelectedPhase(phase)}
-              />
-            ))}
+            {roadmapView === 'accelerated' && isSignificantlyBehind ? (
+              acceleratedPhases.map((phase: any) => (
+                <AcceleratedPhaseCard
+                  key={phase.id}
+                  phase={phase}
+                />
+              ))
+            ) : (
+              phases.map((phase) => (
+                <PhaseCard
+                  key={phase.id}
+                  phase={phase}
+                  onViewDetails={() => setSelectedPhase(phase)}
+                />
+              ))
+            )}
           </div>
         </div>
       </section>
+
+      {/* Comparison Chart (for late starters) */}
+      {isSignificantlyBehind && (
+        <section className="py-8 md:py-12 px-4">
+          <div className="container mx-auto max-w-6xl">
+            <ComparisonChart />
+          </div>
+        </section>
+      )}
 
       {/* Upcoming Milestones */}
       <section className="py-8 md:py-12 px-4">
@@ -149,6 +244,15 @@ const Roadmap = () => {
           <ContentRecommendations items={recommendations} title="Explore Related Content" />
         </div>
       </section>
+
+      {/* Legal Disclaimer (for late starters) */}
+      {isSignificantlyBehind && (
+        <section className="py-8 px-4 bg-muted/30">
+          <div className="container mx-auto max-w-6xl">
+            <LegalDisclaimer />
+          </div>
+        </section>
+      )}
 
       {/* Phase Detail Modal */}
       <PhaseDetailModal
