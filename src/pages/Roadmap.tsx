@@ -28,6 +28,7 @@ import GapAnalysisTool from "@/components/roadmap/GapAnalysisTool";
 import FrameworkBridgingGuides from "@/components/roadmap/FrameworkBridgingGuides";
 import PhaseSkipValidation from "@/components/roadmap/PhaseSkipValidation";
 import { useFiscalYear } from "@/contexts/FiscalYearContext";
+import PersonalisedTimelineCalculator from "@/components/roadmap/PersonalisedTimelineCalculator";
 
 const Roadmap = () => {
   const [selectedPhase, setSelectedPhase] = useState<Phase | null>(null);
@@ -160,6 +161,13 @@ const Roadmap = () => {
       <section className="py-8 px-4 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
           <MaturityAssessment />
+        </div>
+      </section>
+
+      {/* Personalised Timeline Calculator */}
+      <section className="py-8 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <PersonalisedTimelineCalculator />
         </div>
       </section>
 
