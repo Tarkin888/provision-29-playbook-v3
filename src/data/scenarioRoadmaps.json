@@ -1,0 +1,740 @@
+{
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "December YE, Level 1, Starting Q1 2025 (Baseline)",
+      "fiscalYearEnd": "december",
+      "maturityLevel": "level1",
+      "startDate": "2025-01-06",
+      "complianceFYStart": "2026-01-01",
+      "complianceFYEnd": "2026-12-31",
+      "reportDueDate": "2027-04-30",
+      "description": "Ideal scenario: Full 24-month implementation timeline starting fresh in January 2025",
+      "phases": [
+        {
+          "phase": "Phase 1: Foundation & Gap Analysis",
+          "startDate": "2025-01-06",
+          "endDate": "2025-06-30",
+          "duration": "6 months",
+          "color": "#1e3a8a"
+        },
+        {
+          "phase": "Phase 2: Framework Design & Build",
+          "startDate": "2025-07-01",
+          "endDate": "2026-02-28",
+          "duration": "8 months",
+          "color": "#06A77D"
+        },
+        {
+          "phase": "Phase 3: Dry Run & Validation",
+          "startDate": "2025-09-01",
+          "endDate": "2025-12-31",
+          "duration": "4 months",
+          "color": "#F18F01"
+        },
+        {
+          "phase": "Phase 4: Full FY Evidence Collection",
+          "startDate": "2026-01-01",
+          "endDate": "2026-12-31",
+          "duration": "12 months",
+          "color": "#10b981"
+        }
+      ],
+      "milestones": [
+        { "name": "Board Mandate Secured", "date": "2025-02-01", "type": "critical" },
+        { "name": "Materiality Criteria Approved", "date": "2025-03-31", "type": "critical" },
+        { "name": "Material Controls Identified (25-50)", "date": "2025-06-30", "type": "decision-gate" },
+        { "name": "GRC Platform Vendor Selected", "date": "2025-07-31", "type": "critical" },
+        { "name": "Control Documentation Complete", "date": "2025-10-31", "type": "milestone" },
+        { "name": "GRC Platform Live", "date": "2025-08-31", "type": "critical" },
+        { "name": "Dry Run Commences", "date": "2025-09-01", "type": "critical" },
+        { "name": "Dry Run Complete & Board Review", "date": "2025-12-20", "type": "decision-gate" },
+        { "name": "Compliance FY Begins", "date": "2026-01-01", "type": "critical" },
+        { "name": "Quarterly Board Dashboard (Q1)", "date": "2026-04-15", "type": "milestone" },
+        { "name": "Quarterly Board Dashboard (Q2)", "date": "2026-07-15", "type": "milestone" },
+        { "name": "Quarterly Board Dashboard (Q3)", "date": "2026-10-15", "type": "milestone" },
+        { "name": "Year-End Board Dashboard (Q4)", "date": "2027-01-31", "type": "critical" },
+        { "name": "Annual Report Publication", "date": "2027-04-30", "type": "critical" }
+      ],
+      "resourcePeaks": [
+        { "period": "Q1 2025", "fte": "3-4 FTE", "reason": "Board engagement and gap analysis" },
+        { "period": "Q3 2025", "fte": "5-6 FTE", "reason": "GRC platform implementation and control documentation" },
+        { "period": "Q4 2025", "fte": "8-10 FTE", "reason": "Dry run execution" }
+      ],
+      "riskCallouts": [
+        "LOW RISK: Adequate time for all activities including comprehensive dry run",
+        "Board has 12 months to build confidence before compliance FY",
+        "Full 4-month dry run window allows thorough testing and remediation",
+        "December year-end aligns with calendar year simplifying planning"
+      ]
+    },
+    {
+      "id": "scenario-2",
+      "name": "December YE, Level 3, Starting Q4 2025 (Compressed)",
+      "fiscalYearEnd": "december",
+      "maturityLevel": "level3",
+      "startDate": "2025-10-01",
+      "complianceFYStart": "2026-01-01",
+      "complianceFYEnd": "2026-12-31",
+      "reportDueDate": "2027-04-30",
+      "description": "Compressed scenario: 3-month sprint for organizations with controls already documented",
+      "phases": [
+        {
+          "phase": "Phase 1-2: SKIPPED (Controls Documented)",
+          "startDate": "2025-10-01",
+          "endDate": "2025-10-01",
+          "duration": "Already complete",
+          "color": "#9ca3af"
+        },
+        {
+          "phase": "Phase 3: Rapid Testing & Validation",
+          "startDate": "2025-10-01",
+          "endDate": "2025-12-31",
+          "duration": "3 months (compressed)",
+          "color": "#F18F01"
+        },
+        {
+          "phase": "Phase 4: Full FY Evidence Collection",
+          "startDate": "2026-01-01",
+          "endDate": "2026-12-31",
+          "duration": "12 months",
+          "color": "#10b981"
+        }
+      ],
+      "milestones": [
+        { "name": "Board Briefing on Existing Controls", "date": "2025-10-07", "type": "critical" },
+        { "name": "P29 Gap Analysis Complete", "date": "2025-10-31", "type": "decision-gate" },
+        { "name": "Testing Protocols Finalized", "date": "2025-11-15", "type": "milestone" },
+        { "name": "Mini Dry Run (2 weeks)", "date": "2025-11-01", "type": "critical" },
+        { "name": "Board Dashboard Tested", "date": "2025-12-15", "type": "decision-gate" },
+        { "name": "Compliance FY Begins", "date": "2026-01-01", "type": "critical" },
+        { "name": "Annual Report Publication", "date": "2027-04-30", "type": "critical" }
+      ],
+      "resourcePeaks": [
+        { "period": "Oct-Nov 2025", "fte": "4-5 FTE", "reason": "Rapid P29 gap analysis and testing validation" },
+        { "period": "Dec 2025", "fte": "6-7 FTE", "reason": "Mini dry run and board reporting setup" }
+      ],
+      "riskCallouts": [
+        "MEDIUM RISK: Compressed timeline with minimal dry run (2 weeks vs 8 weeks)",
+        "Dependent on existing controls meeting P29 materiality criteria",
+        "No time for major remediation before Jan 2026—existing controls must be robust",
+        "Board has only 3 months to build confidence—intensive board engagement required"
+      ]
+    },
+    {
+      "id": "scenario-3",
+      "name": "March YE, Level 1, Starting Q2 2025",
+      "fiscalYearEnd": "march",
+      "maturityLevel": "level1",
+      "startDate": "2025-04-01",
+      "complianceFYStart": "2026-04-01",
+      "complianceFYEnd": "2027-03-31",
+      "reportDueDate": "2027-07-31",
+      "description": "March year-end starting fresh with 12 months preparation time before compliance FY",
+      "phases": [
+        {
+          "phase": "Phase 1: Foundation & Gap Analysis",
+          "startDate": "2025-04-01",
+          "endDate": "2025-09-30",
+          "duration": "6 months",
+          "color": "#1e3a8a"
+        },
+        {
+          "phase": "Phase 2: Framework Design & Build",
+          "startDate": "2025-10-01",
+          "endDate": "2026-03-31",
+          "duration": "6 months",
+          "color": "#06A77D"
+        },
+        {
+          "phase": "Phase 3: Dry Run & Validation",
+          "startDate": "2025-12-01",
+          "endDate": "2026-03-31",
+          "duration": "4 months",
+          "color": "#F18F01"
+        },
+        {
+          "phase": "Phase 4: Full FY Evidence Collection",
+          "startDate": "2026-04-01",
+          "endDate": "2027-03-31",
+          "duration": "12 months",
+          "color": "#10b981"
+        }
+      ],
+      "milestones": [
+        { "name": "Board Mandate Secured", "date": "2025-05-01", "type": "critical" },
+        { "name": "Materiality Criteria Approved", "date": "2025-07-31", "type": "critical" },
+        { "name": "Material Controls Identified", "date": "2025-09-30", "type": "decision-gate" },
+        { "name": "GRC Platform Vendor Selected", "date": "2025-10-31", "type": "critical" },
+        { "name": "GRC Platform Live", "date": "2025-11-30", "type": "critical" },
+        { "name": "Dry Run Commences (Fiscal Q4)", "date": "2025-12-01", "type": "critical" },
+        { "name": "Dry Run Complete", "date": "2026-03-20", "type": "decision-gate" },
+        { "name": "Compliance FY Begins", "date": "2026-04-01", "type": "critical" },
+        { "name": "Fiscal Q1 Board Dashboard", "date": "2026-07-15", "type": "milestone" },
+        { "name": "Fiscal Q2 Board Dashboard", "date": "2026-10-15", "type": "milestone" },
+        { "name": "Fiscal Q3 Board Dashboard", "date": "2027-01-15", "type": "milestone" },
+        { "name": "Fiscal Q4 Year-End Dashboard", "date": "2027-04-30", "type": "critical" },
+        { "name": "Annual Report Publication", "date": "2027-07-31", "type": "critical" }
+      ],
+      "resourcePeaks": [
+        { "period": "Q2-Q3 2025", "fte": "3-4 FTE", "reason": "Foundation and gap analysis" },
+        { "period": "Q4 2025", "fte": "5-6 FTE", "reason": "GRC platform and control documentation" },
+        { "period": "Q1 2026 (Fiscal Q4)", "fte": "8-10 FTE", "reason": "Dry run in fiscal Q4 before April 2026 start" }
+      ],
+      "riskCallouts": [
+        "LOW RISK: 12-month preparation window before April 2026 compliance FY",
+        "March year-end advantage: Dry run in Q1 calendar year avoids holiday disruptions",
+        "Evidence collection starts April 2026 with new fiscal year momentum",
+        "4-month annual report window (April-July) tighter than December year-ends"
+      ]
+    },
+    {
+      "id": "scenario-4",
+      "name": "March YE, Level 2, Starting Q3 2025",
+      "fiscalYearEnd": "march",
+      "maturityLevel": "level2",
+      "startDate": "2025-07-01",
+      "complianceFYStart": "2026-04-01",
+      "complianceFYEnd": "2027-03-31",
+      "reportDueDate": "2027-07-31",
+      "description": "March year-end with existing foundation, 9-month preparation time",
+      "phases": [
+        {
+          "phase": "Phase 1: SKIPPED (Foundation Established)",
+          "startDate": "2025-07-01",
+          "endDate": "2025-07-01",
+          "duration": "Already complete",
+          "color": "#9ca3af"
+        },
+        {
+          "phase": "Phase 2: Framework Enhancement",
+          "startDate": "2025-07-01",
+          "endDate": "2025-12-31",
+          "duration": "6 months",
+          "color": "#06A77D"
+        },
+        {
+          "phase": "Phase 3: Testing & Validation",
+          "startDate": "2025-11-01",
+          "endDate": "2026-03-31",
+          "duration": "5 months",
+          "color": "#F18F01"
+        },
+        {
+          "phase": "Phase 4: Full FY Evidence Collection",
+          "startDate": "2026-04-01",
+          "endDate": "2027-03-31",
+          "duration": "12 months",
+          "color": "#10b981"
+        }
+      ],
+      "milestones": [
+        { "name": "Existing Framework Gap Analysis", "date": "2025-07-31", "type": "decision-gate" },
+        { "name": "P29-Specific Controls Added", "date": "2025-09-30", "type": "milestone" },
+        { "name": "GRC Platform P29 Module Live", "date": "2025-10-31", "type": "critical" },
+        { "name": "Dry Run Commences", "date": "2025-11-01", "type": "critical" },
+        { "name": "Dry Run Complete", "date": "2026-03-20", "type": "decision-gate" },
+        { "name": "Compliance FY Begins", "date": "2026-04-01", "type": "critical" },
+        { "name": "Annual Report Publication", "date": "2027-07-31", "type": "critical" }
+      ],
+      "resourcePeaks": [
+        { "period": "Q3 2025", "fte": "3-4 FTE", "reason": "P29 gap analysis and enhancement" },
+        { "period": "Q4 2025 - Q1 2026", "fte": "6-7 FTE", "reason": "Extended dry run period" }
+      ],
+      "riskCallouts": [
+        "MEDIUM RISK: 9-month timeline but leveraging existing foundation",
+        "Success depends on quality of existing framework (SOX, ISO, etc.)",
+        "Adequate time for 5-month dry run including remediation",
+        "March fiscal Q4 dry run timing is ideal"
+      ]
+    },
+    {
+      "id": "scenario-5",
+      "name": "June YE, Level 1, Starting Q1 2025",
+      "fiscalYearEnd": "june",
+      "maturityLevel": "level1",
+      "startDate": "2025-01-06",
+      "complianceFYStart": "2026-07-01",
+      "complianceFYEnd": "2027-06-30",
+      "reportDueDate": "2027-10-31",
+      "description": "June year-end starting fresh with 18-month preparation runway",
+      "phases": [
+        {
+          "phase": "Phase 1: Foundation & Gap Analysis",
+          "startDate": "2025-01-06",
+          "endDate": "2025-06-30",
+          "duration": "6 months",
+          "color": "#1e3a8a"
+        },
+        {
+          "phase": "Phase 2: Framework Design & Build",
+          "startDate": "2025-07-01",
+          "endDate": "2026-02-28",
+          "duration": "8 months",
+          "color": "#06A77D"
+        },
+        {
+          "phase": "Phase 3: Dry Run & Validation",
+          "startDate": "2026-03-01",
+          "endDate": "2026-06-30",
+          "duration": "4 months",
+          "color": "#F18F01"
+        },
+        {
+          "phase": "Phase 4: Full FY Evidence Collection",
+          "startDate": "2026-07-01",
+          "endDate": "2027-06-30",
+          "duration": "12 months",
+          "color": "#10b981"
+        }
+      ],
+      "milestones": [
+        { "name": "Board Mandate Secured", "date": "2025-02-01", "type": "critical" },
+        { "name": "Materiality Criteria Approved", "date": "2025-04-30", "type": "critical" },
+        { "name": "Material Controls Identified", "date": "2025-06-30", "type": "decision-gate" },
+        { "name": "GRC Platform Vendor Selected", "date": "2025-08-31", "type": "critical" },
+        { "name": "GRC Platform Live", "date": "2025-12-31", "type": "critical" },
+        { "name": "Control Documentation Complete", "date": "2026-02-28", "type": "milestone" },
+        { "name": "Dry Run Commences (Fiscal Q4)", "date": "2026-03-01", "type": "critical" },
+        { "name": "Dry Run Complete", "date": "2026-06-20", "type": "decision-gate" },
+        { "name": "Compliance FY Begins", "date": "2026-07-01", "type": "critical" },
+        { "name": "Fiscal Q1 Board Dashboard", "date": "2026-10-15", "type": "milestone" },
+        { "name": "Fiscal Q2 Board Dashboard", "date": "2027-01-15", "type": "milestone" },
+        { "name": "Fiscal Q3 Board Dashboard", "date": "2027-04-15", "type": "milestone" },
+        { "name": "Fiscal Q4 Year-End Dashboard", "date": "2027-07-31", "type": "critical" },
+        { "name": "Annual Report Publication", "date": "2027-10-31", "type": "critical" }
+      ],
+      "resourcePeaks": [
+        { "period": "Q1-Q2 2025", "fte": "3-4 FTE", "reason": "Foundation phase" },
+        { "period": "Q4 2025", "fte": "5-6 FTE", "reason": "GRC platform implementation" },
+        { "period": "Q2 2026 (Fiscal Q4)", "fte": "8-10 FTE", "reason": "Dry run in fiscal Q4" }
+      ],
+      "riskCallouts": [
+        "LOW RISK: 18-month preparation window with full 4-month dry run",
+        "June year-end advantage: Mid-year start aligns with budget cycles",
+        "Dry run in Q2 calendar year (fiscal Q4) has optimal weather/availability",
+        "Extended annual report window (July-October) provides buffer"
+      ]
+    },
+    {
+      "id": "scenario-6",
+      "name": "June YE, Level 3, Starting Q1 2026 (Critical Compressed)",
+      "fiscalYearEnd": "june",
+      "maturityLevel": "level3",
+      "startDate": "2026-01-06",
+      "complianceFYStart": "2026-07-01",
+      "complianceFYEnd": "2027-06-30",
+      "reportDueDate": "2027-10-31",
+      "description": "CRITICAL: 6-month emergency sprint for June year-end with controls documented",
+      "phases": [
+        {
+          "phase": "Phase 1-2: SKIPPED (Controls Documented)",
+          "startDate": "2026-01-06",
+          "endDate": "2026-01-06",
+          "duration": "Already complete",
+          "color": "#9ca3af"
+        },
+        {
+          "phase": "Phase 3: Emergency Testing Sprint",
+          "startDate": "2026-01-06",
+          "endDate": "2026-06-30",
+          "duration": "6 months (minimal dry run)",
+          "color": "#F18F01"
+        },
+        {
+          "phase": "Phase 4: Full FY Evidence Collection",
+          "startDate": "2026-07-01",
+          "endDate": "2027-06-30",
+          "duration": "12 months",
+          "color": "#10b981"
+        }
+      ],
+      "milestones": [
+        { "name": "EMERGENCY Board Session", "date": "2026-01-08", "type": "critical" },
+        { "name": "Rapid P29 Gap Analysis (2 weeks)", "date": "2026-01-20", "type": "decision-gate" },
+        { "name": "Testing Protocols Approved", "date": "2026-02-28", "type": "critical" },
+        { "name": "Control Sampling Complete", "date": "2026-04-30", "type": "milestone" },
+        { "name": "Mini Dry Run (3 weeks)", "date": "2026-05-01", "type": "critical" },
+        { "name": "Board Dashboard Validated", "date": "2026-06-15", "type": "decision-gate" },
+        { "name": "Compliance FY Begins", "date": "2026-07-01", "type": "critical" },
+        { "name": "Annual Report Publication", "date": "2027-10-31", "type": "critical" }
+      ],
+      "resourcePeaks": [
+        { "period": "Jan-Mar 2026", "fte": "6-7 FTE + External Support", "reason": "Emergency gap analysis and testing setup" },
+        { "period": "Apr-Jun 2026", "fte": "10-12 FTE", "reason": "Compressed testing and mini dry run" }
+      ],
+      "riskCallouts": [
+        "CRITICAL RISK: Only 6 months before compliance FY—minimal dry run possible",
+        "Strong existing controls (Level 3) are essential—no time for major redesign",
+        "Board must approve qualified declaration: 'Framework established, limited testing'",
+        "Plan full dry run in fiscal Q3 2027 (Jan-Mar) before second-year declaration",
+        "Budget 50% more for external consulting to accelerate validation"
+      ]
+    },
+    {
+      "id": "scenario-7",
+      "name": "September YE, Level 1, Starting Q2 2025",
+      "fiscalYearEnd": "september",
+      "maturityLevel": "level1",
+      "startDate": "2025-04-01",
+      "complianceFYStart": "2026-10-01",
+      "complianceFYEnd": "2027-09-30",
+      "reportDueDate": "2028-01-31",
+      "description": "September year-end starting fresh with 18-month preparation runway",
+      "phases": [
+        {
+          "phase": "Phase 1: Foundation & Gap Analysis",
+          "startDate": "2025-04-01",
+          "endDate": "2025-09-30",
+          "duration": "6 months",
+          "color": "#1e3a8a"
+        },
+        {
+          "phase": "Phase 2: Framework Design & Build",
+          "startDate": "2025-10-01",
+          "endDate": "2026-05-31",
+          "duration": "8 months",
+          "color": "#06A77D"
+        },
+        {
+          "phase": "Phase 3: Dry Run & Validation",
+          "startDate": "2026-06-01",
+          "endDate": "2026-09-30",
+          "duration": "4 months",
+          "color": "#F18F01"
+        },
+        {
+          "phase": "Phase 4: Full FY Evidence Collection",
+          "startDate": "2026-10-01",
+          "endDate": "2027-09-30",
+          "duration": "12 months",
+          "color": "#10b981"
+        }
+      ],
+      "milestones": [
+        { "name": "Board Mandate Secured", "date": "2025-05-01", "type": "critical" },
+        { "name": "Materiality Criteria Approved", "date": "2025-07-31", "type": "critical" },
+        { "name": "Material Controls Identified", "date": "2025-09-30", "type": "decision-gate" },
+        { "name": "GRC Platform Vendor Selected", "date": "2025-11-30", "type": "critical" },
+        { "name": "GRC Platform Live", "date": "2026-03-31", "type": "critical" },
+        { "name": "Control Documentation Complete", "date": "2026-05-31", "type": "milestone" },
+        { "name": "Dry Run Commences (Fiscal Q4)", "date": "2026-06-01", "type": "critical" },
+        { "name": "Dry Run Complete", "date": "2026-09-20", "type": "decision-gate" },
+        { "name": "Compliance FY Begins", "date": "2026-10-01", "type": "critical" },
+        { "name": "Fiscal Q1 Board Dashboard", "date": "2027-01-15", "type": "milestone" },
+        { "name": "Fiscal Q2 Board Dashboard", "date": "2027-04-15", "type": "milestone" },
+        { "name": "Fiscal Q3 Board Dashboard", "date": "2027-07-15", "type": "milestone" },
+        { "name": "Fiscal Q4 Year-End Dashboard", "date": "2027-10-31", "type": "critical" },
+        { "name": "Annual Report Publication", "date": "2028-01-31", "type": "critical" }
+      ],
+      "resourcePeaks": [
+        { "period": "Q2-Q3 2025", "fte": "3-4 FTE", "reason": "Foundation phase" },
+        { "period": "Q1-Q2 2026", "fte": "5-6 FTE", "reason": "GRC platform and documentation" },
+        { "period": "Q3 2026 (Fiscal Q4)", "fte": "8-10 FTE", "reason": "Dry run in fiscal Q4" }
+      ],
+      "riskCallouts": [
+        "LOW RISK: 18-month preparation with full 4-month dry run",
+        "September year-end advantage: Longest annual report window (Oct-Jan, 4 months)",
+        "Dry run in summer (fiscal Q4) may face vacation challenges—plan coverage",
+        "October compliance FY start avoids holiday period disruptions"
+      ]
+    },
+    {
+      "id": "scenario-8",
+      "name": "September YE, Level 2, Starting Q4 2025",
+      "fiscalYearEnd": "september",
+      "maturityLevel": "level2",
+      "startDate": "2025-10-01",
+      "complianceFYStart": "2026-10-01",
+      "complianceFYEnd": "2027-09-30",
+      "reportDueDate": "2028-01-31",
+      "description": "September year-end with foundation established, 12-month accelerated timeline",
+      "phases": [
+        {
+          "phase": "Phase 1: SKIPPED (Foundation Established)",
+          "startDate": "2025-10-01",
+          "endDate": "2025-10-01",
+          "duration": "Already complete",
+          "color": "#9ca3af"
+        },
+        {
+          "phase": "Phase 2: Framework Enhancement (Compressed)",
+          "startDate": "2025-10-01",
+          "endDate": "2026-05-31",
+          "duration": "8 months",
+          "color": "#06A77D"
+        },
+        {
+          "phase": "Phase 3: Testing & Validation",
+          "startDate": "2026-06-01",
+          "endDate": "2026-09-30",
+          "duration": "4 months",
+          "color": "#F18F01"
+        },
+        {
+          "phase": "Phase 4: Full FY Evidence Collection",
+          "startDate": "2026-10-01",
+          "endDate": "2027-09-30",
+          "duration": "12 months",
+          "color": "#10b981"
+        }
+      ],
+      "milestones": [
+        { "name": "Existing Framework Gap Analysis", "date": "2025-10-31", "type": "decision-gate" },
+        { "name": "P29-Specific Controls Added", "date": "2025-12-31", "type": "milestone" },
+        { "name": "GRC Platform P29 Module Live", "date": "2026-02-28", "type": "critical" },
+        { "name": "Control Documentation Enhanced", "date": "2026-05-31", "type": "milestone" },
+        { "name": "Dry Run Commences (Fiscal Q4)", "date": "2026-06-01", "type": "critical" },
+        { "name": "Dry Run Complete", "date": "2026-09-20", "type": "decision-gate" },
+        { "name": "Compliance FY Begins", "date": "2026-10-01", "type": "critical" },
+        { "name": "Annual Report Publication", "date": "2028-01-31", "type": "critical" }
+      ],
+      "resourcePeaks": [
+        { "period": "Q4 2025 - Q1 2026", "fte": "4-5 FTE", "reason": "P29 gap closure and GRC enhancement" },
+        { "period": "Q3 2026 (Fiscal Q4)", "fte": "7-8 FTE", "reason": "Dry run period" }
+      ],
+      "riskCallouts": [
+        "MEDIUM RISK: 12-month timeline but leveraging existing foundation (Level 2)",
+        "Existing framework quality is critical—must align with P29 requirements",
+        "Full 4-month dry run achievable due to summer timing (fiscal Q4)",
+        "September fiscal year provides buffer: Oct 2026 start, Jan 2028 report"
+      ]
+    },
+    {
+      "id": "scenario-9",
+      "name": "March YE, Level 1, Starting Q4 2025 (Behind Schedule)",
+      "fiscalYearEnd": "march",
+      "maturityLevel": "level1",
+      "startDate": "2025-10-01",
+      "complianceFYStart": "2026-04-01",
+      "complianceFYEnd": "2027-03-31",
+      "reportDueDate": "2027-07-31",
+      "description": "HIGH RISK: March year-end starting fresh only 6 months before compliance FY",
+      "phases": [
+        {
+          "phase": "Phase 1-2: EMERGENCY SPRINT",
+          "startDate": "2025-10-01",
+          "endDate": "2026-02-28",
+          "duration": "5 months (severely compressed)",
+          "color": "#dc2626"
+        },
+        {
+          "phase": "Phase 3: Minimal Testing (Fiscal Q4)",
+          "startDate": "2026-03-01",
+          "endDate": "2026-03-31",
+          "duration": "1 month only",
+          "color": "#F18F01"
+        },
+        {
+          "phase": "Phase 4: Full FY Evidence Collection",
+          "startDate": "2026-04-01",
+          "endDate": "2027-03-31",
+          "duration": "12 months",
+          "color": "#10b981"
+        }
+      ],
+      "milestones": [
+        { "name": "EMERGENCY Board Session", "date": "2025-10-08", "type": "critical" },
+        { "name": "Fast-Track Materiality Criteria (2 weeks)", "date": "2025-10-22", "type": "critical" },
+        { "name": "Rapid Control Identification", "date": "2025-11-30", "type": "decision-gate" },
+        { "name": "GRC Platform Emergency Procurement", "date": "2025-11-15", "type": "critical" },
+        { "name": "Emergency Framework Design (External)", "date": "2026-01-31", "type": "critical" },
+        { "name": "Minimal Testing Sprint (1 month)", "date": "2026-03-01", "type": "critical" },
+        { "name": "Board Qualified Declaration Approved", "date": "2026-03-25", "type": "decision-gate" },
+        { "name": "Compliance FY Begins", "date": "2026-04-01", "type": "critical" },
+        { "name": "Qualified Annual Report Publication", "date": "2027-07-31", "type": "critical" }
+      ],
+      "resourcePeaks": [
+        { "period": "Oct 2025 - Feb 2026", "fte": "8-10 FTE + Heavy External Support", "reason": "Emergency sprint for framework design" },
+        { "period": "Mar 2026", "fte": "12-15 FTE", "reason": "Emergency testing sprint in fiscal Q4" }
+      ],
+      "riskCallouts": [
+        "HIGH RISK: Only 6 months before April 2026 compliance FY—no dry run window",
+        "Board must approve qualified declaration: 'Framework operational, limited evidence of effectiveness'",
+        "External consultancy essential (50% of budget)—no time for internal learning curve",
+        "March fiscal Q4 provides only 1-month testing window before April FY start",
+        "Plan comprehensive dry run in fiscal Q3 2027 (Oct-Dec 2026) for Year 2 confidence",
+        "First-year evidence collection will uncover gaps—plan for remediation in fiscal Q2-Q3",
+        "Budget £500k-700k due to emergency external dependency"
+      ]
+    },
+    {
+      "id": "scenario-10",
+      "name": "June YE, Level 2, Starting Q3 2025 (Moderately Compressed)",
+      "fiscalYearEnd": "june",
+      "maturityLevel": "level2",
+      "startDate": "2025-07-01",
+      "complianceFYStart": "2026-07-01",
+      "complianceFYEnd": "2027-06-30",
+      "reportDueDate": "2027-10-31",
+      "description": "June year-end with foundation, 12-month moderately compressed timeline",
+      "phases": [
+        {
+          "phase": "Phase 1: SKIPPED (Foundation Established)",
+          "startDate": "2025-07-01",
+          "endDate": "2025-07-01",
+          "duration": "Already complete",
+          "color": "#9ca3af"
+        },
+        {
+          "phase": "Phase 2: Framework Enhancement",
+          "startDate": "2025-07-01",
+          "endDate": "2026-02-28",
+          "duration": "8 months",
+          "color": "#06A77D"
+        },
+        {
+          "phase": "Phase 3: Testing & Validation",
+          "startDate": "2026-03-01",
+          "endDate": "2026-06-30",
+          "duration": "4 months",
+          "color": "#F18F01"
+        },
+        {
+          "phase": "Phase 4: Full FY Evidence Collection",
+          "startDate": "2026-07-01",
+          "endDate": "2027-06-30",
+          "duration": "12 months",
+          "color": "#10b981"
+        }
+      ],
+      "milestones": [
+        { "name": "Existing Framework Gap Analysis", "date": "2025-08-15", "type": "decision-gate" },
+        { "name": "P29-Specific Controls Defined", "date": "2025-10-31", "type": "milestone" },
+        { "name": "GRC Platform P29 Module Live", "date": "2025-12-31", "type": "critical" },
+        { "name": "Control Documentation Enhanced", "date": "2026-02-28", "type": "milestone" },
+        { "name": "Dry Run Commences (Fiscal Q4)", "date": "2026-03-01", "type": "critical" },
+        { "name": "Dry Run Complete", "date": "2026-06-20", "type": "decision-gate" },
+        { "name": "Compliance FY Begins", "date": "2026-07-01", "type": "critical" },
+        { "name": "Annual Report Publication", "date": "2027-10-31", "type": "critical" }
+      ],
+      "resourcePeaks": [
+        { "period": "Q3-Q4 2025", "fte": "4-5 FTE", "reason": "P29 gap closure and GRC enhancement" },
+        { "period": "Q2 2026 (Fiscal Q4)", "fte": "7-8 FTE", "reason": "Dry run in fiscal Q4" }
+      ],
+      "riskCallouts": [
+        "MEDIUM RISK: 12-month timeline with existing foundation (Level 2)",
+        "Existing ISO/SOX framework must be robust—no time for major redesign",
+        "Full 4-month dry run achievable in fiscal Q4 (Mar-Jun calendar)",
+        "June fiscal year timing is advantageous: summer FY start, October report deadline"
+      ]
+    },
+    {
+      "id": "scenario-11",
+      "name": "September YE, Level 3, Starting Q4 2025 (Minimal Compression)",
+      "fiscalYearEnd": "september",
+      "maturityLevel": "level3",
+      "startDate": "2025-10-01",
+      "complianceFYStart": "2026-10-01",
+      "complianceFYEnd": "2027-09-30",
+      "reportDueDate": "2028-01-31",
+      "description": "September year-end with controls documented, 12-month validation timeline",
+      "phases": [
+        {
+          "phase": "Phase 1-2: SKIPPED (Controls Documented)",
+          "startDate": "2025-10-01",
+          "endDate": "2025-10-01",
+          "duration": "Already complete",
+          "color": "#9ca3af"
+        },
+        {
+          "phase": "Phase 3: Comprehensive Testing & Validation",
+          "startDate": "2025-10-01",
+          "endDate": "2026-09-30",
+          "duration": "12 months (extended)",
+          "color": "#F18F01"
+        },
+        {
+          "phase": "Phase 4: Full FY Evidence Collection",
+          "startDate": "2026-10-01",
+          "endDate": "2027-09-30",
+          "duration": "12 months",
+          "color": "#10b981"
+        }
+      ],
+      "milestones": [
+        { "name": "Existing Controls P29 Mapping", "date": "2025-10-31", "type": "decision-gate" },
+        { "name": "Testing Protocols Enhanced", "date": "2025-12-31", "type": "milestone" },
+        { "name": "Evidence Repository Configured", "date": "2026-02-28", "type": "milestone" },
+        { "name": "First Testing Cycle Complete", "date": "2026-04-30", "type": "milestone" },
+        { "name": "Dry Run Commences (Fiscal Q4)", "date": "2026-06-01", "type": "critical" },
+        { "name": "Dry Run Complete", "date": "2026-09-20", "type": "decision-gate" },
+        { "name": "Board Final Approval", "date": "2026-09-25", "type": "critical" },
+        { "name": "Compliance FY Begins", "date": "2026-10-01", "type": "critical" },
+        { "name": "Annual Report Publication", "date": "2028-01-31", "type": "critical" }
+      ],
+      "resourcePeaks": [
+        { "period": "Q4 2025", "fte": "3-4 FTE", "reason": "P29 mapping and testing setup" },
+        { "period": "Q3 2026 (Fiscal Q4)", "fte": "6-7 FTE", "reason": "Comprehensive dry run" }
+      ],
+      "riskCallouts": [
+        "LOW RISK: 12-month timeline with controls already documented (Level 3)",
+        "Existing controls must meet P29 materiality—validation focus not redesign",
+        "Extended 12-month Phase 3 allows comprehensive testing and remediation",
+        "September year-end provides longest reporting window (Oct-Jan, 4 months)",
+        "Ideal scenario for confident 'full effectiveness' first-year declaration"
+      ]
+    },
+    {
+      "id": "scenario-12",
+      "name": "December YE, Level 2, Starting Q3 2025 (Standard Acceleration)",
+      "fiscalYearEnd": "december",
+      "maturityLevel": "level2",
+      "startDate": "2025-07-01",
+      "complianceFYStart": "2026-01-01",
+      "complianceFYEnd": "2026-12-31",
+      "reportDueDate": "2027-04-30",
+      "description": "December year-end with foundation, 6-month accelerated timeline",
+      "phases": [
+        {
+          "phase": "Phase 1: SKIPPED (Foundation Established)",
+          "startDate": "2025-07-01",
+          "endDate": "2025-07-01",
+          "duration": "Already complete",
+          "color": "#9ca3af"
+        },
+        {
+          "phase": "Phase 2: Framework Enhancement (Compressed)",
+          "startDate": "2025-07-01",
+          "endDate": "2025-10-31",
+          "duration": "4 months",
+          "color": "#06A77D"
+        },
+        {
+          "phase": "Phase 3: Rapid Testing & Validation",
+          "startDate": "2025-11-01",
+          "endDate": "2025-12-31",
+          "duration": "2 months (compressed)",
+          "color": "#F18F01"
+        },
+        {
+          "phase": "Phase 4: Full FY Evidence Collection",
+          "startDate": "2026-01-01",
+          "endDate": "2026-12-31",
+          "duration": "12 months",
+          "color": "#10b981"
+        }
+      ],
+      "milestones": [
+        { "name": "Existing Framework Gap Analysis", "date": "2025-07-31", "type": "decision-gate" },
+        { "name": "P29-Specific Controls Added", "date": "2025-09-15", "type": "milestone" },
+        { "name": "GRC Platform P29 Module Live", "date": "2025-10-15", "type": "critical" },
+        { "name": "Mini Dry Run (6 weeks)", "date": "2025-11-15", "type": "critical" },
+        { "name": "Board Dashboard Tested", "date": "2025-12-20", "type": "decision-gate" },
+        { "name": "Compliance FY Begins", "date": "2026-01-01", "type": "critical" },
+        { "name": "Annual Report Publication", "date": "2027-04-30", "type": "critical" }
+      ],
+      "resourcePeaks": [
+        { "period": "Q3 2025", "fte": "5-6 FTE", "reason": "Rapid P29 gap closure and GRC setup" },
+        { "period": "Q4 2025", "fte": "8-9 FTE", "reason": "Compressed mini dry run (6 weeks)" }
+      ],
+      "riskCallouts": [
+        "MEDIUM-HIGH RISK: Only 6 months before January 2026—compressed dry run (6 weeks vs 8)",
+        "Existing foundation (Level 2) is critical—must be robust SOX or ISO framework",
+        "Holiday period (Dec) creates availability challenges for dry run completion",
+        "Board has only 6 months to build confidence—intensive quarterly engagement required",
+        "Consider external support for rapid P29 gap closure to meet timeline"
+      ]
+    }
+  ]
+}

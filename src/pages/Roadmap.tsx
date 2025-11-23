@@ -29,6 +29,7 @@ import FrameworkBridgingGuides from "@/components/roadmap/FrameworkBridgingGuide
 import PhaseSkipValidation from "@/components/roadmap/PhaseSkipValidation";
 import { useFiscalYear } from "@/contexts/FiscalYearContext";
 import PersonalisedTimelineCalculator from "@/components/roadmap/PersonalisedTimelineCalculator";
+import ScenarioRoadmapsAppendix from "@/components/roadmap/ScenarioRoadmapsAppendix";
 
 const Roadmap = () => {
   const [selectedPhase, setSelectedPhase] = useState<Phase | null>(null);
@@ -331,6 +332,13 @@ const Roadmap = () => {
           </div>
         </section>
       )}
+
+      {/* Scenario-Specific Roadmaps Appendix */}
+      <section className="py-12 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-7xl">
+          <ScenarioRoadmapsAppendix />
+        </div>
+      </section>
 
       {/* Phase Detail Modal */}
       <PhaseDetailModal
