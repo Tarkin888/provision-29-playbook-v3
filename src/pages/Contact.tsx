@@ -8,6 +8,15 @@ import { Mail, Phone, Linkedin, Send } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
+import { z } from 'zod';
+
+// Contact form validation schema
+const contactSchema = z.object({
+  name: z.string().trim().min(2, 'Name must be at least 2 characters').max(100, 'Name must be less than 100 characters'),
+  email: z.string().trim().email('Invalid email address').max(255, 'Email must be less than 255 characters'),
+  company: z.string().trim().max(100, 'Company name must be less than 100 characters').optional(),
+  message: z.string().trim().min(10, 'Message must be at least 10 characters').max(2000, 'Message must be less than 2000 characters')
+});
 
 export default function Contact() {
   const navigate = useNavigate();
@@ -22,14 +31,28 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Simulate form submission
-    toast({
-      title: 'Message sent!',
-      description: 'Thank you for your interest. We\'ll get back to you within 24 hours.',
-    });
-    
-    // Reset form
-    setFormData({ name: '', email: '', company: '', message: '' });
+    try {
+      // Validate form data
+      const validated = contactSchema.parse(formData);
+      
+      // Simulate form submission with validated data
+      toast({
+        title: 'Message sent!',
+        description: 'Thank you for your interest. We\'ll get back to you within 24 hours.',
+      });
+      
+      // Reset form
+      setFormData({ name: '', email: '', company: '', message: '' });
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        // Show validation error
+        toast({
+          title: 'Validation Error',
+          description: error.errors[0].message,
+          variant: 'destructive'
+        });
+      }
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

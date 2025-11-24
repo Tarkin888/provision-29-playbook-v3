@@ -97,7 +97,9 @@ function getABTestData(): {
       return JSON.parse(data);
     }
   } catch (error) {
-    console.error('Error reading A/B test data:', error);
+    if (import.meta.env.DEV) {
+      console.error('Error reading A/B test data:', error);
+    }
   }
 
   return {
@@ -118,7 +120,9 @@ function saveABTestData(data: {
   try {
     localStorage.setItem(AB_STORAGE_KEY, JSON.stringify(data));
   } catch (error) {
-    console.error('Error saving A/B test data:', error);
+    if (import.meta.env.DEV) {
+      console.error('Error saving A/B test data:', error);
+    }
   }
 }
 
@@ -184,7 +188,9 @@ export function recordConversion(
   data.conversions.push(conversion);
   saveABTestData(data);
 
-  console.log(`[A/B Test] Conversion recorded: ${experimentName} - Variant ${variantId}`);
+  if (import.meta.env.DEV) {
+    console.log(`[A/B Test] Conversion recorded: ${experimentName} - Variant ${variantId}`);
+  }
 }
 
 /**
@@ -267,7 +273,9 @@ export function resetExperiment(experimentName: ExperimentName): void {
   data.conversions = data.conversions.filter(c => c.experimentName !== experimentName);
   
   saveABTestData(data);
-  console.log(`[A/B Test] Reset experiment: ${experimentName}`);
+  if (import.meta.env.DEV) {
+    console.log(`[A/B Test] Reset experiment: ${experimentName}`);
+  }
 }
 
 /**
@@ -281,15 +289,19 @@ export function hasOptedOutOfTracking(): boolean {
       return data.hasOptedOut === true;
     }
   } catch (error) {
-    console.error('Error checking opt-out status:', error);
+    if (import.meta.env.DEV) {
+      console.error('Error checking opt-out status:', error);
+    }
   }
   return false;
 }
 
 /**
- * Log experiment summary to console
+ * Log experiment summary to console (dev only)
  */
 export function logExperimentSummary(): void {
+  if (!import.meta.env.DEV) return;
+  
   const results = getAllExperimentResults();
   
   console.group('🧪 A/B Testing Summary');
