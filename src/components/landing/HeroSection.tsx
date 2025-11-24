@@ -19,48 +19,48 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-b from-blue-900 to-blue-950 px-4 py-16">
+    <section className="relative min-h-[100vh] sm:min-h-[80vh] flex items-center justify-center bg-gradient-to-b from-blue-900 to-blue-950 px-4 py-12 sm:py-16 safe-area-inset">
       <div className="w-full max-w-[1200px] text-center">
         {/* Main Headline */}
-        <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
           UK Corporate Governance Code Provision 29 Implementation Playbook
         </h1>
 
         {/* Subtitle */}
-        <p className="text-xl md:text-2xl text-blue-100 max-w-[800px] mx-auto mt-6">
+        <p className="text-lg sm:text-xl md:text-2xl text-blue-100 max-w-[800px] mx-auto mt-4 sm:mt-6">
           Complete 24-month roadmap, templates, and expert guidance for January 2026 compliance
         </p>
 
         {/* Feature Bullets */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 mt-8">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mt-6 sm:mt-8">
           {features.map((feature) => (
             <div key={feature} className="flex items-center gap-2">
-              <Check className="w-5 h-5 text-blue-200" />
-              <span className="text-lg text-blue-200">{feature}</span>
+              <Check className="w-5 h-5 text-blue-200 flex-shrink-0" />
+              <span className="text-base sm:text-lg text-blue-200">{feature}</span>
             </div>
           ))}
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 mt-8 sm:mt-12 max-w-md sm:max-w-none mx-auto">
           <button
             onClick={() => navigate('/getting-started')}
-            className="w-full sm:w-auto text-lg px-8 py-4 rounded-lg bg-white text-blue-900 hover:bg-blue-50 transition-colors font-semibold"
+            className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-4 rounded-lg bg-white text-blue-900 hover:bg-blue-50 transition-colors font-semibold min-h-[48px]"
           >
             Start Implementation
           </button>
           <button
             onClick={() => navigate('/assessment')}
-            className="w-full sm:w-auto text-lg px-8 py-4 rounded-lg border-2 border-white text-white hover:bg-white/10 transition-colors font-semibold"
+            className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-4 rounded-lg border-2 border-white text-white hover:bg-white/10 transition-colors font-semibold min-h-[48px]"
           >
             Take Assessment
           </button>
         </div>
 
         {/* Urgency Indicator */}
-        <div className="inline-flex items-center gap-2 mt-12 px-6 py-3 rounded-full bg-white/10 backdrop-blur-sm">
-          <span className="text-sm text-yellow-300 font-medium">
-            ⚡ January 2026 deadline: {monthsRemaining} months remaining
+        <div className="inline-flex items-center gap-2 mt-8 sm:mt-12 px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-white/10 backdrop-blur-sm w-full sm:w-auto max-w-md sm:max-w-none">
+          <span className="text-xs sm:text-sm text-yellow-300 font-medium text-center flex-1">
+            ⚡ January 2026 deadline: <strong className="text-sm sm:text-base">{monthsRemaining}</strong> months remaining
           </span>
         </div>
       </div>

@@ -171,4 +171,48 @@ All colors MUST be HSL.
       opacity: 0;
     }
   }
+
+  /* Safe Area Insets for iOS devices with notches */
+  .safe-area-inset {
+    padding-top: env(safe-area-inset-top);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+  }
+
+  /* Mobile optimization utilities */
+  @media (max-width: 640px) {
+    /* Ensure readable text on mobile */
+    body {
+      font-size: 16px; /* Prevents iOS zoom on input focus */
+      -webkit-text-size-adjust: 100%;
+    }
+
+    /* Improve touch targets */
+    button, a, input, select, textarea {
+      min-height: 44px; /* iOS recommended touch target */
+    }
+
+    /* Optimize tap delay */
+    a, button {
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+
+    /* Smooth scrolling for mobile */
+    * {
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 }

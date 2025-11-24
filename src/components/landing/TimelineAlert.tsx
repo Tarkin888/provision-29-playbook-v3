@@ -83,29 +83,31 @@ export default function TimelineAlert({
 
   return (
     <div 
-      className={`w-full ${sticky ? 'sticky top-0 z-50 shadow-md' : ''}`}
+      className={`w-full ${sticky ? 'sticky top-0 z-50 shadow-md bg-background' : ''}`}
     >
-      <div className="max-w-[1200px] mx-auto px-4 my-4">
+      <div className="max-w-[1200px] mx-auto px-3 sm:px-4 my-2 sm:my-4">
         <div 
           className={`
             ${styles.bg} ${styles.border} ${styles.pulse}
-            border-2 rounded-lg p-4 md:p-6
-            flex items-center justify-between gap-4
-            transition-all duration-200
+            border-2 rounded-lg p-3 sm:p-4 md:p-6
+            transition-all duration-200 relative
           `}
         >
-          {/* Left side: Icon + Text */}
-          <div className="flex items-center gap-3 flex-1">
-            <IconComponent 
-              className={styles.iconColor} 
-              size={24}
-            />
-            <p className={`${styles.text} text-sm md:text-base font-medium`}>
-              ⚡ Provision 29 Effective Date: January 1, 2026 | <strong>{monthsRemaining} months remaining</strong>
-            </p>
+          {/* Mobile: Stacked layout */}
+          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
+            {/* Icon + Text */}
+            <div className="flex items-center gap-2 sm:gap-3 flex-1 pr-8 sm:pr-0">
+              <IconComponent 
+                className={`${styles.iconColor} flex-shrink-0`} 
+                size={20}
+              />
+              <p className={`${styles.text} text-xs sm:text-sm md:text-base font-medium`}>
+                ⚡ Provision 29 Effective Date: January 1, 2026 | <strong className="text-sm sm:text-base">{monthsRemaining}</strong> months remaining
+              </p>
+            </div>
           </div>
 
-          {/* Right side: Dismiss button */}
+          {/* Dismiss button - Top right on mobile */}
           {showDismiss && (
             <button
               onClick={handleDismiss}
@@ -113,12 +115,12 @@ export default function TimelineAlert({
                 ${styles.iconColor} 
                 hover:opacity-70 
                 transition-opacity 
-                flex-shrink-0
-                p-1
+                absolute top-2 right-2 sm:relative sm:top-0 sm:right-0
+                p-1 min-h-[44px] min-w-[44px] flex items-center justify-center
               `}
               aria-label="Dismiss alert"
             >
-              <X size={20} />
+              <X size={18} className="sm:w-5 sm:h-5" />
             </button>
           )}
         </div>
