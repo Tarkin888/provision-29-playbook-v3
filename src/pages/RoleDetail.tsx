@@ -30,7 +30,7 @@ const RoleDetail = () => {
   }
 
   // Get templates for this role
-  const templates = P29Data.templates.getByRole(role.name);
+  const templates = P29Data.templates.getByRole(role.name) || [];
 
   // Get all roles for navigation
   const allRoles = P29Data.roles.getAll();
