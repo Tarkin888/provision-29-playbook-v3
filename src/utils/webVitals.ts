@@ -65,14 +65,16 @@ function sendToAnalytics(metric: WebVitalsMetric): void {
     localStorage.setItem('p29_analytics', JSON.stringify(analyticsData));
 
     // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (import.meta.env.DEV) {
       const emoji = metric.rating === 'good' ? '✅' : metric.rating === 'needs-improvement' ? '⚠️' : '❌';
       console.log(
         `${emoji} ${metric.name}: ${metric.value.toFixed(0)}${metric.name === 'CLS' ? '' : 'ms'} (${metric.rating})`
       );
     }
   } catch (error) {
-    console.error('Error sending Web Vitals to analytics:', error);
+    if (import.meta.env.DEV) {
+      console.error('Error sending Web Vitals to analytics:', error);
+    }
   }
 }
 
@@ -85,11 +87,15 @@ export function initWebVitals(): void {
   try {
     const analyticsData = JSON.parse(localStorage.getItem('p29_analytics') || '{}');
     if (analyticsData.hasOptedOut) {
-      console.log('[Web Vitals] User has opted out of tracking');
+      if (import.meta.env.DEV) {
+        console.log('[Web Vitals] User has opted out of tracking');
+      }
       return;
     }
   } catch (error) {
-    console.error('Error checking opt-out status:', error);
+    if (import.meta.env.DEV) {
+      console.error('Error checking opt-out status:', error);
+    }
   }
 
   // LCP - Largest Contentful Paint
@@ -113,7 +119,9 @@ export function initWebVitals(): void {
       
       lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
     } catch (error) {
-      console.error('Error observing LCP:', error);
+      if (import.meta.env.DEV) {
+        console.error('Error observing LCP:', error);
+      }
     }
 
     // FID - First Input Delay
@@ -136,7 +144,9 @@ export function initWebVitals(): void {
       
       fidObserver.observe({ type: 'first-input', buffered: true });
     } catch (error) {
-      console.error('Error observing FID:', error);
+      if (import.meta.env.DEV) {
+        console.error('Error observing FID:', error);
+      }
     }
 
     // CLS - Cumulative Layout Shift
@@ -163,7 +173,9 @@ export function initWebVitals(): void {
 
       clsObserver.observe({ type: 'layout-shift', buffered: true });
     } catch (error) {
-      console.error('Error observing CLS:', error);
+      if (import.meta.env.DEV) {
+        console.error('Error observing CLS:', error);
+      }
     }
 
     // FCP - First Contentful Paint
@@ -186,7 +198,9 @@ export function initWebVitals(): void {
       
       fcpObserver.observe({ type: 'paint', buffered: true });
     } catch (error) {
-      console.error('Error observing FCP:', error);
+      if (import.meta.env.DEV) {
+        console.error('Error observing FCP:', error);
+      }
     }
   }
 
@@ -209,7 +223,9 @@ export function initWebVitals(): void {
         sendToAnalytics(metric);
       }
     } catch (error) {
-      console.error('Error measuring TTFB:', error);
+      if (import.meta.env.DEV) {
+        console.error('Error measuring TTFB:', error);
+      }
     }
   }
 }
@@ -257,7 +273,9 @@ export function getWebVitalsSummary(): {
 
     return { metrics, summary };
   } catch (error) {
-    console.error('Error getting Web Vitals summary:', error);
+    if (import.meta.env.DEV) {
+      console.error('Error getting Web Vitals summary:', error);
+    }
     return { metrics: [], summary: {} };
   }
 }

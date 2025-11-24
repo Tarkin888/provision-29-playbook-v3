@@ -51,7 +51,9 @@ const getAnalyticsData = (): AnalyticsData => {
       return data;
     }
   } catch (error) {
-    console.error('Error reading analytics data:', error);
+    if (import.meta.env.DEV) {
+      console.error('Error reading analytics data:', error);
+    }
   }
   
   // Initialize new analytics data
@@ -73,7 +75,9 @@ const saveAnalyticsData = (data: AnalyticsData): void => {
   try {
     localStorage.setItem(ANALYTICS_KEY, JSON.stringify(data));
   } catch (error) {
-    console.error('Error saving analytics data:', error);
+    if (import.meta.env.DEV) {
+      console.error('Error saving analytics data:', error);
+    }
   }
 };
 
@@ -81,10 +85,12 @@ const saveAnalyticsData = (data: AnalyticsData): void => {
 const logEvent = (eventName: string, properties?: Record<string, any>): void => {
   if (!isTrackingAllowed()) return;
   
-  console.log(`[Analytics] ${eventName}`, {
-    timestamp: new Date().toISOString(),
-    ...properties,
-  });
+  if (import.meta.env.DEV) {
+    console.log(`[Analytics] ${eventName}`, {
+      timestamp: new Date().toISOString(),
+      ...properties,
+    });
+  }
 };
 
 // Track page view
@@ -193,7 +199,9 @@ export const getAnalyticsSummary = (): AnalyticsData | null => {
       return JSON.parse(stored);
     }
   } catch (error) {
-    console.error('Error reading analytics summary:', error);
+    if (import.meta.env.DEV) {
+      console.error('Error reading analytics summary:', error);
+    }
   }
   return null;
 };
@@ -202,9 +210,13 @@ export const getAnalyticsSummary = (): AnalyticsData | null => {
 export const clearAnalyticsData = (): void => {
   try {
     localStorage.removeItem(ANALYTICS_KEY);
-    console.log('[Analytics] Data cleared');
+    if (import.meta.env.DEV) {
+      console.log('[Analytics] Data cleared');
+    }
   } catch (error) {
-    console.error('Error clearing analytics data:', error);
+    if (import.meta.env.DEV) {
+      console.error('Error clearing analytics data:', error);
+    }
   }
 };
 
@@ -212,13 +224,17 @@ export const clearAnalyticsData = (): void => {
 export const optOutOfAnalytics = (): void => {
   localStorage.setItem('p29_analytics_opt_out', 'true');
   clearAnalyticsData();
-  console.log('[Analytics] User opted out of tracking');
+  if (import.meta.env.DEV) {
+    console.log('[Analytics] User opted out of tracking');
+  }
 };
 
 // Opt in to analytics
 export const optInToAnalytics = (): void => {
   localStorage.removeItem('p29_analytics_opt_out');
-  console.log('[Analytics] User opted in to tracking');
+  if (import.meta.env.DEV) {
+    console.log('[Analytics] User opted in to tracking');
+  }
 };
 
 // Check if user has opted out
@@ -226,8 +242,10 @@ export const hasOptedOut = (): boolean => {
   return localStorage.getItem('p29_analytics_opt_out') === 'true';
 };
 
-// Display analytics summary in console
+// Display analytics summary in console (dev only)
 export const logAnalyticsSummary = (): void => {
+  if (!import.meta.env.DEV) return;
+  
   const summary = getAnalyticsSummary();
   if (!summary) {
     console.log('[Analytics] No data available');
