@@ -1,14 +1,73 @@
 import SEOHead from '@/components/common/SEOHead';
 import HeroSection from '@/components/landing/HeroSection';
+import HeroSectionVariantB from '@/components/landing/HeroSectionVariantB';
+import HeroSectionVariantC from '@/components/landing/HeroSectionVariantC';
 import JourneySelector from '@/components/landing/JourneySelector';
+import JourneySelectorVariantB from '@/components/landing/JourneySelectorVariantB';
+import JourneySelectorVariantC from '@/components/landing/JourneySelectorVariantC';
 import FeaturesGrid from '@/components/landing/FeaturesGrid';
 import TimelineAlert from '@/components/landing/TimelineAlert';
 import SocialProofCTA from '@/components/landing/SocialProofCTA';
 import CookieConsent from '@/components/analytics/CookieConsent';
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import { trackScrollDepth } from '@/utils/analytics';
+import { 
+  getVariant, 
+  recordImpression, 
+  hasOptedOutOfTracking,
+  type ExperimentName 
+} from '@/utils/abTesting';
 
 export default function Home() {
+  // A/B Test Variant Assignment
+  const heroVariant = useMemo(() => {
+    if (hasOptedOutOfTracking()) return 'A';
+    return getVariant('hero_cta');
+  }, []);
+
+  const journeyVariant = useMemo(() => {
+    if (hasOptedOutOfTracking()) return 'A';
+    return getVariant('journey_layout');
+  }, []);
+
+  const socialProofVariant = useMemo(() => {
+    if (hasOptedOutOfTracking()) return 'A';
+    return getVariant('social_proof_placement');
+  }, []);
+
+  // Record impressions on mount
+  useEffect(() => {
+    if (!hasOptedOutOfTracking()) {
+      recordImpression('hero_cta', heroVariant);
+      recordImpression('journey_layout', journeyVariant);
+      recordImpression('social_proof_placement', socialProofVariant);
+    }
+  }, [heroVariant, journeyVariant, socialProofVariant]);
+
+  // Render hero variant
+  const renderHeroSection = () => {
+    switch (heroVariant) {
+      case 'B':
+        return <HeroSectionVariantB />;
+      case 'C':
+        return <HeroSectionVariantC />;
+      default:
+        return <HeroSection />;
+    }
+  };
+
+  // Render journey selector variant
+  const renderJourneySelector = () => {
+    switch (journeyVariant) {
+      case 'B':
+        return <JourneySelectorVariantB />;
+      case 'C':
+        return <JourneySelectorVariantC />;
+      default:
+        return <JourneySelector />;
+    }
+  };
+
   // Track scroll depth
   useEffect(() => {
     const scrollDepthTracked = {
@@ -90,17 +149,22 @@ export default function Home() {
 
         {/* Main content sections */}
         <div id="main-content">
-          {/* Hero - Full width */}
-          <HeroSection />
+          {/* Hero - A/B Test Variants */}
+          {renderHeroSection()}
 
-          {/* Journey Selector */}
-          <JourneySelector />
+          {/* Social Proof - Variant B: After Hero */}
+          {socialProofVariant === 'B' && <SocialProofCTA />}
+
+          {/* Journey Selector - A/B Test Variants */}
+          {renderJourneySelector()}
 
           {/* Features Grid */}
           <FeaturesGrid />
 
-          {/* Final CTA with Social Proof */}
-          <SocialProofCTA />
+          {/* Social Proof - Variant A: At Bottom (Control) */}
+          {socialProofVariant === 'A' && <SocialProofCTA />}
+
+          {/* Note: Variant C (Floating Widget) not yet implemented */}
         </div>
 
         {/* Cookie Consent Banner */}
