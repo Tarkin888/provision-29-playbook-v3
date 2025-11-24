@@ -3,88 +3,67 @@ import { Card } from '@/components/ui/card';
 import { NavLink } from '@/components/NavLink';
 import SEOHead from '@/components/common/SEOHead';
 import ProgressWidget from '@/components/progress/ProgressWidget';
-import { 
-  getCurrentWeek, 
-  getCurrentQuarter, 
-  getWeeksUntilCompliance,
-  getMonthsBehind,
-  getRiskLevel,
-  formatDate
-} from '@/utils/dateUtils';
-import { 
-  ArrowRight, 
-  ClipboardCheck, 
-  Map, 
-  FileText, 
-  Users, 
-  BookOpen, 
-  HelpCircle, 
-  BookMarked,
-  Linkedin,
-  Mail
-} from 'lucide-react';
-
+import { getCurrentWeek, getCurrentQuarter, getWeeksUntilCompliance, getMonthsBehind, getRiskLevel, formatDate } from '@/utils/dateUtils';
+import { ArrowRight, ClipboardCheck, Map, FileText, Users, BookOpen, HelpCircle, BookMarked, Linkedin, Mail } from 'lucide-react';
 const Home = () => {
   // Dynamic date calculations
   const currentWeek = getCurrentWeek();
-  const { quarter, year } = getCurrentQuarter();
+  const {
+    quarter,
+    year
+  } = getCurrentQuarter();
   const weeksUntilCompliance = getWeeksUntilCompliance();
   const monthsUntilCompliance = Math.floor(weeksUntilCompliance / 4);
   const monthsBehind = getMonthsBehind();
   const riskLevel = getRiskLevel();
   const today = formatDate(new Date());
-  
-  const navigationTiles = [
-    {
-      icon: '🗺️',
-      title: 'Implementation Roadmap',
-      description: '24-month journey from scoping to declaration',
-      link: '/roadmap',
-      color: 'phase1',
-    },
-    {
-      icon: '📄',
-      title: 'Template Library',
-      description: '15 ready-to-use templates and tools',
-      link: '/templates',
-      color: 'phase2',
-    },
-    {
-      icon: '👥',
-      title: 'Role Guides',
-      description: 'Tailored guidance for boards, CFOs, risk, audit',
-      link: '/roles',
-      color: 'phase3',
-    },
-    {
-      icon: '📚',
-      title: 'Resources Hub',
-      description: 'Articles, case studies, and best practices',
-      link: '/resources',
-      color: 'phase4',
-    },
-    {
-      icon: '❓',
-      title: 'FAQ',
-      description: 'Answers to common P29 questions',
-      link: '/faq',
-      color: 'muted',
-    },
-    {
-      icon: '📖',
-      title: 'Glossary',
-      description: 'Key terms and definitions',
-      link: '/glossary',
-      color: 'muted',
-    },
-  ];
-
-  const stats = [
-    { value: '16 months', label: 'Implementation duration' },
-    { value: '200+ controls', label: 'Material controls defined' },
-    { value: 'FTSE 100', label: 'Market segment' },
-  ];
-
+  const navigationTiles = [{
+    icon: '🗺️',
+    title: 'Implementation Roadmap',
+    description: '24-month journey from scoping to declaration',
+    link: '/roadmap',
+    color: 'phase1'
+  }, {
+    icon: '📄',
+    title: 'Template Library',
+    description: '15 ready-to-use templates and tools',
+    link: '/templates',
+    color: 'phase2'
+  }, {
+    icon: '👥',
+    title: 'Role Guides',
+    description: 'Tailored guidance for boards, CFOs, risk, audit',
+    link: '/roles',
+    color: 'phase3'
+  }, {
+    icon: '📚',
+    title: 'Resources Hub',
+    description: 'Articles, case studies, and best practices',
+    link: '/resources',
+    color: 'phase4'
+  }, {
+    icon: '❓',
+    title: 'FAQ',
+    description: 'Answers to common P29 questions',
+    link: '/faq',
+    color: 'muted'
+  }, {
+    icon: '📖',
+    title: 'Glossary',
+    description: 'Key terms and definitions',
+    link: '/glossary',
+    color: 'muted'
+  }];
+  const stats = [{
+    value: '16 months',
+    label: 'Implementation duration'
+  }, {
+    value: '200+ controls',
+    label: 'Material controls defined'
+  }, {
+    value: 'FTSE 100',
+    label: 'Market segment'
+  }];
   const getColorClasses = (color: string) => {
     switch (color) {
       case 'phase1':
@@ -99,14 +78,8 @@ const Home = () => {
         return 'border-l-muted-foreground';
     }
   };
-
-  return (
-    <div className="min-h-screen">
-      <SEOHead 
-        title="P29 Implementation Playbook"
-        description="Expert guidance for FTSE-listed companies implementing UK Corporate Governance Code Provision 29. 24-month roadmap, templates, and resources."
-        canonical={window.location.origin}
-      />
+  return <div className="min-h-screen">
+      <SEOHead title="P29 Implementation Playbook" description="Expert guidance for FTSE-listed companies implementing UK Corporate Governance Code Provision 29. 24-month roadmap, templates, and resources." canonical={window.location.origin} />
       
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 via-blue-50/50 to-background">
@@ -119,22 +92,13 @@ const Home = () => {
               Expert guidance for FTSE-listed companies implementing UK Corporate Governance Code Provision 29, based on hands-on FTSE 100 experience
             </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-              <Button
-                asChild
-                size="lg"
-                className="bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all hover-scale min-h-[48px]"
-              >
+              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all hover-scale min-h-[48px]">
                 <NavLink to="/assessment" className="flex items-center justify-center gap-2">
                   <ClipboardCheck className="w-5 h-5" />
                   <span className="text-base">Start Readiness Assessment</span>
                 </NavLink>
               </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-2 hover:bg-accent transition-all min-h-[48px]"
-              >
+              <Button asChild size="lg" variant="outline" className="border-2 hover:bg-accent transition-all min-h-[48px]">
                 <NavLink to="/roadmap" className="flex items-center justify-center gap-2">
                   <Map className="w-5 h-5" />
                   <span className="text-base">View Implementation Roadmap</span>
@@ -157,10 +121,7 @@ const Home = () => {
               <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
                 Provision 29 of the UK Corporate Governance Code requires FTSE 350 boards to declare annually that they have established procedures to identify and manage material controls. The first declarations are due in annual reports covering fiscal years starting on or after 1 January 2026.
               </p>
-              <NavLink 
-                to="/faq" 
-                className="inline-flex items-center gap-2 text-primary font-medium hover:underline story-link min-h-[44px]"
-              >
+              <NavLink to="/faq" className="inline-flex items-center gap-2 text-primary font-medium hover:underline story-link min-h-[44px]">
                 Learn More
                 <ArrowRight className="w-4 h-4" />
               </NavLink>
@@ -208,31 +169,13 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-              <div className={`flex items-start gap-3 p-4 rounded-lg border-2 ${
-                riskLevel === 'CRITICAL' 
-                  ? 'bg-red-50 dark:bg-red-950/20 border-red-500/50'
-                  : riskLevel === 'HIGH'
-                  ? 'bg-amber-50 dark:bg-amber-950/20 border-amber-500/50'
-                  : 'bg-yellow-50 dark:bg-yellow-950/20 border-yellow-500/50'
-              }`}>
+              <div className={`flex items-start gap-3 p-4 rounded-lg border-2 ${riskLevel === 'CRITICAL' ? 'bg-red-50 dark:bg-red-950/20 border-red-500/50' : riskLevel === 'HIGH' ? 'bg-amber-50 dark:bg-amber-950/20 border-amber-500/50' : 'bg-yellow-50 dark:bg-yellow-950/20 border-yellow-500/50'}`}>
                 <span className="text-2xl">⚠️</span>
                 <div className="flex-1">
-                  <h3 className={`font-semibold mb-1 ${
-                    riskLevel === 'CRITICAL' 
-                      ? 'text-red-900 dark:text-red-200'
-                      : riskLevel === 'HIGH'
-                      ? 'text-amber-900 dark:text-amber-200'
-                      : 'text-yellow-900 dark:text-yellow-200'
-                  }`}>
+                  <h3 className={`font-semibold mb-1 ${riskLevel === 'CRITICAL' ? 'text-red-900 dark:text-red-200' : riskLevel === 'HIGH' ? 'text-amber-900 dark:text-amber-200' : 'text-yellow-900 dark:text-yellow-200'}`}>
                     {riskLevel} RISK: Timeline Reality Check
                   </h3>
-                  <p className={`text-sm ${
-                    riskLevel === 'CRITICAL' 
-                      ? 'text-red-800 dark:text-red-300'
-                      : riskLevel === 'HIGH'
-                      ? 'text-amber-800 dark:text-amber-300'
-                      : 'text-yellow-800 dark:text-yellow-300'
-                  }`}>
+                  <p className={`text-sm ${riskLevel === 'CRITICAL' ? 'text-red-800 dark:text-red-300' : riskLevel === 'HIGH' ? 'text-amber-800 dark:text-amber-300' : 'text-yellow-800 dark:text-yellow-300'}`}>
                     You are currently {monthsBehind} months behind the recommended 24-month implementation timeline. Success will require compressed phases, executive commitment to rapid decision-making, and potentially higher resource investment. See the Roadmap page for your scenario-specific timeline.
                   </p>
                 </div>
@@ -291,13 +234,9 @@ const Home = () => {
             </div>
 
             {/* First 2 navigation tiles */}
-            {navigationTiles.slice(0, 2).map((tile, index) => (
-              <NavLink
-                key={tile.title}
-                to={tile.link}
-                className={`group relative p-6 bg-card border rounded-lg border-l-4 ${getColorClasses(tile.color)} hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-in min-h-[180px]`}
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
+            {navigationTiles.slice(0, 2).map((tile, index) => <NavLink key={tile.title} to={tile.link} className={`group relative p-6 bg-card border rounded-lg border-l-4 ${getColorClasses(tile.color)} hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-in min-h-[180px]`} style={{
+            animationDelay: `${index * 100}ms`
+          }}>
                 <div className="flex flex-col h-full">
                   <div className="text-3xl sm:text-4xl mb-3 md:mb-4">{tile.icon}</div>
                   <h3 className="text-lg sm:text-xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
@@ -310,19 +249,14 @@ const Home = () => {
                     <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
                   </div>
                 </div>
-              </NavLink>
-            ))}
+              </NavLink>)}
           </div>
 
           {/* Remaining navigation tiles */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            {navigationTiles.slice(2).map((tile, index) => (
-              <NavLink
-                key={tile.title}
-                to={tile.link}
-                className={`group relative p-6 bg-card border rounded-lg border-l-4 ${getColorClasses(tile.color)} hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-in min-h-[180px]`}
-                style={{ animationDelay: `${(index + 2) * 100}ms` }}
-              >
+            {navigationTiles.slice(2).map((tile, index) => <NavLink key={tile.title} to={tile.link} className={`group relative p-6 bg-card border rounded-lg border-l-4 ${getColorClasses(tile.color)} hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-in min-h-[180px]`} style={{
+            animationDelay: `${(index + 2) * 100}ms`
+          }}>
                 <div className="flex flex-col h-full">
                   <div className="text-3xl sm:text-4xl mb-3 md:mb-4">{tile.icon}</div>
                   <h3 className="text-lg sm:text-xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
@@ -335,8 +269,7 @@ const Home = () => {
                     <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
                   </div>
                 </div>
-              </NavLink>
-            ))}
+              </NavLink>)}
           </div>
         </div>
       </section>
@@ -350,25 +283,20 @@ const Home = () => {
             </h2>
             
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 mb-6 md:mb-8">
-              {stats.map((stat, index) => (
-                <div 
-                  key={stat.label} 
-                  className="p-6 bg-background rounded-lg shadow-sm animate-scale-in"
-                  style={{ animationDelay: `${index * 150}ms` }}
-                >
+              {stats.map((stat, index) => <div key={stat.label} className="p-6 bg-background rounded-lg shadow-sm animate-scale-in" style={{
+              animationDelay: `${index * 150}ms`
+            }}>
                   <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">
                     {stat.value}
                   </div>
                   <div className="text-sm sm:text-base text-muted-foreground">
                     {stat.label}
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <p className="text-xs sm:text-sm text-muted-foreground italic">
-              Based on Sainsbury's Material Controls Programme (2023-2024)
-            </p>
+          </p>
           </div>
         </div>
       </section>
@@ -382,19 +310,10 @@ const Home = () => {
             </div>
             
             <div className="flex items-center gap-4 md:gap-6">
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
-                aria-label="LinkedIn"
-              >
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="LinkedIn">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a
-                href="mailto:hello@p29playbook.com"
-                className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 min-h-[44px]"
-              >
+              <a href="mailto:hello@p29playbook.com" className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 min-h-[44px]">
                 <Mail className="w-4 h-4" />
                 <span className="hidden sm:inline">hello@p29playbook.com</span>
               </a>
@@ -402,8 +321,6 @@ const Home = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Home;
