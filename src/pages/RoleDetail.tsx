@@ -4,10 +4,11 @@ import SEOHead from "@/components/common/SEOHead";
 import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, FileText, Calendar, BookOpen } from "lucide-react";
+import { ArrowLeft, FileText, Calendar, BookOpen, Settings } from "lucide-react";
 import RoleOverview from "@/components/roles/RoleOverview";
 import RoleTimeline from "@/components/roles/RoleTimeline";
 import RoleResources from "@/components/roles/RoleResources";
+import RoleSettings from "@/components/roles/RoleSettings";
 
 const RoleDetail = () => {
   const { roleId } = useParams<{ roleId: string }>();
@@ -123,9 +124,13 @@ const RoleDetail = () => {
       {/* Main Content with Tabs */}
       <section className="py-12 px-4">
         <div className="container mx-auto max-w-5xl">
-          <Tabs defaultValue="overview" className="w-full">
+          <Tabs defaultValue="settings" className="w-full">
             <div className="sticky top-[var(--nav-height)] bg-background/95 backdrop-blur-sm z-10 pb-4 border-b mb-8">
-              <TabsList className="grid w-full grid-cols-2 md:grid-cols-3">
+              <TabsList className="grid w-full grid-cols-2 md:grid-cols-4">
+                <TabsTrigger value="settings" className="gap-2">
+                  <Settings className="w-4 h-4" />
+                  <span className="hidden sm:inline">Settings</span>
+                </TabsTrigger>
                 <TabsTrigger value="overview" className="gap-2">
                   <FileText className="w-4 h-4" />
                   <span className="hidden sm:inline">Overview</span>
@@ -140,6 +145,10 @@ const RoleDetail = () => {
                 </TabsTrigger>
               </TabsList>
             </div>
+
+            <TabsContent value="settings">
+              <RoleSettings />
+            </TabsContent>
 
             <TabsContent value="overview">
               <RoleOverview role={role} />
