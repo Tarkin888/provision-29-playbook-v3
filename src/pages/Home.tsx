@@ -5,11 +5,9 @@ import HeroSectionVariantC from '@/components/landing/HeroSectionVariantC';
 import JourneySelector from '@/components/landing/JourneySelector';
 import JourneySelectorVariantB from '@/components/landing/JourneySelectorVariantB';
 import JourneySelectorVariantC from '@/components/landing/JourneySelectorVariantC';
-import FeaturesGrid from '@/components/landing/FeaturesGrid';
 import TimelineAlert from '@/components/landing/TimelineAlert';
-import SocialProofCTA from '@/components/landing/SocialProofCTA';
 import CookieConsent from '@/components/analytics/CookieConsent';
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, lazy, Suspense } from 'react';
 import { trackScrollDepth } from '@/utils/analytics';
 import { 
   getVariant, 
@@ -17,6 +15,11 @@ import {
   hasOptedOutOfTracking,
   type ExperimentName 
 } from '@/utils/abTesting';
+import { FeaturesGridSkeleton, SocialProofSkeleton } from '@/components/landing/LoadingSkeletons';
+
+// Lazy load below-the-fold components for better initial load performance
+const FeaturesGrid = lazy(() => import('@/components/landing/FeaturesGrid'));
+const SocialProofCTA = lazy(() => import('@/components/landing/SocialProofCTA'));
 
 export default function Home() {
   // A/B Test Variant Assignment
@@ -123,6 +126,7 @@ export default function Home() {
       clearTimeout(scrollTimeout);
     };
   }, []);
+
   return (
     <>
       <SEOHead
@@ -152,17 +156,27 @@ export default function Home() {
           {/* Hero - A/B Test Variants */}
           {renderHeroSection()}
 
-          {/* Social Proof - Variant B: After Hero */}
-          {socialProofVariant === 'B' && <SocialProofCTA />}
+          {/* Social Proof - Variant B: After Hero (Lazy Loaded) */}
+          {socialProofVariant === 'B' && (
+            <Suspense fallback={<SocialProofSkeleton />}>
+              <SocialProofCTA />
+            </Suspense>
+          )}
 
           {/* Journey Selector - A/B Test Variants */}
           {renderJourneySelector()}
 
-          {/* Features Grid */}
-          <FeaturesGrid />
+          {/* Features Grid (Lazy Loaded) */}
+          <Suspense fallback={<FeaturesGridSkeleton />}>
+            <FeaturesGrid />
+          </Suspense>
 
-          {/* Social Proof - Variant A: At Bottom (Control) */}
-          {socialProofVariant === 'A' && <SocialProofCTA />}
+          {/* Social Proof - Variant A: At Bottom (Control, Lazy Loaded) */}
+          {socialProofVariant === 'A' && (
+            <Suspense fallback={<SocialProofSkeleton />}>
+              <SocialProofCTA />
+            </Suspense>
+          )}
 
           {/* Note: Variant C (Floating Widget) not yet implemented */}
         </div>
