@@ -1,22 +1,47 @@
 import { useState } from 'react';
 import { NavLink } from '@/components/NavLink';
 import { Button } from '@/components/ui/button';
-import { Menu, X, FileCheck } from 'lucide-react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { Menu, X, ChevronDown, Zap } from 'lucide-react';
 import { MobileMenu } from './MobileMenu';
 import VendorLogo from './vendor/VendorLogo';
 import VendorTagline from './vendor/VendorTagline';
 import SearchBar from './search/SearchBar';
+import { useNavigate } from 'react-router-dom';
 
 export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const navLinks = [
+    { to: '/', label: 'Home' },
+    { to: '/getting-started', label: 'Getting Started' },
     { to: '/roadmap', label: 'Roadmap' },
+  ];
+
+  const resourcesLinks = [
     { to: '/templates', label: 'Templates' },
-    { to: '/roles', label: 'Roles' },
-    { to: '/resources', label: 'Resources' },
+    { to: '/resources', label: 'Resource Hub' },
+    { to: '/roles', label: 'Role Guides' },
+  ];
+
+  const toolsLinks = [
+    { to: '/assessment', label: 'Readiness Assessment' },
+    { to: '/progress', label: 'Progress Tracker' },
     { to: '/faq', label: 'FAQ' },
     { to: '/glossary', label: 'Glossary' },
+  ];
+
+  const allMobileLinks = [
+    ...navLinks,
+    { to: '/features', label: 'Features' },
+    ...resourcesLinks,
+    ...toolsLinks,
   ];
 
   return (
@@ -34,7 +59,7 @@ export const Header = () => {
           </NavLink>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
               <NavLink
                 key={link.to}
@@ -45,21 +70,69 @@ export const Header = () => {
                 {link.label}
               </NavLink>
             ))}
+
+            {/* Resources Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors rounded-md hover:bg-accent">
+                Resources
+                <ChevronDown className="w-4 h-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-background border shadow-lg z-50">
+                {resourcesLinks.map((link) => (
+                  <DropdownMenuItem
+                    key={link.to}
+                    onClick={() => navigate(link.to)}
+                    className="cursor-pointer hover:bg-accent"
+                  >
+                    {link.label}
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {/* Tools Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors rounded-md hover:bg-accent">
+                Tools
+                <ChevronDown className="w-4 h-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-background border shadow-lg z-50">
+                {toolsLinks.map((link) => (
+                  <DropdownMenuItem
+                    key={link.to}
+                    onClick={() => navigate(link.to)}
+                    className="cursor-pointer hover:bg-accent"
+                  >
+                    {link.label}
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {/* Features Link */}
+            <NavLink
+              to="/features"
+              className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors rounded-md hover:bg-accent"
+              activeClassName="text-primary bg-accent"
+            >
+              Features
+            </NavLink>
           </nav>
 
           {/* Desktop: Search & CTA */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-3">
             <SearchBar />
-            <Button asChild className="bg-primary hover:bg-primary/90">
-              <NavLink to="/assessment" className="flex items-center gap-2">
-                <FileCheck className="w-4 h-4" />
-                Readiness Assessment
-              </NavLink>
+            <Button 
+              onClick={() => navigate('/assessment')}
+              className="bg-primary hover:bg-primary/90"
+            >
+              <Zap className="w-4 h-4 mr-2" />
+              Start Now
             </Button>
           </div>
 
           {/* Mobile: Search & Menu */}
-          <div className="flex md:hidden items-center gap-2">
+          <div className="flex lg:hidden items-center gap-2">
             <SearchBar mobile />
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -80,7 +153,7 @@ export const Header = () => {
       <MobileMenu
         isOpen={mobileMenuOpen}
         onClose={() => setMobileMenuOpen(false)}
-        navLinks={navLinks}
+        navLinks={allMobileLinks}
       />
     </>
   );
