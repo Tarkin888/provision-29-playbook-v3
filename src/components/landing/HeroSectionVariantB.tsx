@@ -1,22 +1,25 @@
 import { Check } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useMemo, memo } from 'react';
 import { trackPageView, trackCTAClick } from '@/utils/analytics';
 import { recordConversion } from '@/utils/abTesting';
 
-export default function HeroSectionVariantB() {
+function HeroSectionVariantB() {
   const navigate = useNavigate();
   
   useEffect(() => {
     trackPageView('landing_hero_variant_b');
   }, []);
   
-  const today = new Date();
-  const deadline = new Date('2026-01-01');
-  const monthsRemaining = Math.max(
-    0,
-    Math.floor((deadline.getTime() - today.getTime()) / (1000 * 60 * 60 * 24 * 30))
-  );
+  // Calculate months remaining until January 2026 (memoized to avoid recalculation)
+  const monthsRemaining = useMemo(() => {
+    const today = new Date();
+    const deadline = new Date('2026-01-01');
+    return Math.max(
+      0,
+      Math.floor((deadline.getTime() - today.getTime()) / (1000 * 60 * 60 * 24 * 30))
+    );
+  }, []);
 
   const features = [
     '24-Month Roadmap',
@@ -79,3 +82,6 @@ export default function HeroSectionVariantB() {
     </section>
   );
 }
+
+// Memoize component to prevent unnecessary re-renders
+export default memo(HeroSectionVariantB);

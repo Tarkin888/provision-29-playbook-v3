@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, memo } from 'react';
 import { AlertCircle, AlertTriangle, X } from 'lucide-react';
 import { trackAlertDismissal } from '@/utils/analytics';
 
@@ -8,7 +8,7 @@ interface TimelineAlertProps {
   sticky?: boolean;
 }
 
-export default function TimelineAlert({ 
+function TimelineAlert({
   deadline = "2026-01-01", 
   showDismiss = true,
   sticky = false 
@@ -130,3 +130,6 @@ export default function TimelineAlert({
     </div>
   );
 }
+
+// Memoize component to prevent unnecessary re-renders
+export default memo(TimelineAlert);
