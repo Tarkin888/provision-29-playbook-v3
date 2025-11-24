@@ -3,6 +3,8 @@ import { Card } from '@/components/ui/card';
 import { NavLink } from '@/components/NavLink';
 import SEOHead from '@/components/common/SEOHead';
 import ProgressWidget from '@/components/progress/ProgressWidget';
+import HeroSection from '@/components/landing/HeroSection';
+import JourneySelector from '@/components/landing/JourneySelector';
 import { getCurrentWeek, getCurrentQuarter, getWeeksUntilCompliance, getMonthsBehind, getRiskLevel, formatDate } from '@/utils/dateUtils';
 import { ArrowRight, ClipboardCheck, Map, FileText, Users, BookOpen, HelpCircle, BookMarked, Linkedin, Mail } from 'lucide-react';
 const Home = () => {
@@ -82,32 +84,10 @@ const Home = () => {
       <SEOHead title="P29 Implementation Playbook" description="Expert guidance for FTSE-listed companies implementing UK Corporate Governance Code Provision 29. 24-month roadmap, templates, and resources." canonical={window.location.origin} />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 via-blue-50/50 to-background">
-        <div className="container mx-auto px-4 py-12 md:py-20 lg:py-28">
-          <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-foreground leading-tight">
-              Your Partner for Provision 29 Compliance
-            </h1>
-            <p className="text-base md:text-lg lg:text-xl text-muted-foreground mb-8 md:mb-10 max-w-3xl mx-auto leading-relaxed">
-              Expert guidance for FTSE-listed companies implementing UK Corporate Governance Code Provision 29, based on hands-on FTSE 100 experience
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all hover-scale min-h-[48px]">
-                <NavLink to="/assessment" className="flex items-center justify-center gap-2">
-                  <ClipboardCheck className="w-5 h-5" />
-                  <span className="text-base">Start Readiness Assessment</span>
-                </NavLink>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="border-2 hover:bg-accent transition-all min-h-[48px]">
-                <NavLink to="/roadmap" className="flex items-center justify-center gap-2">
-                  <Map className="w-5 h-5" />
-                  <span className="text-base">View Implementation Roadmap</span>
-                </NavLink>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
+
+      {/* Journey Selector */}
+      <JourneySelector />
 
       {/* What is P29 Section */}
       <section className="container mx-auto px-4 py-12 md:py-16">
