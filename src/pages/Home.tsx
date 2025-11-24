@@ -4,6 +4,14 @@ import { NavLink } from '@/components/NavLink';
 import SEOHead from '@/components/common/SEOHead';
 import ProgressWidget from '@/components/progress/ProgressWidget';
 import { 
+  getCurrentWeek, 
+  getCurrentQuarter, 
+  getWeeksUntilCompliance,
+  getMonthsBehind,
+  getRiskLevel,
+  formatDate
+} from '@/utils/dateUtils';
+import { 
   ArrowRight, 
   ClipboardCheck, 
   Map, 
@@ -17,6 +25,15 @@ import {
 } from 'lucide-react';
 
 const Home = () => {
+  // Dynamic date calculations
+  const currentWeek = getCurrentWeek();
+  const { quarter, year } = getCurrentQuarter();
+  const weeksUntilCompliance = getWeeksUntilCompliance();
+  const monthsUntilCompliance = Math.floor(weeksUntilCompliance / 4);
+  const monthsBehind = getMonthsBehind();
+  const riskLevel = getRiskLevel();
+  const today = formatDate(new Date());
+  
   const navigationTiles = [
     {
       icon: '🗺️',
@@ -180,18 +197,43 @@ const Home = () => {
               <div className="flex items-start gap-3 p-4 bg-background rounded-lg">
                 <span className="text-2xl">🚀</span>
                 <div className="flex-1">
-                  <h3 className="font-semibold mb-1">Starting Your P29 Journey in November 2025</h3>
+                  <h3 className="font-semibold mb-1">
+                    Starting Your P29 Journey Today (Week {currentWeek}, Q{quarter} {year})
+                  </h3>
                   <p className="text-sm text-muted-foreground mb-2">
-                    Organizations beginning P29 implementation now face a severely compressed timeline with only 14 months until the January 2026 effective date. The roadmap automatically calculates your specific timeline based on your fiscal year-end and current implementation maturity. Most organizations starting now will require an accelerated 12-14 month implementation approach.
+                    Organizations beginning P29 implementation now face a severely compressed timeline with only {monthsUntilCompliance} months ({weeksUntilCompliance} weeks) until the January 2026 effective date. The roadmap automatically calculates your specific timeline based on your fiscal year-end and current implementation maturity. Most organizations starting now will require an accelerated implementation approach.
+                  </p>
+                  <p className="text-xs text-muted-foreground italic">
+                    Current date: {today}
                   </p>
                 </div>
               </div>
-              <div className="flex items-start gap-3 p-4 bg-amber-50 dark:bg-amber-950/20 rounded-lg border-2 border-amber-500/50">
+              <div className={`flex items-start gap-3 p-4 rounded-lg border-2 ${
+                riskLevel === 'CRITICAL' 
+                  ? 'bg-red-50 dark:bg-red-950/20 border-red-500/50'
+                  : riskLevel === 'HIGH'
+                  ? 'bg-amber-50 dark:bg-amber-950/20 border-amber-500/50'
+                  : 'bg-yellow-50 dark:bg-yellow-950/20 border-yellow-500/50'
+              }`}>
                 <span className="text-2xl">⚠️</span>
                 <div className="flex-1">
-                  <h3 className="font-semibold mb-1 text-amber-900 dark:text-amber-200">Timeline Reality Check</h3>
-                  <p className="text-sm text-amber-800 dark:text-amber-300">
-                    Organizations starting in Q4 2025 are significantly behind the recommended 24-month implementation timeline. Success will require compressed phases, executive commitment to rapid decision-making, and potentially higher resource investment. See the Roadmap page for your scenario-specific timeline.
+                  <h3 className={`font-semibold mb-1 ${
+                    riskLevel === 'CRITICAL' 
+                      ? 'text-red-900 dark:text-red-200'
+                      : riskLevel === 'HIGH'
+                      ? 'text-amber-900 dark:text-amber-200'
+                      : 'text-yellow-900 dark:text-yellow-200'
+                  }`}>
+                    {riskLevel} RISK: Timeline Reality Check
+                  </h3>
+                  <p className={`text-sm ${
+                    riskLevel === 'CRITICAL' 
+                      ? 'text-red-800 dark:text-red-300'
+                      : riskLevel === 'HIGH'
+                      ? 'text-amber-800 dark:text-amber-300'
+                      : 'text-yellow-800 dark:text-yellow-300'
+                  }`}>
+                    You are currently {monthsBehind} months behind the recommended 24-month implementation timeline. Success will require compressed phases, executive commitment to rapid decision-making, and potentially higher resource investment. See the Roadmap page for your scenario-specific timeline.
                   </p>
                 </div>
               </div>
