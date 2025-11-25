@@ -8,6 +8,13 @@ interface Message {
   content: string;
 }
 
+const SUGGESTED_QUESTIONS = [
+  "What is the P29 implementation timeline?",
+  "How do I select a GRC platform?",
+  "What are the key roles and responsibilities?",
+  "What if I'm behind schedule?"
+];
+
 export const P29ChatAssistant = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -29,17 +36,19 @@ export const P29ChatAssistant = () => {
     scrollToBottom();
   }, [messages]);
 
-  const sendMessage = async () => {
-    if (!input.trim() || isLoading) return;
+  const sendMessage = async (messageText?: string) => {
+    const textToSend = messageText || input;
+    if (!textToSend.trim() || isLoading) return;
 
-    const userMessage: Message = { role: 'user', content: input };
+    const userMessage: Message = { role: 'user', content: textToSend };
     setMessages(prev => [...prev, userMessage]);
     setInput('');
     setIsLoading(true);
 
     try {
+      const conversationHistory = [...messages, userMessage];
       const { data, error } = await supabase.functions.invoke('p29-chat', {
-        body: { messages: [...messages, userMessage] }
+        body: { messages: conversationHistory }
       });
 
       if (error) {
@@ -76,6 +85,10 @@ export const P29ChatAssistant = () => {
       e.preventDefault();
       sendMessage();
     }
+  };
+
+  const handleSuggestedQuestion = (question: string) => {
+    sendMessage(question);
   };
 
   if (!isOpen) {
@@ -155,6 +168,24 @@ export const P29ChatAssistant = () => {
 
           {/* Input */}
           <div className="border-t border-border p-4 bg-card">
+            {/* Suggested Questions */}
+            {messages.length === 1 && !isLoading && (
+              <div className="mb-3">
+                <p className="text-xs text-muted-foreground mb-2">Suggested questions:</p>
+                <div className="flex flex-wrap gap-2">
+                  {SUGGESTED_QUESTIONS.map((question, index) => (
+                    <button
+                      key={index}
+                      onClick={() => handleSuggestedQuestion(question)}
+                      className="bg-primary/10 text-primary rounded-full px-3 py-1 text-xs hover:bg-primary/20 transition-colors"
+                    >
+                      {question}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+            
             <div className="flex gap-2">
               <input
                 type="text"
@@ -166,7 +197,7 @@ export const P29ChatAssistant = () => {
                 disabled={isLoading}
               />
               <button
-                onClick={sendMessage}
+                onClick={() => sendMessage()}
                 disabled={isLoading || !input.trim()}
                 className="bg-primary text-primary-foreground rounded-lg px-4 py-2 hover:bg-primary/90 disabled:bg-muted disabled:text-muted-foreground disabled:cursor-not-allowed transition-colors"
                 aria-label="Send message"
