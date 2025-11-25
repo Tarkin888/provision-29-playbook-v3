@@ -82,7 +82,7 @@ export const P29ChatAssistant = () => {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 bg-primary text-primary-foreground rounded-full p-4 shadow-lg hover:bg-primary/90 transition-all z-50"
+        className="fixed bottom-4 right-4 md:bottom-6 md:right-6 bg-primary text-primary-foreground rounded-full p-4 shadow-lg hover:bg-primary/90 transition-all z-50"
         aria-label="Open P29 Assistant"
       >
         <MessageCircle className="w-6 h-6" />
@@ -92,7 +92,7 @@ export const P29ChatAssistant = () => {
 
   return (
     <div 
-      className={`fixed ${isMinimized ? 'bottom-6 right-6 w-80' : 'bottom-6 right-6 w-96'} bg-card rounded-lg shadow-2xl z-50 flex flex-col transition-all border border-border`}
+      className={`fixed ${isMinimized ? 'bottom-4 right-4 w-80 md:bottom-6 md:right-6' : 'bottom-4 right-4 left-4 md:left-auto md:w-96 md:bottom-6 md:right-6'} bg-card rounded-lg shadow-2xl z-50 flex flex-col transition-all border border-border`}
       style={{ height: isMinimized ? '60px' : '600px' }}
     >
       {/* Header */}
