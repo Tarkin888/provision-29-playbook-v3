@@ -35,7 +35,7 @@ export default function JourneySelector() {
       title: 'In Progress',
       description: 'Already started? Access your roadmap, templates, and track your implementation progress.',
       bullets: [
-        '24-month roadmap',
+        'Phased implementation framework',
         'Template library',
         'Progress tracking'
       ],

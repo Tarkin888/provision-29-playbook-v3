@@ -22,7 +22,7 @@ function HeroSection() {
   }, []);
 
   const features = [
-    '24-Month Roadmap',
+    'Phased Implementation Guide',
     '15+ Templates',
     'Role-Based Guidance'
   ];
@@ -42,7 +42,7 @@ function HeroSection() {
 
         {/* Subtitle */}
         <p className="text-lg sm:text-xl md:text-2xl text-blue-100 max-w-[800px] mx-auto mt-4 sm:mt-6">
-          Complete 24-month roadmap, templates, and expert guidance for January 2026 compliance
+          Comprehensive implementation framework, templates, and expert guidance for UK Corporate Governance Code Provision 29
         </p>
 
         {/* Feature Bullets */}

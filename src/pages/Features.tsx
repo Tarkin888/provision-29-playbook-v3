@@ -13,14 +13,14 @@ export default function Features() {
       icon: Calendar,
       iconColor: 'text-blue-600',
       bgColor: 'bg-blue-50',
-      name: '24-Month Implementation Roadmap',
-      description: 'Our comprehensive roadmap breaks down the P29 implementation journey into four manageable phases spanning 24 months. Each phase includes detailed milestones, dependencies, and timeline guidance. The roadmap adapts to your fiscal year-end and current maturity level, providing a personalized implementation schedule that accounts for your organization\'s unique circumstances.',
+      name: 'Phased Implementation Guide',
+      description: 'Our comprehensive framework breaks down the P29 implementation journey into four manageable phases. Each phase includes detailed milestones, dependencies, and flexible timeline guidance. The framework adapts to your fiscal year-end and current maturity level, providing a personalized implementation schedule that accounts for your organisation\'s unique circumstances.',
       capabilities: [
-        'Phased approach with clear milestones and deliverables',
-        'Timeline calculator based on fiscal year-end',
+        'Four-phase approach with clear milestones and deliverables',
+        'Timeline calculator based on fiscal year-end and maturity',
         'Dependency mapping between phases and activities',
-        'Accelerated track options for late starters',
-        'Visual Gantt chart and calendar views',
+        'Accelerated track options for different starting points',
+        'Visual timeline and calendar views',
         'Progress tracking with completion percentages',
         'Integration with template library for deliverables'
       ],
@@ -123,7 +123,7 @@ export default function Features() {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Platform Features - P29 Implementation Playbook"
-        description="Explore comprehensive features including 24-month roadmap, templates, role guides, assessment tools, resources, and progress tracking for P29 compliance."
+        description="Explore comprehensive features including phased implementation framework, templates, role guides, assessment tools, resources, and progress tracking for P29 compliance."
       />
 
       <div className="container mx-auto px-4 py-12 max-w-[1200px]">

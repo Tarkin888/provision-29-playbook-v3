@@ -17,8 +17,8 @@ const MaturityAssessment = () => {
       description: 'Begin at Phase 1 - Definition & Scoping',
       color: 'bg-red-100 dark:bg-red-900 text-red-900 dark:text-red-100',
       icon: AlertCircle,
-      recommendation: 'You need the full 24-month implementation roadmap. Start with Phase 1 to establish foundational elements.',
-      timeline: '24 months (Full roadmap)',
+      recommendation: 'You need the full phased implementation framework. Start with Phase 1 to establish foundational elements.',
+      timeline: 'Full implementation (All phases)',
       startPhase: 'Phase 1',
     },
     level2: {
@@ -136,7 +136,7 @@ const MaturityAssessment = () => {
               <p className="font-semibold">Next Steps for Your Level:</p>
               {level === 'level1' && (
                 <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                  <li>Review the full 24-month roadmap below</li>
+                  <li>Review the full implementation framework below</li>
                   <li>Start with Phase 1: Definition & Scoping</li>
                   <li>Secure executive sponsorship and establish steering committee</li>
                   <li>Define materiality criteria and identify material controls</li>

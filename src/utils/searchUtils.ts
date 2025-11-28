@@ -187,7 +187,7 @@ export const searchPages = (query: string, limit: number = 3): SearchResult[] =>
   if (!query) return [];
   
   const pages = [
-    { title: 'Implementation Roadmap', description: '24-month journey from scoping to declaration', url: '/roadmap', keywords: ['roadmap', 'implementation', 'phases', 'timeline'] },
+    { title: 'Implementation Roadmap', description: 'Four-phase journey from scoping to declaration', url: '/roadmap', keywords: ['roadmap', 'implementation', 'phases', 'timeline'] },
     { title: 'Template Library', description: 'Ready-to-use templates and tools', url: '/templates', keywords: ['templates', 'tools', 'download'] },
     { title: 'Role Guides', description: 'Tailored guidance for boards, CFOs, risk, audit', url: '/roles', keywords: ['roles', 'board', 'cfo', 'audit', 'risk'] },
     { title: 'Resources Hub', description: 'Articles, case studies, and best practices', url: '/resources', keywords: ['resources', 'articles', 'case studies', 'videos'] },

@@ -8,7 +8,7 @@ const LegalDisclaimer = () => {
       <AlertDescription className="ml-2 text-sm text-muted-foreground">
         <strong className="font-semibold text-foreground">⚠️ Legal Disclaimer:</strong>
         {' '}
-        This accelerated timeline involves significant implementation risks and reduces assurance quality compared to the ideal 24-month framework. 
+        This accelerated timeline involves significant implementation risks and reduces assurance quality compared to the standard phased framework. 
         Organisations starting in November 2025 or later should consider: 
         (1) Qualifying their first-year Provision 29 declaration in March 2027, 
         (2) Engaging external audit or consulting support for framework design and testing, and 

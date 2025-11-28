@@ -9,21 +9,21 @@ const ComparisonChart = () => {
   const milestones = [
     {
       milestone: 'Board Approval',
-      idealTimeline: 'Q1 2025 (Week 12)',
+      idealTimeline: 'Phase 1 Complete (Week 12)',
       yourTimeline: 'Nov 2025 (Week 48)',
       gap: '36 weeks',
       risk: 'CRITICAL'
     },
     {
       milestone: 'GRC Platform Live',
-      idealTimeline: 'Q3 2025 (Week 32)',
+      idealTimeline: 'Phase 2 Complete (Week 32)',
       yourTimeline: 'Jan 2026 (Week 52+)',
       gap: '20+ weeks',
       risk: 'CRITICAL'
     },
     {
       milestone: 'Dry Run Complete',
-      idealTimeline: 'Q4 2025 (Week 48)',
+      idealTimeline: 'Phase 3 Complete (Week 48)',
       yourTimeline: 'Not feasible',
       gap: 'N/A',
       risk: 'CRITICAL'

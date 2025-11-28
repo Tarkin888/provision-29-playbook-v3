@@ -7,10 +7,10 @@ import { Zap, Clock, AlertTriangle, CheckCircle2 } from 'lucide-react';
 const AcceleratedTracks = () => {
   const tracks = [
     {
-      id: '24-month',
-      label: '24-Month',
+      id: 'standard',
+      label: 'Standard',
       title: 'Standard Track (Level 1 Maturity)',
-      duration: '24 months',
+      duration: 'Full implementation',
       maturityLevel: 'Level 1: Starting Fresh',
       phases: [
         { name: 'Phase 1: Definition', duration: '12 weeks', canCompress: false },
@@ -119,7 +119,7 @@ const AcceleratedTracks = () => {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <Tabs defaultValue="24-month" className="w-full">
+        <Tabs defaultValue="standard" className="w-full">
           <TabsList className="grid w-full grid-cols-4">
             {tracks.map((track) => (
               <TabsTrigger key={track.id} value={track.id} className="text-xs">
