@@ -104,7 +104,7 @@ function TimelineAlert({
                 size={20}
               />
               <p className={`${styles.text} text-xs sm:text-sm md:text-base font-medium`}>
-                ⚡ Provision 29 Effective Date: January 1, 2026 | <strong className="text-sm sm:text-base">{monthsRemaining}</strong> months remaining
+                ⚡ Provision 29 Effective Date: January 1, 2026 | <strong className="text-sm sm:text-base">{monthsRemaining}</strong> {monthsRemaining === 1 ? 'month' : 'months'} remaining
               </p>
             </div>
           </div>

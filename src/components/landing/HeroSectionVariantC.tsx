@@ -75,7 +75,7 @@ function HeroSectionVariantC() {
         {/* Urgency Indicator */}
         <div className="inline-flex items-center gap-2 mt-8 sm:mt-12 px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-white/10 backdrop-blur-sm w-full sm:w-auto max-w-md sm:max-w-none">
           <span className="text-xs sm:text-sm text-yellow-300 font-medium text-center flex-1">
-            ⚡ January 2026 deadline: <strong className="text-sm sm:text-base">{monthsRemaining}</strong> months remaining
+            ⚡ January 2026 deadline: <strong className="text-sm sm:text-base">{monthsRemaining}</strong> {monthsRemaining === 1 ? 'month' : 'months'} remaining
           </span>
         </div>
       </div>

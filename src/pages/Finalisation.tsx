@@ -119,7 +119,7 @@ export default function Finalisation() {
         <Alert className={`mb-8 ${monthsRemaining < 6 ? 'bg-red-50 border-red-300' : 'bg-orange-50 border-orange-300'}`}>
           <Clock className={monthsRemaining < 6 ? 'text-red-600' : 'text-orange-600'} />
           <AlertDescription className={monthsRemaining < 6 ? 'text-red-900' : 'text-orange-900'}>
-            <strong>{monthsRemaining} months remaining</strong> until January 2026 deadline. Ensure all critical tasks are completed well in advance.
+            <strong>{monthsRemaining} {monthsRemaining === 1 ? 'month' : 'months'} remaining</strong> until January 2026 deadline. Ensure all critical tasks are completed well in advance.
           </AlertDescription>
         </Alert>
 
