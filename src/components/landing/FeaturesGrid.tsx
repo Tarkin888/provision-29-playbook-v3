@@ -18,8 +18,8 @@ export default function FeaturesGrid() {
     {
       icon: Calendar,
       iconColor: 'text-blue-600',
-      title: '24-Month Roadmap',
-      description: 'Phased implementation plan with milestones, dependencies, and timeline',
+      title: 'Phased Implementation Guide',
+      description: 'Structured framework with milestones, dependencies, and flexible timeline',
       badge: '4 Phases',
       badgeColor: 'bg-blue-100 text-blue-700'
     },

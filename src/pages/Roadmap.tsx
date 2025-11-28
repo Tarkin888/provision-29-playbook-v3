@@ -14,6 +14,7 @@ import RoadmapViewToggle from "@/components/roadmap/RoadmapViewToggle";
 import StatusAssessment from "@/components/roadmap/StatusAssessment";
 import ComparisonChart from "@/components/roadmap/ComparisonChart";
 import LegalDisclaimer from "@/components/roadmap/LegalDisclaimer";
+import TimelineContextBanner from "@/components/landing/TimelineContextBanner";
 import { Phase } from "@/types/data";
 import { Calendar, FileText, Target, Download } from "lucide-react";
 import { getCurrentWeek, getCurrentQuarter, getMonthsBehind } from "@/utils/dateUtils";
@@ -101,7 +102,7 @@ const Roadmap = () => {
     <div className="min-h-screen bg-background">
       <SEOHead 
         title={isSignificantlyBehind ? "Provision 29 Accelerated Implementation: Catch-Up Roadmap for November 2025" : "Implementation Roadmap - Fiscal Year Flexible"}
-        description={isSignificantlyBehind ? "Realistic framework for organisations starting Provision 29 implementation behind schedule. Accelerated timeline with risk assessment and mitigation strategies. Flexible for all fiscal year-ends." : "24-month structured journey through all phases of Provision 29 compliance. Customizable for your fiscal year-end. Plan your implementation with our comprehensive roadmap."}
+        description={isSignificantlyBehind ? "Realistic framework for organisations starting Provision 29 implementation behind schedule. Accelerated timeline with risk assessment and mitigation strategies. Flexible for all fiscal year-ends." : "Structured four-phase journey through all stages of Provision 29 compliance. Customizable for your fiscal year-end. Plan your implementation with our comprehensive framework."}
         canonical={`${window.location.origin}/roadmap`}
       />
       
@@ -116,13 +117,13 @@ const Roadmap = () => {
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4 animate-fade-in">
             {isSignificantlyBehind 
               ? "Provision 29 Accelerated Implementation: Catch-Up Roadmap for November 2025"
-              : `Your 24-Month Journey to Provision 29 Compliance ${getComplianceYearLabel()}`
+              : `P29 Implementation Framework ${getComplianceYearLabel()}`
             }
           </h1>
           <p className="text-base md:text-lg text-muted-foreground mb-4 md:mb-6 animate-fade-in">
             {isSignificantlyBehind
               ? "A realistic framework for organisations starting behind schedule - customized for your fiscal year-end"
-              : "A proven implementation framework based on FTSE 100 delivery - flexible for all fiscal year-ends"
+              : "Four phases from foundation to declaration — adapt the timeline to your organisation's starting point"
             }
           </p>
           <div className="flex flex-wrap items-center gap-3 animate-fade-in">
@@ -140,6 +141,13 @@ const Roadmap = () => {
               </div>
             )}
           </div>
+        </div>
+      </section>
+
+      {/* Timeline Context Banner */}
+      <section className="py-6 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <TimelineContextBanner variant="info" />
         </div>
       </section>
 
@@ -244,13 +252,13 @@ const Roadmap = () => {
             <h2 className="text-2xl font-bold mb-2">
               {roadmapView === 'accelerated' && isSignificantlyBehind
                 ? "Accelerated Implementation Timeline"
-                : "Ideal 24-Month Timeline"
+                : "Implementation Timeline Framework"
               }
             </h2>
             <p className="text-sm text-muted-foreground">
               {roadmapView === 'accelerated' && isSignificantlyBehind
                 ? "Compressed timeline for organisations starting in November 2025 - dates adjust based on your fiscal year-end"
-                : "Recommended timeline for organisations starting in Q1 2025 - dates adjust based on your fiscal year-end"
+                : "Four-phase progression adapted to your organisation's starting point and fiscal year-end"
               }
             </p>
           </div>

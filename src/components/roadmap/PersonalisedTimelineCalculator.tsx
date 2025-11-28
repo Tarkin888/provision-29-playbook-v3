@@ -18,7 +18,7 @@ const PersonalisedTimelineCalculator = () => {
   const maturityScore = getScore();
 
   // Calculate latest start dates for different tracks
-  const latestStart24Month = subMonths(complianceFYStart, 24);
+  const latestStartStandard = subMonths(complianceFYStart, 24);
   const latestStart18Month = subMonths(complianceFYStart, 18);
   const latestStart12Month = subMonths(complianceFYStart, 12);
 
@@ -190,7 +190,7 @@ const PersonalisedTimelineCalculator = () => {
       recommendations.push('Increase internal resource allocation');
       recommendations.push('Plan compressed but complete dry run');
     } else {
-      recommendations.push('Follow standard 24-month implementation track');
+      recommendations.push('Follow standard phased implementation track');
       recommendations.push('Conduct thorough gap analysis before starting');
       recommendations.push('Plan comprehensive dry run 6 months before compliance FY');
       recommendations.push('Budget for internal capability building');
@@ -254,9 +254,9 @@ const PersonalisedTimelineCalculator = () => {
           </div>
           <div className="space-y-3">
             <div className="flex justify-between items-start">
-              <span className="text-sm text-muted-foreground">Latest start for 24-month track:</span>
+              <span className="text-sm text-muted-foreground">Latest start for standard track:</span>
               <span className="text-sm font-semibold text-right">
-                {format(latestStart24Month, 'dd MMM yyyy')}
+                {format(latestStartStandard, 'dd MMM yyyy')}
               </span>
             </div>
             <div className="flex justify-between items-start">

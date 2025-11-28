@@ -6,6 +6,8 @@ import JourneySelector from '@/components/landing/JourneySelector';
 import JourneySelectorVariantB from '@/components/landing/JourneySelectorVariantB';
 import JourneySelectorVariantC from '@/components/landing/JourneySelectorVariantC';
 import CookieConsent from '@/components/analytics/CookieConsent';
+import TimelineContextBanner from '@/components/landing/TimelineContextBanner';
+import WhereAreYou from '@/components/landing/WhereAreYou';
 import { useEffect, useMemo, lazy, Suspense } from 'react';
 import { trackScrollDepth } from '@/utils/analytics';
 import { 
@@ -130,7 +132,7 @@ export default function Home() {
     <>
       <SEOHead
         title="P29 Implementation Playbook | UK Corporate Governance"
-        description="Complete 24-month roadmap for Provision 29 compliance. Templates, guidance, and tools for January 2026 deadline."
+        description="Comprehensive implementation framework for Provision 29 compliance. Templates, guidance, and tools for UK Corporate Governance Code requirements."
         canonical={window.location.origin}
       />
 
@@ -147,6 +149,16 @@ export default function Home() {
         <div id="main-content">
           {/* Hero - A/B Test Variants */}
           {renderHeroSection()}
+
+          {/* Timeline Context Banner */}
+          <div className="container mx-auto px-4 max-w-[1200px] mt-8">
+            <TimelineContextBanner />
+          </div>
+
+          {/* Where Are You? Quick Assessment */}
+          <div className="container mx-auto px-4 max-w-[1200px]">
+            <WhereAreYou />
+          </div>
 
           {/* Social Proof - Variant B: After Hero (Lazy Loaded) */}
           {socialProofVariant === 'B' && (
