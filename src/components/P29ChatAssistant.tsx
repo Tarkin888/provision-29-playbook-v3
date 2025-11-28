@@ -195,6 +195,7 @@ export const P29ChatAssistant = () => {
                 placeholder="Ask about P29 implementation..."
                 className="flex-1 border border-input bg-background rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                 disabled={isLoading}
+                maxLength={5000}
               />
               <button
                 onClick={() => sendMessage()}
